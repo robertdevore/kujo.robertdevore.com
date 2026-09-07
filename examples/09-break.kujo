@@ -1,0 +1,3 @@
+struct Job { units: int }
+let job := Job { units: 3 }
+print(to_json(job))

@@ -1,0 +1,2 @@
+spawn { let result := 2 + 3 }
+print("spawn accepted; completion not asserted")

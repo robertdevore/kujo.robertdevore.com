@@ -1,0 +1,4 @@
+let result := spawn_process(["/usr/bin/printf", "%s", "course-process"], {"timeout_ms": 2000, "max_output_bytes": 1024, "inherit_env": false})
+assert_equal(result.success, true)
+assert_equal(result.stdout, "course-process")
+print(to_json({"ok": result.success, "exitcode": result.exitcode, "stdout": result.stdout}))

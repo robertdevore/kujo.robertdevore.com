@@ -1,0 +1,8 @@
+func total(values) {
+    mut sum := 0
+    for value in values { sum += value }
+    return sum
+}
+assert_equal(total([]), 0)
+assert_equal(total([2, 3]), 5)
+print("2 assertions passed")

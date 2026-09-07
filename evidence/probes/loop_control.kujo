@@ -1,0 +1,6 @@
+func main() { mut accepted := []
+for value in [-1,2,0,4,6] { if value <= 0 { continue }
+accepted = push(accepted, value)
+if len(accepted) == 2 { break } }
+print(accepted) }
+main()

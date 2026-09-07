@@ -1,0 +1,6 @@
+let base := {"endpoint": "https://example.test/chat", "model": "course"}
+let first := ai_request_hash("Summarize", {...base, "api_key": secret("synthetic-a")})
+let second := ai_request_hash("Summarize", {...base, "api_key": secret("synthetic-b")})
+assert_equal(first, second)
+assert_equal(len(first), 64)
+print(first)

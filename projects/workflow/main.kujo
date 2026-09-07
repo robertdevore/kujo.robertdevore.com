@@ -1,0 +1,15 @@
+func evaluate(proposal, actual) { return proposal["count"] == actual }
+func run_workflow(proposals, actual, maximum) {
+    mut attempts := 0
+    for proposal in proposals {
+        attempts += 1
+        if attempts > maximum { return {"verdict": "STOP", "attempts": maximum, "reason": "budget"} }
+        if evaluate(proposal, actual) { return {"verdict": "PASS", "attempts": attempts, "count": actual} }
+    }
+    return {"verdict": "STOP", "attempts": attempts, "reason": "evaluation_failed"}
+}
+let result := run_workflow([{"count": 3}, {"count": 2}], 2, 2)
+assert_equal(result["verdict"], "PASS")
+assert_equal(result["attempts"], 2)
+assert_equal(run_workflow([{"count": 3}], 2, 1)["verdict"], "STOP")
+print(to_json(result))

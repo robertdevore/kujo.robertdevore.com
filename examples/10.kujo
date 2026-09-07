@@ -1,0 +1,13 @@
+func quantity(value) {
+    if value > 0 { return Ok(value) }
+    return Err("quantity must be positive")
+}
+match quantity(3) {
+    case Ok(value): { print(value) }
+    case Err(message): { throw(message) }
+}
+match Some("report") {
+    case Some(label): { print(label) }
+    case None: { print("unnamed") }
+}
+

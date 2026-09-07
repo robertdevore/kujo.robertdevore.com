@@ -1,0 +1,2 @@
+let record := {"name": "job"}
+print(record["missing"] ?? "fallback")

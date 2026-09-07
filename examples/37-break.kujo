@@ -1,0 +1,2 @@
+let proposal := {"count": 3}
+assert_equal(proposal["count"], len(["a", "b"]))

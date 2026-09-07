@@ -1,0 +1,6 @@
+let messages := [ai_message("system", "Be concise."), ai_message("user", "Count jobs.")]
+let fit := ai_fit_context(messages, 128)
+assert_equal(fit["fits"], true)
+let ranked := vec_top_k([1.0, 0.0], [[0.0, 1.0], [1.0, 0.0]], 1)
+assert_equal(ranked[0]["index"], 1)
+print(to_json(ranked))

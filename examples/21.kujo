@@ -1,0 +1,3 @@
+func title(name) { return "Report: " + name }
+assert_equal(title("jobs"), "Report: jobs")
+print(title("jobs"))

@@ -1,0 +1,21 @@
+# Stage 1: arguments are user input; all calculations remain pure.
+func summarize(labels) {
+    if len(labels) == 0 { throw("at least one job label is required") }
+    mut accepted := []
+    for label in labels {
+        if len(trim(label)) == 0 { throw("job labels must not be empty") }
+        accepted = push(accepted, {"name": trim(label), "accepted": true})
+    }
+    return {"count": len(accepted), "jobs": accepted}
+}
+func main() {
+    let input := args()
+    if len(input) < 2 || input[0] != "jobs" { throw("at least one job label is required; usage: -- jobs alpha beta") }
+    mut labels := []
+    mut index := 1
+    while index < len(input) { labels = push(labels, input[index]) index += 1 }
+    let result := summarize(labels)
+    print("Accepted jobs: " + to_string(result["count"]))
+    for job in result["jobs"] { print("- " + job["name"]) }
+}
+main()

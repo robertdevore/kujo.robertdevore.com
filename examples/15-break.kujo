@@ -1,0 +1,2 @@
+from missing_course_module import total
+print(total([]))

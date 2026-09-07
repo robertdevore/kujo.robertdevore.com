@@ -1,0 +1,4 @@
+func within_policy(event) { return event["attempts"] <= 2 && event["output_bytes"] <= 1024 }
+assert_equal(within_policy({"attempts": 1, "output_bytes": 100}), true)
+assert_equal(within_policy({"attempts": 3, "output_bytes": 100}), false)
+print("watchdog policy verified")

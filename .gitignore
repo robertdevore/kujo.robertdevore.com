@@ -1,0 +1,14 @@
+.tools/
+node_modules/
+output/
+content/posts/
+content/pages/
+.wrangler/
+.dev.vars
+work/
+.DS_Store
+templates/post.html
+templates/page-home.html
+templates/page-course.html
+assets/course-search.json
+assets/course-examples.json

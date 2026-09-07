@@ -1,0 +1,1 @@
+print(read_file_beneath("fixtures", "../course.json", 1024))

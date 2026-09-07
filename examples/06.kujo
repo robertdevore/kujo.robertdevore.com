@@ -1,0 +1,6 @@
+func apply(value, operation) { return operation(value) }
+let doubled := apply(6, func(x) { return x * 2 })
+func no_result() { let local := 3 }
+assert_equal(doubled, 12)
+assert_equal(no_result(), null)
+print(doubled)

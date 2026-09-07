@@ -1,0 +1,622 @@
+{
+  "date": "2026-09-06",
+  "timezone": "America/Detroit",
+  "release": {
+    "html_url": "https://github.com/kujolang/kujo/releases/tag/v1.3.1",
+    "published_at": "2026-09-06T16:38:52Z",
+    "tag_name": "v1.3.1",
+    "target_commitish": "main"
+  },
+  "sources": [
+    {
+      "file": "docs/LANGUAGE_SPEC.md",
+      "url": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/LANGUAGE_SPEC.md",
+      "sha256": "ced49b1f13ae6c008f6725123abde3109f62efca2b63ac540dfd60eb4b09f045",
+      "status": "released contract or release documentation"
+    },
+    {
+      "file": "docs/V1_SCOPE.md",
+      "url": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/V1_SCOPE.md",
+      "sha256": "f211b435df11e3e8a73e26cf6db78bcd36a6a1325f9a68cb4e26e8ec8601580d",
+      "status": "released contract or release documentation"
+    },
+    {
+      "file": "ROADMAP.md",
+      "url": "https://github.com/kujolang/kujo/blob/v1.3.1/ROADMAP.md",
+      "sha256": "6bf96b3d354641c880a2ca818f0fc20eb74066b70c2dc3c7ed915cac8bdd9e48",
+      "status": "released contract or release documentation"
+    },
+    {
+      "file": "CHANGELOG.md",
+      "url": "https://github.com/kujolang/kujo/blob/v1.3.1/CHANGELOG.md",
+      "sha256": "55f3de7dbf7b249bda40780846d698e580ce22205cc1a234cdc192bfb87c7b37",
+      "status": "released contract or release documentation"
+    },
+    {
+      "file": "docs/STANDARD_LIBRARY.md",
+      "url": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/STANDARD_LIBRARY.md",
+      "sha256": "d582fe668a3d1a9da73cdd850c50cb6b16ff6797a781acb4ff94ecbf1a647fa8",
+      "status": "released contract or release documentation"
+    },
+    {
+      "file": "docs/AI_RUNTIME.md",
+      "url": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/AI_RUNTIME.md",
+      "sha256": "2eef0215c7dbbccd6da32dd2ab85e4316143b13ff931cc14ba6432551a36952b",
+      "status": "released contract or release documentation"
+    },
+    {
+      "file": "docs/VM_INTERPRETER_PARITY_MATRIX.md",
+      "url": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/VM_INTERPRETER_PARITY_MATRIX.md",
+      "sha256": "694bbaee9cf2ba365f3da630f46de03cb03f933c7ba1e7061b14815d909191ad",
+      "status": "released contract or release documentation"
+    },
+    {
+      "file": "docs/NATIVE_API_SECURITY_POSTURE.md",
+      "url": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/NATIVE_API_SECURITY_POSTURE.md",
+      "sha256": "099e6f26a6d69bc5c30db6ac30de38ebfddc7327a7c4157ad38bfb153e6a9d66",
+      "status": "released contract or release documentation"
+    },
+    {
+      "file": "docs/CLI_MACHINE_READABLE_CONTRACTS.md",
+      "url": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/CLI_MACHINE_READABLE_CONTRACTS.md",
+      "sha256": "af03fe9a18ad4247b9ad3f277835957d1dca2a9f54e654f001b6dcbdaf0c19d1",
+      "status": "released contract or release documentation"
+    },
+    {
+      "file": "docs/PROTOCOL_CONTRACTS.md",
+      "url": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/PROTOCOL_CONTRACTS.md",
+      "sha256": "c8dc1bb0a1659c0adf297724118a43245fc8eaa41f1361416f51bae8df4b0822",
+      "status": "released contract or release documentation"
+    },
+    {
+      "file": "README.md",
+      "url": "https://github.com/kujolang/kujo/blob/v1.3.1/README.md",
+      "sha256": "d38f48cc1bba4e5affcf58846be389ac25e2a6ddb031026216b3c46482281ff1",
+      "status": "released contract or release documentation"
+    }
+  ],
+  "ecosystem": [
+    {
+      "repo": "kujo-workflows",
+      "revision": "5df0458d4918215128e62597796a1d5eef98bb1e",
+      "source": "https://github.com/kujolang/kujo-workflows",
+      "status": "inspected local ecosystem source; not a course runtime dependency"
+    },
+    {
+      "repo": "mcp",
+      "revision": "20f1c83f702aa0a86595db5a824634c1dde96aaa",
+      "source": "https://github.com/kujolang/mcp",
+      "status": "inspected local ecosystem source; not a course runtime dependency"
+    },
+    {
+      "repo": "eval",
+      "revision": "7ad5caef1b718ab8a6ccdd02ef1b645af93ac133",
+      "source": "https://github.com/kujolang/eval",
+      "status": "inspected local ecosystem source; not a course runtime dependency"
+    },
+    {
+      "repo": "runledger",
+      "revision": "92cb06344386fc0a78d92b1db92f417edb22b285",
+      "source": "https://github.com/kujolang/runledger",
+      "status": "inspected local ecosystem source; not a course runtime dependency"
+    },
+    {
+      "repo": "agents-sdk",
+      "revision": "e0be75bb153296e0d2e93c7b4608a90abcb6f60e",
+      "source": "https://github.com/kujolang/agents-sdk",
+      "status": "inspected local ecosystem source; not a course runtime dependency"
+    },
+    {
+      "repo": "ssg",
+      "revision": "e165dbc1b596ea759a2b9c2ff0b9ca988c333eea",
+      "source": "https://github.com/kujolang/ssg",
+      "status": "inspected local ecosystem source; not a course runtime dependency"
+    },
+    {
+      "repo": "site-kit",
+      "revision": "e4d1d37032d84a77e84d55533b2f5523535f3bb3",
+      "source": "https://github.com/kujolang/site-kit",
+      "status": "inspected local ecosystem source; not a course runtime dependency"
+    }
+  ],
+  "rows": [
+    {
+      "concept": "What Kujo is",
+      "source": "docs/LANGUAGE_SPEC.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/LANGUAGE_SPEC.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "what-is-kujo",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/01",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Installation, CLI, and your first program",
+      "source": "docs/LANGUAGE_SPEC.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/LANGUAGE_SPEC.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "setup-and-cli",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/02",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Bindings, values, and mutability",
+      "source": "docs/LANGUAGE_SPEC.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/LANGUAGE_SPEC.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "bindings-and-mutability",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/03",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Values, operators, and truthiness",
+      "source": "docs/LANGUAGE_SPEC.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/LANGUAGE_SPEC.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "values-and-truthiness",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/04",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Control flow and block scopes",
+      "source": "docs/LANGUAGE_SPEC.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/LANGUAGE_SPEC.md",
+      "status": "specified surface with documented release boundaries",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "control-flow",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/05",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Functions, callbacks, and return values",
+      "source": "docs/LANGUAGE_SPEC.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/LANGUAGE_SPEC.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "functions",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/06",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Collections, pipes, and null handling",
+      "source": "docs/LANGUAGE_SPEC.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/LANGUAGE_SPEC.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "collections-and-pipelines",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/07",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Scope, shadowing, and capture",
+      "source": "docs/LANGUAGE_SPEC.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/LANGUAGE_SPEC.md",
+      "status": "specified surface with documented release boundaries",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "scope-and-capture",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/08",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Structs and enums",
+      "source": "docs/LANGUAGE_SPEC.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/LANGUAGE_SPEC.md",
+      "status": "specified surface with documented release boundaries",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "structs-and-enums",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/09",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Match, Result, and Option",
+      "source": "docs/LANGUAGE_SPEC.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/LANGUAGE_SPEC.md",
+      "status": "specified surface with documented release boundaries",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "match-result-option",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/10",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Exceptions and recoverable errors",
+      "source": "docs/LANGUAGE_SPEC.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/LANGUAGE_SPEC.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "exceptions",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/11",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Optional typing without imaginary guarantees",
+      "source": "docs/LANGUAGE_SPEC.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/LANGUAGE_SPEC.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "optional-typing",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/12",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Async functions and await",
+      "source": "docs/LANGUAGE_SPEC.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/LANGUAGE_SPEC.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "async-and-await",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/13",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Spawn and bounded concurrent work",
+      "source": "docs/LANGUAGE_SPEC.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/LANGUAGE_SPEC.md",
+      "status": "specified surface with documented release boundaries",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "bounded-concurrency",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/14",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Modules and explicit exports",
+      "source": "docs/CLI_MACHINE_READABLE_CONTRACTS.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/CLI_MACHINE_READABLE_CONTRACTS.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "modules",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/15",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Projects, packages, and lockfiles",
+      "source": "docs/CLI_MACHINE_READABLE_CONTRACTS.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/CLI_MACHINE_READABLE_CONTRACTS.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "projects-and-lockfiles",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/16",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Finding the standard library contract",
+      "source": "docs/CLI_MACHINE_READABLE_CONTRACTS.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/CLI_MACHINE_READABLE_CONTRACTS.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "standard-library",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/17",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Testing, fixtures, and runtime evidence",
+      "source": "docs/CLI_MACHINE_READABLE_CONTRACTS.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/CLI_MACHINE_READABLE_CONTRACTS.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "testing",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/18",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Diagnostics and machine-readable interfaces",
+      "source": "docs/CLI_MACHINE_READABLE_CONTRACTS.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/CLI_MACHINE_READABLE_CONTRACTS.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "machine-contracts",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/19",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Documentation as a build artifact",
+      "source": "docs/CLI_MACHINE_READABLE_CONTRACTS.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/CLI_MACHINE_READABLE_CONTRACTS.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "documentation",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/20",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Editor integration and the LSP boundary",
+      "source": "docs/CLI_MACHINE_READABLE_CONTRACTS.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/CLI_MACHINE_READABLE_CONTRACTS.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "editor-and-lsp",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/21",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Filesystem automation with bounded paths",
+      "source": "docs/NATIVE_API_SECURITY_POSTURE.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/NATIVE_API_SECURITY_POSTURE.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "filesystem",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/22",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Processes without unnecessary shells",
+      "source": "docs/NATIVE_API_SECURITY_POSTURE.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/NATIVE_API_SECURITY_POSTURE.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "processes",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/23",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "HTTP and network boundaries",
+      "source": "docs/NATIVE_API_SECURITY_POSTURE.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/NATIVE_API_SECURITY_POSTURE.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "http-and-networking",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/24",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Structured data and local persistence",
+      "source": "docs/NATIVE_API_SECURITY_POSTURE.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/NATIVE_API_SECURITY_POSTURE.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "data-and-persistence",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/25",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Trusted execution and minimum authority",
+      "source": "docs/NATIVE_API_SECURITY_POSTURE.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/NATIVE_API_SECURITY_POSTURE.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "capability-security",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/26",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Secrets, redaction, and endpoint policy",
+      "source": "docs/NATIVE_API_SECURITY_POSTURE.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/NATIVE_API_SECURITY_POSTURE.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "secret-boundaries",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/27",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "AI effects and portable messages",
+      "source": "docs/AI_RUNTIME.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/AI_RUNTIME.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "ai-effects-and-messages",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/28",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Deterministic request identity",
+      "source": "docs/AI_RUNTIME.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/AI_RUNTIME.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "request-identity",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/29",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Record, replay, and offline evidence",
+      "source": "docs/AI_RUNTIME.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/AI_RUNTIME.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "record-and-replay",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/30",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Streaming and cancellation",
+      "source": "docs/AI_RUNTIME.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/AI_RUNTIME.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "streaming",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/31",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Structured outputs and schema validation",
+      "source": "docs/AI_RUNTIME.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/AI_RUNTIME.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "structured-outputs",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/32",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Context budgets, embeddings, and vectors",
+      "source": "docs/AI_RUNTIME.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/AI_RUNTIME.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "context-and-vectors",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/33",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Bounded AI tool loops",
+      "source": "docs/AI_RUNTIME.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/AI_RUNTIME.md",
+      "status": "stable contract exercised by bounded example",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "tool-loops",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/34",
+      "notes": "Exact source and stdout plus intentional failure checked."
+    },
+    {
+      "concept": "Mechanism versus policy",
+      "source": "docs/V1_SCOPE.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/V1_SCOPE.md",
+      "status": "application architecture; ecosystem concepts separately identified",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "mechanism-and-policy",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/35",
+      "notes": "Example validates local policy, not full ecosystem implementation."
+    },
+    {
+      "concept": "Loop Engineering, specs, and stop conditions",
+      "source": "docs/V1_SCOPE.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/V1_SCOPE.md",
+      "status": "application architecture; ecosystem concepts separately identified",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "loop-engineering",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/36",
+      "notes": "Example validates local policy, not full ecosystem implementation."
+    },
+    {
+      "concept": "Evaluation independent of generation",
+      "source": "docs/V1_SCOPE.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/V1_SCOPE.md",
+      "status": "application architecture; ecosystem concepts separately identified",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "evaluation",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/37",
+      "notes": "Example validates local policy, not full ecosystem implementation."
+    },
+    {
+      "concept": "Evidence, run records, and work boundaries",
+      "source": "docs/V1_SCOPE.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/V1_SCOPE.md",
+      "status": "application architecture; ecosystem concepts separately identified",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "evidence-and-handoffs",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/38",
+      "notes": "Example validates local policy, not full ecosystem implementation."
+    },
+    {
+      "concept": "Isolation, observability, and watchdogs",
+      "source": "docs/V1_SCOPE.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/V1_SCOPE.md",
+      "status": "application architecture; ecosystem concepts separately identified",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "isolation-and-observability",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/39",
+      "notes": "Example validates local policy, not full ecosystem implementation."
+    },
+    {
+      "concept": "MCP and external tool interoperability",
+      "source": "docs/V1_SCOPE.md",
+      "sourceUrl": "https://github.com/kujolang/kujo/blob/v1.3.1/docs/V1_SCOPE.md",
+      "status": "application architecture; ecosystem concepts separately identified",
+      "verifiedVersion": "1.3.1",
+      "verifiedDate": "2026-09-06",
+      "lesson": "mcp-interoperability",
+      "runtimeTested": "VM",
+      "evidence": "evidence/verification.json#lessons/40",
+      "notes": "Example validates local policy, not full ecosystem implementation."
+    }
+  ],
+  "external": [
+    {
+      "url": "https://docs.kujolang.ai",
+      "status": "HTTP 200 verified; local canonical docs used for contracts"
+    },
+    {
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28",
+      "status": "current protocol specification reviewed; no blanket framework conformance claim"
+    },
+    {
+      "url": "https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/",
+      "status": "AI architecture review lens only"
+    },
+    {
+      "url": "https://developers.cloudflare.com/workers/static-assets/",
+      "status": "deployment architecture reference"
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+async func worker(value) { throw("worker rejected") }
+print(await parallel_map([1], worker, 2))

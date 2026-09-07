@@ -1,0 +1,10 @@
+let options := {"endpoint": "http://127.0.0.1:1/v1/chat/completions", "model": "gpt-replay", "api_key": secret("course-synthetic-key"), "cassette": {"mode": "strict", "dir": "fixtures/ai"}}
+let schema := {"type": "object", "required": ["message"], "properties": {"message": {"type": "string", "minLength": 1}}}
+match ai_chat("Hello model", options) {
+    case Ok(payload): {
+        assert_equal(json_schema_validate(payload, schema)["valid"], true)
+        assert_equal(payload["message"], "hello from cassette")
+        print(to_json({"schema": "course.ai/v1", "request": ai_request_hash("Hello model", options), "validated": true}))
+    }
+    case Err(err): { throw(to_string(err)) }
+}

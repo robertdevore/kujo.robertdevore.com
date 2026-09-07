@@ -1,0 +1,21 @@
+struct Job { label: string, units: int }
+async func process(job) {
+    if job.units < 0 { return Err("negative units") }
+    return Ok({"label": job.label, "doubled": job.units * 2})
+}
+func main() {
+    let jobs := [Job {label: "a", units: 2}, Job {label: "b", units: 3}]
+    let results := await parallel_map(jobs, process, 2)
+    mut rows := []
+    for result in results {
+        match result {
+            case Ok(row): { rows = push(rows, row) }
+            case Err(reason): { throw(reason) }
+        }
+    }
+    assert_equal(rows[0]["label"], "a")
+    assert_equal(rows[1]["doubled"], 6)
+    match Some(len(rows)) { case Some(count): { assert_equal(count, 2) } case None: { throw("missing count") } }
+    print(to_json(rows))
+}
+main()

@@ -1,0 +1,4 @@
+let descriptor := {"name": "count_jobs", "description": "Count the fixed local job fixture", "inputSchema": {"type": "object", "properties": {}, "additionalProperties": false}}
+assert_equal(json_schema_validate({}, descriptor["inputSchema"])["valid"], true)
+assert_equal(json_schema_validate({"shell": "anything"}, descriptor["inputSchema"])["valid"], false)
+print(to_json(descriptor))

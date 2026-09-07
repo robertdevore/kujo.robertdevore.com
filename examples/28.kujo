@@ -1,0 +1,4 @@
+let messages := [ai_message("system", "Return a bounded report."), ai_message("user", [ai_text("Inspect the fixture."), ai_image_url("https://example.test/image.png", "low")])]
+assert_equal(messages[0]["role"], "system")
+assert_equal(len(messages[1]["content"]), 2)
+print(to_json(messages))

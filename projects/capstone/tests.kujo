@@ -1,0 +1,12 @@
+test_group "operations boundary" {
+    test "unknown goal rejected" { from src.contracts import validate_request, count_jobs, evaluate
+ assert_equal(validate_request({"goal": "shell", "jobs": [], "max_steps": 2})["valid"], false) }
+    test "excess budget rejected" { from src.contracts import validate_request, count_jobs, evaluate
+ assert_equal(validate_request({"goal": "count_jobs", "jobs": [], "max_steps": 3})["valid"], false) }
+    test "correct count accepted" { from src.contracts import validate_request, count_jobs, evaluate
+ assert_equal(evaluate({"count": 2, "status": "complete"}, 2), true) }
+    test "plausible wrong count rejected" { from src.contracts import validate_request, count_jobs, evaluate
+ assert_equal(evaluate({"count": 3, "status": "complete"}, 2), false) }
+    test "extra action rejected" { from src.contracts import validate_request, count_jobs, evaluate
+ assert_equal(evaluate({"count": 2, "status": "complete", "shell": "unexpected"}, 2), false) }
+}

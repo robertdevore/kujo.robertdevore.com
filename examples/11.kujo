@@ -1,0 +1,9 @@
+func divide(a, b) {
+    if b == 0 { throw("denominator must be nonzero") }
+    return a / b
+}
+try { divide(3, 0) } except err {
+    assert_equal(contains(err.message, "denominator"), 1)
+    print("rejected denominator")
+}
+assert_equal(divide(6, 2), 3)

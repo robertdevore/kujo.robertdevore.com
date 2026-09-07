@@ -1,0 +1,2 @@
+let course_items := [1]
+course_items[0] := 2

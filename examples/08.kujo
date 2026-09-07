@@ -1,0 +1,9 @@
+let label := "outer"
+if true {
+    let label := "inner"
+    let captured := func() { return label }
+    assert_equal(captured(), "inner")
+    print(captured())
+}
+assert_equal(label, "outer")
+print(label)

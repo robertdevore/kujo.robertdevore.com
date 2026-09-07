@@ -1,0 +1,5 @@
+func evaluate(proposed, records) { return proposed["count"] == len(records) }
+let records := ["a", "b"]
+assert_equal(evaluate({"count": 2}, records), true)
+assert_equal(evaluate({"count": 3}, records), false)
+print("correct accepted; plausible wrong rejected")

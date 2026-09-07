@@ -1,0 +1,2 @@
+for n in [1, 2] { let label := to_string(n)
+print(label) }

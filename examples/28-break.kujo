@@ -1,0 +1,1 @@
+ai_chat("Hello", {"endpoint": "https://example.test/chat", "model": "course"})

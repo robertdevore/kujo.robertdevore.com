@@ -1,0 +1,5 @@
+let opts := {"endpoint": "http://127.0.0.1:1/v1/chat/completions", "model": "gpt-replay", "cassette": {"mode": "strict", "dir": "fixtures/ai"}}
+match ai_chat("Course replay miss", opts) {
+    case Err(err): { throw(to_string(err)) }
+    case Ok(payload): { print("unexpected response") }
+}

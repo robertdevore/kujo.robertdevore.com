@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "build-1",
+    "title": "Build 1: Local reporting utility",
+    "description": "Take job labels from command-line arguments, reject blank input, and produce a useful human-readable report.",
+    "file": "docs/build-1.md"
+  },
+  {
+    "slug": "build-2",
+    "title": "Build 2: Concurrent data processor",
+    "description": "Turn a fixed set of typed-looking domain records into ordered results using bounded async work.",
+    "file": "docs/build-2.md"
+  },
+  {
+    "slug": "build-3",
+    "title": "Build 3: Reusable package",
+    "description": "Create a standalone package with an exported module, tests, documentation, and machine-readable output.",
+    "file": "docs/build-3.md"
+  },
+  {
+    "slug": "build-4",
+    "title": "Build 4: Bounded native automation",
+    "description": "Read a contained fixture, run a controlled process, call a local HTTP fixture, and write a structured result.",
+    "file": "docs/build-4.md"
+  },
+  {
+    "slug": "build-5",
+    "title": "Build 5: Replay-backed AI automation",
+    "description": "Add an AI response boundary to a working local program and prove its response handling without live credentials.",
+    "file": "docs/build-5.md"
+  },
+  {
+    "slug": "build-6",
+    "title": "Build 6: Evaluated agentic workflow",
+    "description": "Combine a bounded goal, explicit context, proposed results, independent evaluation, and a final disposition.",
+    "file": "docs/build-6.md"
+  },
+  {
+    "slug": "capstone",
+    "title": "Local-first AI operations runner",
+    "description": "Build a complete path from validated request to evaluated result and evidence.",
+    "file": "docs/capstone.md"
+  },
+  {
+    "slug": "explorer",
+    "title": "Explore the verified examples",
+    "description": "Inspect actual source, captured output, and genuine failure diagnostics.",
+    "file": "docs/explorer.md"
+  },
+  {
+    "slug": "about",
+    "title": "About this course",
+    "description": "A Kujo-specific path for developers, built with Kujo itself.",
+    "file": "docs/about.md"
+  },
+  {
+    "slug": "evidence",
+    "title": "Evidence and freshness ledger",
+    "description": "Inspect the runtime version, verified examples, and known contract discrepancies.",
+    "file": "docs/evidence.md"
+  }
+]

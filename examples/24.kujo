@@ -1,0 +1,6 @@
+func accepted(response) {
+    return response["status"] == 200 && response["body"]["ok"] == true
+}
+assert_equal(accepted({"status": 200, "body": {"ok": true}}), true)
+assert_equal(accepted({"status": 503, "body": {"ok": false}}), false)
+print("response policy verified")

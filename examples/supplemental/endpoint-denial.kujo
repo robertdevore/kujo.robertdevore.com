@@ -1,0 +1,5 @@
+let opts := {"endpoint": "https://denied.example.test/v1/chat/completions", "model": "course", "structured_errors": true}
+match ai_chat("policy drill", opts) {
+    case Err(err): { assert_equal(err["kind"], "endpoint_denied") print(err["kind"]) }
+    case Ok(payload): { throw("unexpected endpoint success") }
+}

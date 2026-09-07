@@ -1,0 +1,5 @@
+async func double(value) { return value * 2 }
+let pending := double(5)
+let answer := await pending
+assert_equal(answer, 10)
+print(answer)

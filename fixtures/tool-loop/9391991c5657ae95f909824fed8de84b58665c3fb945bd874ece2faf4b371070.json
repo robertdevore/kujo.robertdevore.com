@@ -1,0 +1,36 @@
+{
+  "_cassette_version": 1,
+  "request_meta": {
+    "hash": "9391991c5657ae95f909824fed8de84b58665c3fb945bd874ece2faf4b371070",
+    "surface": "ai_tool_loop",
+    "endpoint": "http://127.0.0.1:4189/v1/chat/completions",
+    "model": "course-fixture",
+    "normalized": {
+      "_hash_version": 1,
+      "body": {
+        "messages": [
+          {
+            "content": "Count the fixture jobs.",
+            "role": "user"
+          }
+        ],
+        "model": "course-fixture",
+        "stream": false
+      },
+      "endpoint": "http://127.0.0.1:4189/v1/chat/completions",
+      "headers": [],
+      "model": "course-fixture"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "date": "[redacted]",
+      "keep-alive": "timeout=5",
+      "content-type": "application/json",
+      "connection": "keep-alive",
+      "transfer-encoding": "chunked"
+    },
+    "body": "{\"choices\":[{\"message\":{\"role\":\"assistant\",\"content\":null,\"tool_calls\":[{\"id\":\"course_call_1\",\"type\":\"function\",\"function\":{\"name\":\"count_jobs\",\"arguments\":\"{}\"}}]},\"finish_reason\":\"tool_calls\"}],\"usage\":{\"prompt_tokens\":10,\"completion_tokens\":8,\"total_tokens\":18}}"
+  }
+}

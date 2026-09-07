@@ -1,0 +1,5 @@
+let state := {"schema": "course.state/v1", "completed": ["report"]}
+let encoded := to_json(state)
+let restored := parse_json(encoded)
+assert_equal(restored, state)
+print(encoded)

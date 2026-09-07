@@ -1,0 +1,5 @@
+let key := secret("course-synthetic-key")
+assert_equal(is_secret(key), true)
+let output := to_json({"key": key})
+assert_equal(contains(output, "course-synthetic-key"), 0)
+print(output)

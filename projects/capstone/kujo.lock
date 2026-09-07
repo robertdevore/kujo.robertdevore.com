@@ -1,0 +1,7 @@
+schema_version = 1
+
+[package]
+name = "course-operations-runner"
+version = "0.1.0"
+
+[dependencies]

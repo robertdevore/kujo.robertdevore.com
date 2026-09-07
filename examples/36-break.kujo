@@ -1,0 +1,2 @@
+let spec := {"max_attempts": 0}
+assert_true(spec["max_attempts"] > 0)

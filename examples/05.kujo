@@ -1,0 +1,9 @@
+func select(values) {
+    mut accepted := []
+    for value in values {
+        if value > 0 { accepted = push(accepted, value) }
+    }
+    return accepted
+}
+assert_equal(select([-1, 2, 0, 4]), [2, 4])
+print(to_json(select([-1, 2, 0, 4])))

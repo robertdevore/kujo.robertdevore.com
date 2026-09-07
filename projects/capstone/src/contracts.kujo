@@ -1,0 +1,14 @@
+/// Validate bounded input before selecting a tool or contacting AI.
+export func validate_request(request) {
+    let schema := {"type": "object", "required": ["goal", "jobs", "max_steps"], "additionalProperties": false, "properties": {"goal": {"const": "count_jobs"}, "max_steps": {"type": "integer", "minimum": 1, "maximum": 2}, "jobs": {"type": "array", "maxItems": 100, "items": {"type": "object", "required": ["name"], "additionalProperties": false, "properties": {"name": {"type": "string", "minLength": 1, "maxLength": 80}}}}}}
+    return json_schema_validate(request, schema)
+}
+/// The local tool has no host effects and accepts no model-controlled paths.
+export func count_jobs(jobs) { return len(jobs) }
+/// A model claim must pass both schema and independent local evaluation.
+export func evaluate(proposal, actual) {
+    let schema := {"type": "object", "required": ["count", "status"], "additionalProperties": false, "properties": {"count": {"type": "integer", "minimum": 0, "maximum": 100}, "status": {"const": "complete"}}}
+    let validation := json_schema_validate(proposal, schema)
+    if validation["valid"] == false { return false }
+    return proposal["count"] == actual
+}

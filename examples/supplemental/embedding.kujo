@@ -1,0 +1,5 @@
+let opts := {"endpoint": "http://127.0.0.1:1/v1/embeddings", "model": "embed-replay", "cassette": {"mode": "strict", "dir": "fixtures/ai"}}
+match ai_embedding("seed text", opts) {
+    case Ok(payload): { print(to_json(payload["vector"])) }
+    case Err(err): { throw(to_string(err)) }
+}

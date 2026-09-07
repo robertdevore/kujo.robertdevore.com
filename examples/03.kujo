@@ -1,0 +1,7 @@
+const limit := 3
+mut count := 0
+count += 1
+mut report := {"count": count, "limit": limit}
+report["count"] += 1
+assert_equal(report["count"], 2)
+print(to_json(report))

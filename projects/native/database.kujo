@@ -1,0 +1,7 @@
+let db := db_connect("sqlite", ":memory:")
+db_execute(db, "CREATE TABLE jobs (name TEXT, units INTEGER)", [])
+db_execute(db, "INSERT INTO jobs VALUES (?, ?)", ["report", 2])
+let rows := db_query(db, "SELECT name, units FROM jobs ORDER BY name", [])
+assert_equal(len(rows), 1)
+assert_equal(rows[0]["units"], 2)
+print(to_json(rows))

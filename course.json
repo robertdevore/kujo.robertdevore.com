@@ -1,0 +1,426 @@
+{
+  "version": "1.3.1",
+  "verifiedDate": "2026-09-06",
+  "stages": [
+    "Kujo foundations",
+    "Language semantics",
+    "Projects and tooling",
+    "Native automation",
+    "AI-native programming",
+    "Agentic systems"
+  ],
+  "lessons": [
+    {
+      "id": "01",
+      "stage": 1,
+      "slug": "what-is-kujo",
+      "title": "What Kujo is",
+      "description": "Start with a goal, an executable program, and evidence.",
+      "flags": [],
+      "reason": "The expected value is wrong. Read the actual assertion failure; successful execution and a correct result are different claims.",
+      "source": "docs/LANGUAGE_SPEC.md"
+    },
+    {
+      "id": "02",
+      "stage": 1,
+      "slug": "setup-and-cli",
+      "title": "Installation, CLI, and your first program",
+      "description": "Pin the release, choose the VM, and learn the command boundaries.",
+      "flags": [],
+      "reason": "The parameter list is malformed. This is a parser failure; the body never runs.",
+      "source": "docs/LANGUAGE_SPEC.md"
+    },
+    {
+      "id": "03",
+      "stage": 1,
+      "slug": "bindings-and-mutability",
+      "title": "Bindings, values, and mutability",
+      "description": "Use let, mut, and const according to Kujo’s actual rules.",
+      "flags": [],
+      "reason": "Mutation through an immutable binding is rejected.",
+      "source": "docs/LANGUAGE_SPEC.md"
+    },
+    {
+      "id": "04",
+      "stage": 1,
+      "slug": "values-and-truthiness",
+      "title": "Values, operators, and truthiness",
+      "description": "Predict boolean results, checked arithmetic, and equality.",
+      "flags": [],
+      "reason": "The operands are valid integers but their sum exceeds the signed 64-bit range. The runtime must reject overflow rather than wrap silently.",
+      "source": "docs/LANGUAGE_SPEC.md"
+    },
+    {
+      "id": "05",
+      "stage": 1,
+      "slug": "control-flow",
+      "title": "Control flow and block scopes",
+      "description": "Make decisions, terminate loops, and keep iteration state local.",
+      "flags": [],
+      "reason": "A never-declared name is a runtime error. The separate scope probe records the release discrepancy.",
+      "source": "docs/LANGUAGE_SPEC.md"
+    },
+    {
+      "id": "06",
+      "stage": 1,
+      "slug": "functions",
+      "title": "Functions, callbacks, and return values",
+      "description": "Extract decisions into small functions with explicit results.",
+      "flags": [],
+      "reason": "The function requires two positional arguments. The failure concerns arity, not the arithmetic inside the function.",
+      "source": "docs/LANGUAGE_SPEC.md"
+    },
+    {
+      "id": "07",
+      "stage": 1,
+      "slug": "collections-and-pipelines",
+      "title": "Collections, pipes, and null handling",
+      "description": "Transform structured data without hiding missing-value errors.",
+      "flags": [],
+      "reason": "The missing dictionary key throws before null coalescing can select a fallback.",
+      "source": "docs/LANGUAGE_SPEC.md"
+    },
+    {
+      "id": "08",
+      "stage": 2,
+      "slug": "scope-and-capture",
+      "title": "Scope, shadowing, and capture",
+      "description": "Locate state by lexical binding, then test capture assumptions.",
+      "flags": [],
+      "reason": "Two declarations target the same lexical scope. This is a duplicate declaration, not valid shadowing.",
+      "source": "docs/LANGUAGE_SPEC.md"
+    },
+    {
+      "id": "09",
+      "stage": 2,
+      "slug": "structs-and-enums",
+      "title": "Structs and enums",
+      "description": "Model domain records and states before adding behavior.",
+      "flags": [],
+      "reason": "Runtime structs are not directly JSON-serializable; select a dictionary of fields.",
+      "source": "docs/LANGUAGE_SPEC.md"
+    },
+    {
+      "id": "10",
+      "stage": 2,
+      "slug": "match-result-option",
+      "title": "Match, Result, and Option",
+      "description": "Give expected failure and absence their own states.",
+      "flags": [],
+      "reason": "An out-of-bounds lookup is a runtime error, not automatically None. Wrap an explicit bounds decision in an Option-returning function when absence is part of your API.",
+      "source": "docs/LANGUAGE_SPEC.md"
+    },
+    {
+      "id": "11",
+      "stage": 2,
+      "slug": "exceptions",
+      "title": "Exceptions and recoverable errors",
+      "description": "Catch failures at the boundary that can make a decision.",
+      "flags": [],
+      "reason": "No exception boundary handles this deliberate failure, so the command must fail.",
+      "source": "docs/LANGUAGE_SPEC.md"
+    },
+    {
+      "id": "12",
+      "stage": 2,
+      "slug": "optional-typing",
+      "title": "Optional typing without imaginary guarantees",
+      "description": "Use annotations while respecting dynamic VM execution.",
+      "flags": [],
+      "reason": "The runtime operation receives an incompatible dictionary. This demonstrates dynamic execution failure, not a static type-check guarantee.",
+      "source": "docs/LANGUAGE_SPEC.md"
+    },
+    {
+      "id": "13",
+      "stage": 2,
+      "slug": "async-and-await",
+      "title": "Async functions and await",
+      "description": "Own pending work and inspect its completion.",
+      "flags": [],
+      "reason": "The awaited operation rejects. Completion must propagate the failure rather than produce a success receipt.",
+      "source": "docs/LANGUAGE_SPEC.md"
+    },
+    {
+      "id": "14",
+      "stage": 2,
+      "slug": "bounded-concurrency",
+      "title": "Spawn and bounded concurrent work",
+      "description": "Choose owned results over timing assumptions.",
+      "flags": [],
+      "reason": "A failed worker must make the awaited batch fail. Do not accept a partial batch as a complete result.",
+      "source": "docs/LANGUAGE_SPEC.md"
+    },
+    {
+      "id": "15",
+      "stage": 3,
+      "slug": "modules",
+      "title": "Modules and explicit exports",
+      "description": "Separate reusable code from entrypoint effects.",
+      "flags": [],
+      "reason": "The requested module does not exist in the configured roots. This is a resolution failure, not a provider installation request.",
+      "source": "docs/CLI_MACHINE_READABLE_CONTRACTS.md"
+    },
+    {
+      "id": "16",
+      "stage": 3,
+      "slug": "projects-and-lockfiles",
+      "title": "Projects, packages, and lockfiles",
+      "description": "Reproduce a manifest without inventing a public registry.",
+      "flags": [],
+      "reason": "This small assertion illustrates the invariant. The real package drift failure is additionally exercised and recorded by the package integration gate; a string comparison is not a substitute for that gate.",
+      "source": "docs/CLI_MACHINE_READABLE_CONTRACTS.md"
+    },
+    {
+      "id": "17",
+      "stage": 3,
+      "slug": "standard-library",
+      "title": "Finding the standard library contract",
+      "description": "Look up arity, result shape, failure, and authority before calling.",
+      "flags": [],
+      "reason": "The text is malformed JSON. The native parser returns a real parse-location failure instead of silently producing empty data.",
+      "source": "docs/CLI_MACHINE_READABLE_CONTRACTS.md"
+    },
+    {
+      "id": "18",
+      "stage": 3,
+      "slug": "testing",
+      "title": "Testing, fixtures, and runtime evidence",
+      "description": "Make failures intentional and success independently checkable.",
+      "flags": [],
+      "reason": "This intentionally incorrect expectation must fail. A verifier that accepts it cannot establish correctness.",
+      "source": "docs/CLI_MACHINE_READABLE_CONTRACTS.md"
+    },
+    {
+      "id": "19",
+      "stage": 3,
+      "slug": "machine-contracts",
+      "title": "Diagnostics and machine-readable interfaces",
+      "description": "Serve humans and agents from one explicit result contract.",
+      "flags": [],
+      "reason": "Run this with --json-runtime-diagnostics as an additional drill. JSON on stdout must not override the nonzero failure exit.",
+      "source": "docs/CLI_MACHINE_READABLE_CONTRACTS.md"
+    },
+    {
+      "id": "20",
+      "stage": 3,
+      "slug": "documentation",
+      "title": "Documentation as a build artifact",
+      "description": "Generate API evidence and write the decisions extraction cannot infer.",
+      "flags": [],
+      "reason": "The call violates the documented input boundary. Keeping a failing usage drill beside docs helps reveal examples that cannot actually run.",
+      "source": "docs/CLI_MACHINE_READABLE_CONTRACTS.md"
+    },
+    {
+      "id": "21",
+      "stage": 3,
+      "slug": "editor-and-lsp",
+      "title": "Editor integration and the LSP boundary",
+      "description": "Keep tooling connected to the same language contract.",
+      "flags": [],
+      "reason": "The malformed parameter list is diagnosed without executing a program. Compare CLI checking with LSP diagnostics on this same source.",
+      "source": "docs/CLI_MACHINE_READABLE_CONTRACTS.md"
+    },
+    {
+      "id": "22",
+      "stage": 4,
+      "slug": "filesystem",
+      "title": "Filesystem automation with bounded paths",
+      "description": "Read intended inputs and make writes deliberate.",
+      "flags": [
+        "--allow-fs-read"
+      ],
+      "reason": "The relative path tries to escape the selected root. Filesystem-read authority is granted, so rejection should concern path containment.",
+      "source": "docs/NATIVE_API_SECURITY_POSTURE.md"
+    },
+    {
+      "id": "23",
+      "stage": 4,
+      "slug": "processes",
+      "title": "Processes without unnecessary shells",
+      "description": "Use argv, bounded output, and an explicit result receipt.",
+      "flags": [
+        "--allow-process-exec"
+      ],
+      "reason": "The argv array is empty. The call must reject invalid arguments before starting a child process.",
+      "source": "docs/NATIVE_API_SECURITY_POSTURE.md"
+    },
+    {
+      "id": "24",
+      "stage": 4,
+      "slug": "http-and-networking",
+      "title": "HTTP and network boundaries",
+      "description": "Separate response handling from live transport.",
+      "flags": [],
+      "reason": "This drill has no network-client allowance. It must fail at the capability boundary before any socket is useful. The project integration gate tests real local HTTP separately.",
+      "source": "docs/NATIVE_API_SECURITY_POSTURE.md"
+    },
+    {
+      "id": "25",
+      "stage": 4,
+      "slug": "data-and-persistence",
+      "title": "Structured data and local persistence",
+      "description": "Store explicit schemas and keep migrations inspectable.",
+      "flags": [],
+      "reason": "The persisted representation is malformed. Loading must reject it rather than return an apparently empty state.",
+      "source": "docs/NATIVE_API_SECURITY_POSTURE.md"
+    },
+    {
+      "id": "26",
+      "stage": 4,
+      "slug": "capability-security",
+      "title": "Trusted execution and minimum authority",
+      "description": "Prove a denial, grant one effect, and test the remaining boundary.",
+      "flags": [
+        "--allow-fs-read"
+      ],
+      "reason": "The lesson grants read authority only. A write must still be denied; the gate must not create the target file.",
+      "source": "docs/NATIVE_API_SECURITY_POSTURE.md"
+    },
+    {
+      "id": "27",
+      "stage": 4,
+      "slug": "secret-boundaries",
+      "title": "Secrets, redaction, and endpoint policy",
+      "description": "Keep credential values out of ordinary output.",
+      "flags": [],
+      "reason": "reveal deliberately returns the inner value. The failed assertion demonstrates why revealing before logging defeats the wrapper.",
+      "source": "docs/NATIVE_API_SECURITY_POSTURE.md"
+    },
+    {
+      "id": "28",
+      "stage": 5,
+      "slug": "ai-effects-and-messages",
+      "title": "AI effects and portable messages",
+      "description": "Treat model responses as uncertain external input.",
+      "flags": [],
+      "reason": "This call has no AI capability allowance. Constructing messages is pure, but making the AI request is an effect.",
+      "source": "docs/AI_RUNTIME.md"
+    },
+    {
+      "id": "29",
+      "stage": 5,
+      "slug": "request-identity",
+      "title": "Deterministic request identity",
+      "description": "Know which work a cassette or cache entry represents.",
+      "flags": [],
+      "reason": "The prompts represent different work, so the deliberately equal-hash expectation fails.",
+      "source": "docs/AI_RUNTIME.md"
+    },
+    {
+      "id": "30",
+      "stage": 5,
+      "slug": "record-and-replay",
+      "title": "Record, replay, and offline evidence",
+      "description": "Make AI integration tests independent of a live provider.",
+      "flags": [
+        "--allow-ai"
+      ],
+      "reason": "The changed request has no cassette. Strict mode must report replay_miss and must not contact the endpoint.",
+      "source": "docs/AI_RUNTIME.md"
+    },
+    {
+      "id": "31",
+      "stage": 5,
+      "slug": "streaming",
+      "title": "Streaming and cancellation",
+      "description": "Distinguish delivered chunks from a completed domain result.",
+      "flags": [
+        "--allow-ai"
+      ],
+      "reason": "The callback is not callable. The runtime must reject the invalid callback contract.",
+      "source": "docs/AI_RUNTIME.md"
+    },
+    {
+      "id": "32",
+      "stage": 5,
+      "slug": "structured-outputs",
+      "title": "Structured outputs and schema validation",
+      "description": "Parse text, validate shape, then evaluate meaning.",
+      "flags": [],
+      "reason": "The string is valid JSON-like data but violates the required integer type. The acceptance assertion must fail.",
+      "source": "docs/AI_RUNTIME.md"
+    },
+    {
+      "id": "33",
+      "stage": 5,
+      "slug": "context-and-vectors",
+      "title": "Context budgets, embeddings, and vectors",
+      "description": "Bound context and keep retrieval policy outside core math.",
+      "flags": [],
+      "reason": "The vectors have different dimensions. Ranking and similarity require compatible numeric shapes.",
+      "source": "docs/AI_RUNTIME.md"
+    },
+    {
+      "id": "34",
+      "stage": 5,
+      "slug": "tool-loops",
+      "title": "Bounded AI tool loops",
+      "description": "Validate a proposed call before supplying a tool result.",
+      "flags": [
+        "--allow-ai"
+      ],
+      "reason": "Zero is not a valid finite step budget for this API. The invalid options must reject before a request is useful.",
+      "source": "docs/AI_RUNTIME.md"
+    },
+    {
+      "id": "35",
+      "stage": 6,
+      "slug": "mechanism-and-policy",
+      "title": "Mechanism versus policy",
+      "description": "Compose an application without turning the language into a framework.",
+      "flags": [],
+      "reason": "The attempt budget is exhausted. A policy that still accepts another attempt would violate the bound.",
+      "source": "docs/V1_SCOPE.md"
+    },
+    {
+      "id": "36",
+      "stage": 6,
+      "slug": "loop-engineering",
+      "title": "Loop Engineering, specs, and stop conditions",
+      "description": "Turn an open-ended request into bounded work.",
+      "flags": [],
+      "reason": "The proposed execution budget permits no valid attempt. Reject the spec before starting work.",
+      "source": "docs/V1_SCOPE.md"
+    },
+    {
+      "id": "37",
+      "stage": 6,
+      "slug": "evaluation",
+      "title": "Evaluation independent of generation",
+      "description": "Reject plausible but wrong output with observable criteria.",
+      "flags": [],
+      "reason": "The proposal has the right shape but the wrong factual count. Independent evaluation rejects it.",
+      "source": "docs/V1_SCOPE.md"
+    },
+    {
+      "id": "38",
+      "stage": 6,
+      "slug": "evidence-and-handoffs",
+      "title": "Evidence, run records, and work boundaries",
+      "description": "Leave enough proof for the next person or program.",
+      "flags": [],
+      "reason": "The receipt claims PASS without passing evaluation. A status label cannot replace evidence.",
+      "source": "docs/V1_SCOPE.md"
+    },
+    {
+      "id": "39",
+      "stage": 6,
+      "slug": "isolation-and-observability",
+      "title": "Isolation, observability, and watchdogs",
+      "description": "Control the host and detect failures outside the happy path.",
+      "flags": [],
+      "reason": "The observed attempt count exceeds policy. A watchdog must report a violation rather than normalize it away.",
+      "source": "docs/V1_SCOPE.md"
+    },
+    {
+      "id": "40",
+      "stage": 6,
+      "slug": "mcp-interoperability",
+      "title": "MCP and external tool interoperability",
+      "description": "Expose a schema without confusing discovery with authority.",
+      "flags": [],
+      "reason": "The extra argument is outside the tool schema. Discovery metadata must not allow arbitrary execution parameters.",
+      "source": "docs/V1_SCOPE.md"
+    }
+  ]
+}

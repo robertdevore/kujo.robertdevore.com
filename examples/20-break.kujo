@@ -1,0 +1,2 @@
+func doubled(quantity) { return quantity * 2 }
+print(doubled())

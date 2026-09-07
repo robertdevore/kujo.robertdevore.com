@@ -1,0 +1,15 @@
+func main() {
+func double(x) { return x * 2 }
+let config := {"limit": 2, "label": "jobs"}
+let adjusted := {...config, "limit": 3}
+mut values := [1, 2]
+values := push(values, 3)
+let all := [0, ...values]
+assert_equal(adjusted["limit"], 3)
+assert_equal(null ?? 9, 9)
+assert_equal(0 ?? 9, 0)
+print(4 |> double)
+print(to_json(all))
+
+}
+main()

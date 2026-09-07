@@ -1,0 +1,9 @@
+mut hits := 0
+for value in [false, null, 0, 0.0, "", [], {}, "false", [0]] {
+    if value { hits += 1 }
+}
+assert_equal(hits, 2)
+assert_equal(true && 5, true)
+assert_equal(false || "fallback", true)
+assert_equal(1 == 1.0, true)
+print(hits)

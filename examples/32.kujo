@@ -1,0 +1,5 @@
+let schema := {"type": "object", "required": ["count"], "properties": {"count": {"type": "integer", "minimum": 0, "maximum": 100}}, "additionalProperties": false}
+assert_equal(json_schema_validate({"count": 2}, schema)["valid"], true)
+let rejected := json_schema_validate({"count": -1}, schema)
+assert_equal(rejected["valid"], false)
+print(to_json(rejected))

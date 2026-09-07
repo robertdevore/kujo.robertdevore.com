@@ -1,0 +1,6 @@
+func first_chunk(delta, raw) { print(delta) return false }
+let opts := {"endpoint": "http://127.0.0.1:1/v1/chat/completions", "model": "gpt-replay", "cassette": {"mode": "strict", "dir": "fixtures/ai"}}
+match ai_stream_chat("Stream please", opts, first_chunk) {
+    case Ok(payload): { print("stream callback completed") }
+    case Err(err): { throw(to_string(err)) }
+}

@@ -1,0 +1,3 @@
+let text := read_file_beneath("fixtures", "input.txt", 1024)
+assert_equal(trim(text), "Kujo fixture")
+print(trim(text))

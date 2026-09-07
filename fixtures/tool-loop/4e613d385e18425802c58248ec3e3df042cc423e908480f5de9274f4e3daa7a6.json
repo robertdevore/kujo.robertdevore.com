@@ -1,0 +1,45 @@
+{
+  "_cassette_version": 1,
+  "request_meta": {
+    "hash": "4e613d385e18425802c58248ec3e3df042cc423e908480f5de9274f4e3daa7a6",
+    "surface": "ai_tool_loop",
+    "endpoint": "http://127.0.0.1:4189/v1/chat/completions",
+    "model": "course-fixture",
+    "normalized": {
+      "_hash_version": 1,
+      "body": {
+        "messages": [
+          {
+            "content": "Count the fixture jobs.",
+            "role": "user"
+          },
+          {
+            "content": "",
+            "role": "assistant"
+          },
+          {
+            "content": "2",
+            "name": "count_jobs",
+            "role": "tool"
+          }
+        ],
+        "model": "course-fixture",
+        "stream": false
+      },
+      "endpoint": "http://127.0.0.1:4189/v1/chat/completions",
+      "headers": [],
+      "model": "course-fixture"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "transfer-encoding": "chunked",
+      "date": "[redacted]",
+      "content-type": "application/json",
+      "keep-alive": "timeout=5",
+      "connection": "keep-alive"
+    },
+    "body": "{\"choices\":[{\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"count\\\":2,\\\"status\\\":\\\"complete\\\"}\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":10,\"completion_tokens\":8,\"total_tokens\":18}}"
+  }
+}

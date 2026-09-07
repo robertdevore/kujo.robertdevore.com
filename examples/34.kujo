@@ -1,0 +1,5 @@
+let opts := {"endpoint": "http://127.0.0.1:4189/v1/chat/completions", "model": "course-fixture", "max_steps": 2, "tool_results": {"count_jobs": "2"}, "cassette": {"mode": "strict", "dir": "fixtures/tool-loop"}}
+match ai_tool_loop("Count the fixture jobs.", opts) {
+    case Ok(payload): { assert_equal(payload["steps"], 2) print(payload["message"]) }
+    case Err(err): { throw(to_string(err)) }
+}

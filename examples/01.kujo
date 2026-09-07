@@ -1,0 +1,8 @@
+func accepted_total(values) {
+    mut total := 0
+    for value in values { if value > 0 { total += value } }
+    return total
+}
+let total := accepted_total([3, -2, 7])
+assert_equal(total, 10)
+print("accepted total: " + to_string(total))

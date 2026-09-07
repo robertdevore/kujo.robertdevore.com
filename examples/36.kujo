@@ -1,0 +1,5 @@
+let spec := {"goal": "count fixture jobs", "max_attempts": 2, "expected_count": 2}
+func evaluate(count, expected) { return count == expected }
+assert_equal(evaluate(2, spec["expected_count"]), true)
+assert_equal(spec["max_attempts"] > 0, true)
+print(to_json({"verdict": "PASS", "attempts": 1}))

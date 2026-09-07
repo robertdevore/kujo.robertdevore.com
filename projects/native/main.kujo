@@ -1,0 +1,10 @@
+# Run from the course root. Controlled loopback HTTP is an integration fixture.
+let input_text := trim(read_file_beneath("fixtures", "input.txt", 1024))
+let process := spawn_process(["/usr/bin/printf", "%s", input_text], {"timeout_ms": 2000, "max_output_bytes": 1024, "inherit_env": false})
+assert_equal(process.success, true)
+assert_equal(process.stdout_truncated, false)
+let response := http_get("http://127.0.0.1:4190/health")
+print(to_json(response))
+let receipt := {"schema": "course.automation/v1", "input": input_text, "process_ok": process.success}
+write_file("work/automation.json", to_json(receipt), true)
+print(to_json(receipt))

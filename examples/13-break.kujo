@@ -1,0 +1,3 @@
+async func fail() { throw("async operation rejected") }
+let result := await fail()
+print(result)

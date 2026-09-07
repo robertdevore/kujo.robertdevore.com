@@ -1,0 +1,4 @@
+func double(value: int) -> int { return value * 2 }
+let answer: int := double(4)
+assert_equal(answer, 8)
+print(answer)

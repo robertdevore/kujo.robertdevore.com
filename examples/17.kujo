@@ -1,0 +1,3 @@
+let data := parse_json(to_json({"items": [2, 3]}))
+assert_equal(len(data["items"]), 2)
+print(to_json({"count": len(data["items"])}))

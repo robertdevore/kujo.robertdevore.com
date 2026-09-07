@@ -1,0 +1,4 @@
+/// Return twice the supplied numeric quantity. Performs no host effects.
+export func doubled(quantity) { return quantity * 2 }
+assert_equal(doubled(3), 6)
+print(doubled(3))

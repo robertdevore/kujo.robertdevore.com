@@ -1,0 +1,2 @@
+let opts := {"endpoint": "https://example.test/chat", "model": "course"}
+assert_equal(ai_request_hash("first", opts), ai_request_hash("second", opts))

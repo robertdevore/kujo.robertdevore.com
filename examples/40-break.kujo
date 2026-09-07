@@ -1,0 +1,2 @@
+let schema := {"type": "object", "properties": {}, "additionalProperties": false}
+assert_equal(json_schema_validate({"shell": "unexpected"}, schema)["valid"], true)

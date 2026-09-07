@@ -1,0 +1,4 @@
+struct Job { units: int }
+mut job := Job { units: 3 }
+job.units = 4
+print(job.units)

@@ -1,0 +1,8 @@
+test_group "report calculation" {
+    test_setup { print("setup") }
+    test "empty input" { from src.report import total
+ assert_equal(total([]), 0) }
+    test "positive values" { from src.report import total
+ assert_equal(total([2, 3]), 5) }
+    test_teardown { print("teardown") }
+}

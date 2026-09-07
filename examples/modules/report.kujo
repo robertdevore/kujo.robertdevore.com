@@ -1,0 +1,5 @@
+export func total(values) {
+    mut sum := 0
+    for value in values { sum += value }
+    return sum
+}

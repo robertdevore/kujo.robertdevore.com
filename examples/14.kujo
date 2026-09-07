@@ -1,0 +1,4 @@
+async func worker(value) { return value * 2 }
+let result := await parallel_map([3, 1, 2], worker, 2)
+assert_equal(result, [6, 2, 4])
+print(to_json(result))

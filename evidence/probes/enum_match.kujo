@@ -1,0 +1,2 @@
+enum State { Ready, Failed }
+match State::Ready("checked") { case State::Ready(note): { print(note) } default: { print("default") } }

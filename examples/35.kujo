@@ -1,0 +1,5 @@
+func may_retry(attempt, maximum, retryable) { return retryable && attempt < maximum }
+assert_equal(may_retry(1, 2, true), true)
+assert_equal(may_retry(2, 2, true), false)
+assert_equal(may_retry(1, 2, false), false)
+print("retry policy verified")

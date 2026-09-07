@@ -1,0 +1,9 @@
+struct Job {
+    name: string,
+    units: int,
+    func doubled() { return units * 2 }
+}
+let job := Job { name: "report", units: 3 }
+assert_equal(job.doubled(), 6)
+print(to_json({"name": job.name, "units": job.units}))
+

@@ -1,0 +1,3 @@
+mut course_rows := [1]
+course_rows = push(course_rows, 2)
+print(course_rows)
