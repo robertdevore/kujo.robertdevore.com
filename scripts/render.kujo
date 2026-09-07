@@ -37,7 +37,9 @@ func course_markdown(source) {
 func escape(value) { return escape_xml(to_string(value)) }
 func render_page(title, description, route, inner, layout) {
     canonical := "https://kujo.robertdevore.com" + route
-    html := replace(layout, "{{page_title}}", escape(title + " · Kujo Course"))
+    document_title := title + " · Kujo Course"
+    if route == "/" { document_title = title }
+    html := replace(layout, "{{page_title}}", escape(document_title))
     html = replace(html, "{{meta_description}}", escape(description))
     html = replace(html, "{{canonical_tag}}", "<link rel=\"canonical\" href=\"" + canonical + "\">")
     html = replace(html, "{{seo_title}}", escape(title))
@@ -81,7 +83,7 @@ func main() {
     layout := read_file("templates/layout.html")
     post := read_file("templates/post.html")
     page := read_file("templates/page.html")
-    render_page("Learn Kujo: write, run, prove", "A practical Kujo programming course: 40 lessons, six stage builds, and a replay-backed AI operations capstone.", "/", read_file("templates/page-home.html"), layout)
+    render_page("Clarity. Context. Control.", "A practical Kujo programming course: 40 lessons, six stage builds, and a replay-backed AI operations capstone.", "/", read_file("templates/page-home.html"), layout)
     render_page("The course map", "40 lessons across six stages, from Kujo foundations to reliable AI-native systems.", "/course/", read_file("templates/page-course.html"), layout)
     redirects := "/course /course/ 301\n"
     sitemap := "<?xml version=\"1.0\" encoding=\"UTF-8\"?><urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"><url><loc>https://kujo.robertdevore.com/</loc></url><url><loc>https://kujo.robertdevore.com/course/</loc></url>"
