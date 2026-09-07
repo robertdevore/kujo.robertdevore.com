@@ -66,5 +66,5 @@ print(to_json({"schema": "course.package/v1", "total": total([2, 3])}))
 
 <div class="lesson-actions"><button class="complete" data-complete="build-3" type="button">Mark build complete</button><span data-complete-status></span></div>
 
-[Return to the course map →](/course/)
+[Return to the course map](/course/)
 

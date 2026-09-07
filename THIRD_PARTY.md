@@ -8,3 +8,5 @@
 - scripts/social-card.svg is an original typography-only social card. assets/social.png is its 1200×630 rasterization with macOS sips.
 
 Departure Mono Regular is self-hosted from the official Kujo website repository; its SIL Open Font License is in assets/fonts/DepartureMono-LICENSE.txt. The unmodified Kujo logomark and favicon were retrieved from https://kujolang.ai/assets/images/kujo-logomark.svg on 2026-09-07 at the site owner’s request. Kujo branding identifies the language; no external endorsement is claimed. Howl produces the showcase SVG/HTML/Markdown from howl.json and the verified examples/02.kujo.
+
+Interface icons use locally hosted Tabler Icons v3.46.0 outline SVGs from https://github.com/tabler/tabler-icons, distributed under MIT (assets/icons/LICENSE). CSS masks preserve their paths and inherit monochrome interface color. The Kujo logomark remains the language brand identity.

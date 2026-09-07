@@ -2,7 +2,7 @@
 
 Build a Kujo-native operations runner that accepts a bounded request, assembles explicit context, uses a controlled local tool with replay-backed AI, independently evaluates the response, and writes an inspectable evidence packet. A run must be useful to a human and machine-readable to another program.
 
-<div class="flow">Request → Validate → Context → Bounded executor → Tool → Evaluate → Evidence → PASS / REVISE / STOP</div>
+<div class="flow">Request <span class="icon icon-arrow-right" aria-hidden="true"></span> Validate <span class="icon icon-arrow-right" aria-hidden="true"></span> Context <span class="icon icon-arrow-right" aria-hidden="true"></span> Bounded executor <span class="icon icon-arrow-right" aria-hidden="true"></span> Tool <span class="icon icon-arrow-right" aria-hidden="true"></span> Evaluate <span class="icon icon-arrow-right" aria-hidden="true"></span> Evidence <span class="icon icon-arrow-right" aria-hidden="true"></span> PASS / REVISE / STOP</div>
 
 This is a small complete system with a narrow operation: count a supplied local job fixture. Its value is the visible architecture. Expanding the set of operations is an exercise in maintaining these boundaries, not a reason to add arbitrary shell execution.
 
