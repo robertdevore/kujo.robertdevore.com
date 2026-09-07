@@ -1,6 +1,6 @@
 ## Why this exists
 
-Waiting for external work should not force an application into a collection of hidden lifecycle assumptions. Async functions make pending results explicit. The owner still needs to await them, handle rejection, and decide when the overall run is complete.
+Async functions make pending results explicit while an application waits for external work. The owner still needs to await them, handle rejection, and decide when the overall run is complete.
 
 ## Runtime contract
 

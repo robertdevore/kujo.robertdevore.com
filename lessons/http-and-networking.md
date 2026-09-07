@@ -36,7 +36,7 @@ From the course repository root, use the pinned Kujo 1.3.1 runtime.
 
 ## Break it and diagnose it
 
-This drill has no network-client allowance. It must fail at the capability boundary before any socket is useful. The project integration gate tests real local HTTP separately.
+This drill has no network-client allowance. The capability check must reject the call before network access. The project integration gate tests real local HTTP separately.
 
 {{broken}}
 

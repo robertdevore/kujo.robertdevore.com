@@ -6,11 +6,11 @@ An undocumented function can be syntactically correct and still be unusable by a
 
 kujo docgen extracts documentation from source. Triple-slash documentation comments can accompany exported functions. Use the current help to select an output directory and format; the course exercises docgen with JSON output and a bounded source target.
 
-The machine summary includes generated paths, item counts, diagnostics, gaps, and contract information. A generated file existing does not prove every public symbol has useful documentation. Inspect gap counts and enable appropriate failure gates when they match your project's policy.
+The machine summary includes generated paths, item counts, diagnostics, gaps, and contract information. Generating a file does not establish that every public symbol has useful documentation. Inspect gap counts and enable appropriate failure gates when they match your project's policy.
 
 ## Read the example
 
-The comment describes the calculation and its lack of host effects. The function is exported so it can become a public module boundary. An example and an assertion keep its usage grounded in executable behavior.
+The comment describes the calculation and its lack of host effects. The function is exported so it can become a public module boundary. The example shows how to call it; the assertion checks its result.
 
 Generated API docs cannot decide why you chose Result over exceptions, which endpoint an operator should trust, or whether retrying an action is safe. Write those decisions in project documentation alongside generated references.
 

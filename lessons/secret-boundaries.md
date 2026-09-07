@@ -1,6 +1,6 @@
 ## Mental model
 
-A secret is a value whose display behavior must differ from an ordinary string. Redaction helps prevent accidental logging, but the application still owns where the value is obtained, revealed, transmitted, and retained.
+A secret is a value whose display behavior must differ from an ordinary string. Redaction helps prevent accidental logging, but the application still controls where it obtains, reveals, transmits, and retains the value.
 
 ## Runtime contract
 

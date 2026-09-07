@@ -1,10 +1,10 @@
 ## Why this exists
 
-A human can interpret a paragraph; a program needs a stable shape and authoritative status. Agent-readable software should not require brittle scraping of colored terminal output.
+A program consuming CLI output needs a stable data schema and an exit status it can trust. Agent-readable software should not require brittle scraping of colored terminal output.
 
 ## Stable tool contract
 
-Exit categories are 0 success, 1 unmet gate or generic failure, 2 command usage, 3 lexer/parser failure, 4 runtime failure, 5 I/O failure, and 6 internal/tooling failure. A nonzero result remains authoritative even if output looks reassuring.
+Exit categories are 0 success, 1 unmet gate or generic failure, 2 command usage, 3 lexer/parser failure, 4 runtime failure, 5 I/O failure, and 6 internal/tooling failure. Treat a nonzero exit status as failure even if the output contains a success message.
 
 Successful --json commands put machine JSON on stdout. Failures generally use stderr. Two documented exceptions are run --json-runtime-diagnostics and lsp-rename --json: their runtime failure envelopes are on stdout with a nonzero exit. A consumer must know the specific command contract instead of assuming all JSON commands behave identically.
 

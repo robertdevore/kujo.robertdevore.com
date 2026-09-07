@@ -8,11 +8,11 @@ Test declarations use test with a string name, plus test_group, test_setup, and 
 
 Use committed input fixtures and expected results. Keep provider calls out of the default suite. For runtime behavior that must hold on the VM, also run an ordinary .kujo assertion program through kujo run. Interpreter-hosted framework coverage alone cannot establish VM parity.
 
-The working example below is a VM assertion program. The projects/package/tests.kujo file demonstrates the framework declarations and is run separately by the verifier. This separation prevents a green framework test from disguising a failing production path.
+The working example below is a VM assertion program. The projects/package/tests.kujo file demonstrates the framework declarations and is run separately by the verifier. Running both checks catches code that passes the interpreter-hosted framework but fails on the default VM.
 
 ## Negative tests
 
-A failing test must fail for the intended reason. Check both the exit category and a stable diagnostic concept. A missing file that prevents your arithmetic test from running is not evidence that invalid arithmetic was rejected.
+A failing test must fail for the intended reason. Check both the exit category and the diagnostic reason. A missing file that prevents your arithmetic test from running is not evidence that invalid arithmetic was rejected.
 
 Snapshots are useful for stable output, but examine a mismatch before changing the expected result. Some information, such as absolute source paths or timing, may need a documented normalization. Never normalize away a meaningful change in result or error code.
 

@@ -1,6 +1,6 @@
 ## Mental model
 
-A function gives a piece of behavior a name and a parameter boundary. The caller should be able to understand what input is needed and what output means without reading every statement in the body.
+A function defines an operation and the parameters it accepts. The caller should be able to understand what input is needed and what output means without reading every statement in the body.
 
 ## Language contract
 
@@ -16,7 +16,7 @@ Functions are values. Anonymous `func(...) { ... }` expressions can be passed to
 
 Keep domain calculations pure: pass values in, return values out. Put file reads, network requests, and printing at the application's edge. This lets tests call the calculation without granting host authority and makes later model-proposed inputs easier to validate.
 
-Do not make a callback quietly depend on a large set of global variables. Pass explicit context or a narrow closure so its inputs remain inspectable. For a tool handler later, this distinction becomes a security concern: a tool description is not permission to access any global resource.
+Do not make a callback quietly depend on a large set of global variables. Pass context explicitly or capture only the bindings the callback needs, so its inputs remain inspectable. For a tool handler later, this distinction becomes a security concern: a tool description is not permission to access any global resource.
 
 ## Common mistakes
 

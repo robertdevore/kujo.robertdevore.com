@@ -6,7 +6,7 @@ A project records enough structure that another developer can run it without rec
 
 kujo init creates kujo.toml and a starter src/main.kujo. package-add records a dependency declaration. package-install derives a deterministic kujo.lock snapshot. package-install --frozen verifies agreement without rewriting the manifest or lockfile.
 
-These core commands cover local manifest/lockfile determinism. Do not describe them as a public registry or package publishing transport. Kennel is a separate ecosystem workflow with its own manifests and installed roots; inspect it explicitly if a project needs that composition.
+These core commands cover local manifest/lockfile determinism. Do not describe them as a public registry or package publishing transport. Kennel is a separate ecosystem workflow with its own manifests and installed roots; inspect its contracts if your project needs those package workflows.
 
 ## Run the package drill
 
@@ -36,7 +36,7 @@ From the course repository root, use the pinned Kujo 1.3.1 runtime.
 
 ## Break it and diagnose it
 
-This small assertion illustrates the invariant. The real package drift failure is additionally exercised and recorded by the package integration gate; a string comparison is not a substitute for that gate.
+This small assertion illustrates the invariant. The package integration gate also exercises and records a real manifest/lockfile mismatch; a string comparison is not a substitute for that gate.
 
 {{broken}}
 

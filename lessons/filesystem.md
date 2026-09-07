@@ -12,7 +12,7 @@ The example reads only a committed fixture under a chosen root and asserts its c
 
 ## Professional pattern
 
-Separate selection from action. First produce a plan describing which files will be touched; validate the paths and bounds; then perform the minimum effects. Write structured receipts after successful completion. Atomic-write helpers can reduce partial-update risk, but they do not decide whether overwriting a file is authorized.
+Separate selection from action. First produce a plan describing which files will be touched; validate the paths and bounds; then perform only the approved operations. Write structured receipts after successful completion. Atomic-write helpers can reduce partial-update risk, but they do not decide whether overwriting a file is authorized.
 
 Avoid using real user documents for a lesson drill. The fixture directory provides small, known inputs. A temporary work directory contains generated outputs, so the test cannot accidentally become a bulk cleanup script.
 

@@ -6,13 +6,13 @@ You can build a tested Kujo application and add reproducible AI effects. The fin
 
 Core owns deterministic and security-sensitive mechanisms: request hashing, replay, schemas, vectors, secrets, capabilities, and native effects. Policy includes provider selection, routing, retries, retrieval strategy, evaluation thresholds, approval decisions, and workflow orchestration.
 
-The ecosystem offers implementations of those policies. A project may benefit from an agent SDK, Eval, Dispatch, RunLedger, or a context tool, but importing every repository is not a course objective. The capstone starts with ordinary Kujo modules so the boundary is visible before any framework is selected.
+The ecosystem offers implementations of those policies. A project may benefit from an agent SDK, Eval, Dispatch, RunLedger, or a context tool, depending on the policies it needs. The capstone starts with ordinary Kujo modules so the boundary is visible before any framework is selected.
 
 ## Read the example
 
 A pure policy function decides whether an attempt can continue. It consumes explicit data rather than reading a hidden environment or making a model call. The mechanism that executes an attempt can use the result without owning the retry policy itself.
 
-This is a useful design-review lens: can you change the policy without rewriting the mechanism, and can you test it without invoking an expensive external effect? Simplicity comes from separating decisions that change for different reasons.
+Ask during design review: can you change the policy without rewriting the mechanism, and can you test it without invoking an expensive external effect? Simplicity comes from separating decisions that change for different reasons.
 
 ## Professional pattern
 

@@ -12,11 +12,11 @@ Our example uses a concurrency limit of two and a fixed input of three jobs. It 
 
 ## Spawn drill
 
-Experiment separately with spawn and shared state in a throwaway program. Identify who observes completion and whether your observation actually waits. Do not put that experiment on the path that decides the stage project has succeeded. Missing lifecycle evidence is a design problem, not a reason to add a random sleep.
+Experiment separately with spawn and shared state in a throwaway program. Identify who observes completion and whether your observation actually waits. Do not put that experiment on the path that decides the stage project has succeeded. If you cannot establish completion, fix how the program waits for work; adding an arbitrary sleep does not establish it.
 
 ## Professional pattern
 
-Bound both the number of jobs and simultaneous work. A finite concurrency limit over an unbounded stream still needs a total work or time policy. Stop or classify failures explicitly, and emit results in a deterministic order for downstream tools.
+Bound both the total number of jobs and the number running concurrently. A finite concurrency limit over an unbounded stream still needs a total work or time policy. Stop or classify failures explicitly, and emit results in a deterministic order for downstream tools.
 
 ## Common mistakes
 

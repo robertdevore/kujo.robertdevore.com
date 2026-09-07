@@ -2,7 +2,7 @@
 
 Kujo capability controls gate supported native effects. They are not operating-system isolation, a container, or a multitenant execution service. A hostile program can still consume resources or exercise behavior outside the guarantees you have actually established.
 
-Use a dedicated process/container/VM with explicit filesystem, network, CPU, memory, lifetime, and credential policy when the threat model requires it. The course does not ship a remote arbitrary-code playground. Its source/output explorer is safe because it displays preverified artifacts and performs no code execution.
+Use a dedicated process/container/VM with explicit filesystem, network, CPU, memory, lifetime, and credential policy when the threat model requires it. The course does not ship a remote arbitrary-code playground. Its source/output explorer displays verified artifacts without executing submitted code.
 
 ## Observability
 
@@ -20,7 +20,7 @@ Make liveness, cancellation, drain, and restart decisions explicit. Separate obs
 
 ## Common mistakes
 
-A timeout inside one tool does not bound the entire workflow. A language's default scheduler deadline is not a CPU/memory sandbox. A green trace that omitted failed actions is not complete evidence. Keep independent limits and test a forced failure path.
+A timeout inside one tool does not bound the entire workflow. A language's default scheduler deadline is not a CPU/memory sandbox. A trace that reports success but omits failed actions is incomplete evidence. Keep independent limits and test a forced failure path.
 
 ## Working example
 

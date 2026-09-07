@@ -14,11 +14,11 @@ Assignments are statements. Kujo supports `:=`, `=`, and compound assignment ope
 
 ## Read the example
 
-The configuration is constant, while the count and its containing report are mutable. Each change has a small visible location. This makes it possible to compare the final state with the intended transitions.
+The configuration is constant, while the count and its containing report are mutable. Each update is explicit, so you can compare the final state with the intended transitions.
 
 ## Professional pattern
 
-Default to `let` for derived values and function inputs copied into local names. Introduce `mut` where a state transition is actually needed. If you are adding it everywhere to silence errors, first ask whether a function should return a new value instead.
+Default to `let` for derived values and function inputs copied into local names. Introduce `mut` where the program needs to change state. If you are adding it everywhere to silence errors, first ask whether a function should return a new value instead.
 
 ## Common mistakes
 

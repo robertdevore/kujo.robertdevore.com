@@ -36,7 +36,7 @@ From the course repository root, use the pinned Kujo 1.3.1 runtime.
 
 ## Break it and diagnose it
 
-The argv array is empty. The call must reject invalid arguments before starting a child process.
+The argv array is empty. The runtime must reject the invalid arguments before starting a child process.
 
 {{broken}}
 

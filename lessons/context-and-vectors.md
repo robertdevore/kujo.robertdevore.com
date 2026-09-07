@@ -12,7 +12,7 @@ The example fits a short context and ranks two fixed vectors offline. This makes
 
 ## Professional pattern
 
-Check fits before submitting. If preserved context cannot fit, stop with an actionable result instead of quietly dropping the most important instruction. Track selected document identifiers and provenance, and keep untrusted retrieved content clearly labeled as data.
+Check fits before submitting. If preserved context cannot fit, report that the preserved messages exceed the budget instead of silently dropping an essential instruction. Track selected document identifiers and provenance, and keep untrusted retrieved content clearly labeled as data.
 
 Choose a retrieval system only when the application needs one. Storage, indexing, chunking, routing, and relevance thresholds are ecosystem/application policy, not additional Kujo syntax.
 

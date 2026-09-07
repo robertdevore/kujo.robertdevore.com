@@ -6,7 +6,7 @@ Replay delivers chunks in recorded order without opening a socket. That lets you
 
 ## Mental model
 
-A stream is a partial observation until the application has enough evidence to accept a result. A fragment of JSON is not a valid domain object. Keep progressive display separate from the evaluator that decides whether the final structured output is usable.
+Treat streamed output as incomplete until the application has enough evidence to accept a result. A fragment of JSON is not a valid domain object. Keep progressive display separate from the evaluator that decides whether the final structured output is usable.
 
 Cancellation is also a lifecycle event, not automatic success. It can be user-requested, policy-triggered, or caused by an external client disconnect. The application should state whether partial output is retained, discarded, or labeled incomplete. Do not promise that a local cancellation signal reverses work already performed by a remote provider.
 

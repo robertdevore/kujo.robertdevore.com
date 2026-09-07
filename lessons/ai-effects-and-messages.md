@@ -12,7 +12,7 @@ A successful HTTP/model response does not prove the content is correct. The appl
 
 ai_text builds a text block, ai_image_url builds an image block, and ai_message combines a role with content. These helpers are pure and capability-free. They construct portable message dictionaries; they do not fetch the image or call a model by themselves.
 
-The example verifies message structure without network access. This is a useful first AI test: the context sent to a model is inspectable before you spend money or disclose information. The URL is an illustrative input and is never fetched here.
+The example verifies message structure without network access. This first AI test lets you inspect the model's context before making a paid request or sending data externally. The URL is an illustrative input and is never fetched here.
 
 ## Professional pattern
 

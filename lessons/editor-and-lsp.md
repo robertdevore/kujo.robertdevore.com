@@ -20,7 +20,7 @@ Keep stdout clean for protocol traffic when launching a language server over sta
 
 ## Common mistakes
 
-An extension shipping its own outdated binary may disagree with your shell. Completion suggestions are not validation. Rename edits should be inspected before application, particularly across modules; a tool-generated edit is still a proposed source change that needs checking and tests.
+An extension shipping its own outdated binary may disagree with your shell. Completion suggestions are not validation. Review rename edits before applying them, particularly across modules. Check and test the resulting source change.
 
 ## Working example
 

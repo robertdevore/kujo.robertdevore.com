@@ -6,9 +6,9 @@ The v1 scope explicitly says interpreter mode may emit non-fatal type-check warn
 
 ## Mental model
 
-Treat annotations as communicative and tooling-facing contracts whose current enforcement has limits. Runtime validation still owns untrusted input. This is neither Rust's compile-time model nor a reason to omit all useful type information.
+Annotations describe intended types to readers and tooling, but enforcement has limits. Validate untrusted input at runtime. This is neither Rust's compile-time model nor a reason to omit all useful type information.
 
-The example annotates a simple function and then asserts its actual result. These are complementary pieces of evidence: one describes intent; the other exercises behavior. The breaking example supplies incompatible runtime values so the actual operation fails.
+The example annotates a simple function and then asserts its actual result. These are complementary pieces of evidence: the annotation describes intent; the assertion checks behavior. The breaking example supplies incompatible runtime values so the actual operation fails.
 
 ## On the horizon
 

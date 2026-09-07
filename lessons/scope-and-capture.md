@@ -12,11 +12,11 @@ Closures capture the nearest visible lexical binding. The stable specification d
 
 The inner label deliberately hides the outer label. The closure created there resolves the inner name; leaving the block exposes the original outer name again. This is shadowing, not mutation. The unchanged outer value is part of the test.
 
-For accumulated state, declare a mutable binding at the scope where the result should survive. Reassign that existing binding rather than accidentally creating a new same-named declaration. In larger functions, use different names when shadowing would make the intent difficult to follow.
+For accumulated state, declare a mutable binding at the scope where the result should survive. Reassign that existing binding rather than accidentally creating a new declaration with the same name. In larger functions, use different names when shadowing would make the intent difficult to follow.
 
 ## VM drill
 
-Run this example normally and with the interpreter flag. Compare the output, but do not conclude that every closure scenario is identical because this one passes. Parity evidence is scoped to an exercised behavior. A test that calls a closure immediately does not prove how detached work observes later updates.
+Run this example normally and with the interpreter flag. Compare the output, but do not conclude that every closure scenario is identical because this one passes. A parity test establishes agreement only for the behavior it exercises. A test that calls a closure immediately does not prove how detached work observes later updates.
 
 ## Professional pattern
 

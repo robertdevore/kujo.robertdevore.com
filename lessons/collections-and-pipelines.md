@@ -4,13 +4,13 @@ Arrays preserve insertion order. Indexing outside their bounds fails. Dictionary
 
 Spread syntax copies elements into an array literal or entries into a dictionary literal. A later dictionary entry wins when keys overlap. Do not use dictionary display order as an application sorting policy; serialize explicitly and sort where presentation requires it.
 
-`push` returns a new array value. Reassign that return when you intend to retain it. Mutation through an immutable binding remains forbidden even if the element being replaced is itself mutable-looking structured data.
+`push` returns a new array value. Reassign that return when you intend to retain it. Mutation through an immutable binding remains forbidden even when replacing an element inside a nested collection.
 
 ## Pipes and fallback
 
 A pipe sends a value into a following function call. It is useful for small, readable transformations. A pipeline should still make failure visible; chaining more operations is not a substitute for validation.
 
-`??` selects a fallback for null. It is distinct from truthiness. Zero, false, and an empty string can be valid values and should not be silently replaced. Crucially, `record["missing"] ?? fallback` cannot rescue a missing-key indexing error: the left expression fails before it becomes a value.
+`??` selects a fallback for null. It is distinct from truthiness. Zero, false, and an empty string can be valid values and should not be silently replaced. `record["missing"] ?? fallback` cannot rescue a missing-key indexing error: the left expression fails before it becomes a value.
 
 ## Professional pattern
 

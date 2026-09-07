@@ -10,7 +10,7 @@ The descriptor is an application-owned JSON object with an inputSchema. The loca
 
 ## Current Kujo ecosystem
 
-The reviewed MCP project supplies a local server framework, bounded file/resource controls, configurable exposure, and guidance for guarded remote deployments. Its documented readiness explicitly leaves production ingress, TLS, auth, secret custody, and rate/capacity decisions to operators. Ability projection is a separate opt-in bridge with its own canonical contract.
+The reviewed MCP project supplies a local server framework, bounded file/resource controls, configurable exposure, and guidance for guarded remote deployments. Its deployment documentation assigns production ingress, TLS, authentication, secret custody, rate limits, and capacity planning to operators. Ability projection is a separate opt-in bridge with its own canonical contract.
 
 ## Professional pattern
 

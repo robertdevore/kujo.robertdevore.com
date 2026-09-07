@@ -10,9 +10,9 @@ Per-call cassette options can select replay/strict and a directory. Replay looku
 
 ## Read the example
 
-The course vendors reviewed synthetic upstream cassettes with provenance. The endpoint uses an unavailable loopback port, and the request explicitly selects strict replay. The result must match the committed response. No live credentials are needed.
+The course includes reviewed synthetic cassettes from upstream and records their provenance. The endpoint uses an unavailable loopback port, and the request explicitly selects strict replay. The result must match the committed response. No live credentials are needed.
 
-The breaking drill changes the prompt so the request identity has no cassette. It promotes the returned error to a command failure so the verifier can prove the miss. A test that silently falls through would violate this lesson's purpose.
+The breaking drill changes the prompt so the request identity has no cassette. It promotes the returned error to a command failure so the verifier can detect the replay miss. A test that silently falls through would violate this lesson's purpose.
 
 ## Professional pattern
 

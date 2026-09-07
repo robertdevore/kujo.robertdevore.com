@@ -16,7 +16,7 @@ Dispatch and explicit handoffs should carry a bounded goal, context references, 
 
 ## Professional pattern
 
-Include source/version provenance, deterministic inputs or references, executed checks, exit statuses, and a concise human summary. Preserve failed attempts when they explain the final disposition. Define retention and privacy separately from observability delivery.
+Include source/version provenance, deterministic inputs or references, executed checks, exit statuses, and a concise human summary. Preserve failed attempts when they explain the final disposition. Define what evidence to retain, for how long, and who may read it, separately from how telemetry is delivered.
 
 ## Common mistakes
 

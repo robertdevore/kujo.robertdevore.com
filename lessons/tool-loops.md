@@ -2,7 +2,7 @@
 
 ai_tool_loop accepts a finite max_steps, tool descriptors, and a tool_results dictionary. The core implementation resolves returned tool calls against supplied string results keyed by tool name. It is not an arbitrary callback dispatcher that safely executes every model-proposed command.
 
-This distinction matters: core provides request/response mechanics; your program or an ecosystem agent runtime owns tool invocation policy, argument validation, capabilities, approval, and evidence. Do not invent a callback API merely because another provider SDK has one.
+Core handles requests and responses. Your program or an ecosystem agent runtime controls tool invocation policy, argument validation, capabilities, approval, and evidence. Do not invent a callback API merely because another provider SDK has one.
 
 ## Read the example
 
@@ -36,7 +36,7 @@ From the course repository root, use the pinned Kujo 1.3.1 runtime.
 
 ## Break it and diagnose it
 
-Zero is not a valid finite step budget for this API. The invalid options must reject before a request is useful.
+Zero is not a valid finite step budget for this API. The runtime must reject the invalid options before proceeding with the request.
 
 {{broken}}
 

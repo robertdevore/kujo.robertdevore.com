@@ -4,7 +4,7 @@ This course assumes you can already program. You are learning a different langua
 
 ## Why this exists
 
-An AI-native application has uncertainty at its boundaries. A model may return a different answer tomorrow; a tool may fail; a generated plan may ask for authority it does not need. Calling a model is the easy part. The engineering work is making effects explicit, validating inputs and outputs, and deciding when to stop.
+An AI-native application has uncertainty at its boundaries. A model may return a different answer tomorrow; a tool may fail; a generated plan may ask for authority it does not need. Reliable AI integration requires explicit effects, input and output validation, and stop conditions.
 
 Kujo supplies a VM-first scripting language, native system operations, capability controls, and deterministic AI mechanisms. You supply application policy: which endpoints to trust, what counts as success, whether to retry, and which actions need a human decision. Keep that division visible from the first program.
 
@@ -18,7 +18,7 @@ The example separates input, a calculation, and a claim that can be checked. Its
 
 Normal execution is `kujo run`. The source passes through the lexer and parser, then the compiler and bytecode VM. `kujo check` validates without executing the program's host effects. `kujo doctor` inspects the environment. None of these commands proves your business rule is correct.
 
-Kujo is local-first, but local execution is not isolation. A normal trusted script can use the user's host privileges. Our pure examples run with `--untrusted`; we introduce specific capabilities when we actually need them.
+Kujo is local-first, but local execution is not isolation. A normal trusted script can use the user's host privileges. Our pure examples run with `--untrusted`; we grant specific capabilities as examples require them.
 
 ## Professional pattern
 

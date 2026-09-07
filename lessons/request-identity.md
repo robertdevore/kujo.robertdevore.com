@@ -6,7 +6,7 @@ Header normalization lowercases and sorts included header names. The endpoint is
 
 ## Mental model
 
-The hash answers which normalized request this evidence belongs to. It does not certify that the answer is correct, that a provider will be deterministic, or that a different model has equivalent behavior. Credential exclusion lets a test identity survive key rotation without storing the key in the hash input contract.
+The hash answers which normalized request this evidence belongs to. It does not certify that the answer is correct, that a provider will be deterministic, or that a different model has equivalent behavior. Excluding credentials keeps request identity stable across key rotation; the key is not part of the normalized hash input.
 
 The example changes only the API key and proves the identity remains equal. A changed prompt must yield a different identity. This catches a common mistake where a cached result is reused after the actual work changed.
 
@@ -18,7 +18,7 @@ Do not use the request hash as an authorization token. Anyone who knows public r
 
 ## Common mistakes
 
-A stable request hash does not guarantee a stable live response. Excluding credentials from identity does not mean cassettes contain no sensitive text. Hashing model output proves a byte identity, not truth. The next lesson connects identity to reproducible offline response fixtures.
+A stable request hash does not guarantee a stable live response. Excluding credentials from identity does not mean cassettes contain no sensitive text. Hashing model output identifies its bytes; it does not establish that the content is true. The next lesson connects identity to reproducible offline response fixtures.
 
 ## Working example
 

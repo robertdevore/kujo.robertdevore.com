@@ -12,7 +12,7 @@ Enums use named variants and tagged values. The next lesson combines them with m
 
 ## Serialization boundary
 
-A struct is a runtime value, not automatically a JSON object. Convert selected fields into a dictionary for machine output. This is an opportunity to choose a stable external schema rather than exposing every internal implementation field. Native handles and functions likewise need deliberate representations.
+A struct is a runtime value, not automatically a JSON object. Convert selected fields into a dictionary for machine output. Choose a stable external schema instead of exposing every internal field. Native handles and functions likewise need deliberate representations.
 
 ## Professional pattern
 

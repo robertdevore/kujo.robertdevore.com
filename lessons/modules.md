@@ -6,13 +6,13 @@ A script becomes a project when another file needs to reuse its behavior. Module
 
 Kujo supports import module_name and from module_name import symbols, including dotted paths such as src.util. Export imported functions with export func. Normal module use works on the default VM path, though imported implementation and callback bridges have their own documented boundaries.
 
-Resolution searches deterministic roots: the importing package context, project and modules roots, explicit KUJO_MODULE_PATH entries, and installed roots named by a nearest Kennel lockfile where applicable. Imports do not implicitly fetch packages. Unsafe traversal and symlink escapes are rejected, and cycles have diagnostic failures.
+Resolution searches deterministic roots: the importing package context, project and modules roots, explicit KUJO_MODULE_PATH entries, and installed roots named by a nearest Kennel lockfile where applicable. Imports do not implicitly fetch packages. The loader rejects unsafe traversal, symlink escapes, and import cycles with diagnostics.
 
 ## Read the example
 
 The module exports a pure total function. The entrypoint owns the input, calls the module, and prints the result. There is no network or filesystem work inside the exported calculation. Reading module source is loader behavior; it is distinct from giving your program arbitrary read_file authority.
 
-The file lives under examples/modules/report.kujo. Run from the repository root as shown. If resolution fails from another working directory, diagnose roots and invocation context rather than adding a broad ambient path until it happens to work.
+The file lives under examples/modules/report.kujo. Run from the repository root as shown. If resolution fails from another working directory, diagnose roots and invocation context rather than adding unrelated directories to the module search path until the import happens to work.
 
 ## Professional pattern
 

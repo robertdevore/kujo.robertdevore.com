@@ -4,7 +4,7 @@ A generator optimizes for producing an answer. An evaluator decides whether that
 
 ## Deterministic checks first
 
-Start with input validation, schema checks, arithmetic invariants, fixture expectations, and bounded tool results. Use a model-based evaluator only when a criterion genuinely needs judgment, and record its uncertainty and disagreement policy. Do not replace an exact comparison with a model opinion.
+Start with input validation, schema checks, arithmetic invariants, fixture expectations, and bounded tool results. Use a model-based evaluator only when a criterion requires judgment, and record its uncertainty and disagreement policy. Do not replace an exact comparison with a model opinion.
 
 The example compares a proposed count with the length of trusted local input. Both a well-shaped correct result and a well-shaped wrong result are tested. This demonstrates why structured output validation is necessary but insufficient.
 
@@ -20,7 +20,7 @@ The Kujo Eval project provides suite/report workflows, but evaluation remains an
 
 ## Professional pattern
 
-Create negative fixtures before trusting an evaluator. Include malformed data, plausible wrong answers, missing evidence, and extra unauthorized actions. A gate that has never rejected anything has weak evidence of usefulness.
+Create negative fixtures before trusting an evaluator. Include malformed data, plausible wrong answers, missing evidence, and extra unauthorized actions. Verify that the gate rejects these fixtures before relying on it.
 
 ## Common mistakes
 

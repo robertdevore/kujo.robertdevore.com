@@ -8,13 +8,13 @@ Kujo provides JSON and other structured-file helpers as well as database APIs. J
 
 Database operations require database authority. SQLite is useful for local state; an in-memory database gives a deterministic test without leaving a file. Use parameterized query values rather than composing SQL from untrusted strings. Inspect the current db_execute and db_query signatures for your runtime.
 
-The lesson example shows a versioned file-shaped state round trip. The native project adds an in-memory SQLite contract test. These are different storage choices around the same domain model, not reasons to leak database row encodings into every function.
+The lesson example shows a serialization round trip for versioned file data. The native project adds an in-memory SQLite contract test. These are different storage choices around the same domain model, not reasons to leak database row encodings into every function.
 
 ## Professional pattern
 
 Validate before saving and again when loading. Include a schema version. For a format change, write a migration with fixtures covering old and new state. Prefer atomic publication when the native write contract supports it, and retain failure evidence instead of leaving a partially written file that looks complete.
 
-A local database is not automatically private. File permissions, backups, and the process's authority remain relevant. Do not store raw credentials or entire model prompts when a bounded identifier or redacted receipt would suffice.
+A local database is not automatically private. File permissions, backups, and the process's authority remain relevant. Do not store raw credentials or entire model prompts when an identifier or redacted receipt with explicit size limits would suffice.
 
 ## Common mistakes
 

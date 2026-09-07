@@ -16,7 +16,7 @@ The reviewed loop-engineering kit contains loop.spec.yml, HOWTO.md, an initializ
 
 ## Professional pattern
 
-Define the evaluation gate before the agent acts. Keep approval boundaries tied to actual authority, and let the host decide whether approval exists. A repeated denied action should stop with a clear blocker, not expand its permissions.
+Define the evaluation gate before the agent acts. Require approval for actions that need it, and let the host verify that approval. A repeated denied action should stop with a clear blocker, not expand its permissions.
 
 ## Common mistakes
 

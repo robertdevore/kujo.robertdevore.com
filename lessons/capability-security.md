@@ -6,13 +6,13 @@ Capability categories include filesystem read/write/delete, process and shell ex
 
 ## Capability drill
 
-Run the fixture reader without any allowances and observe the denial. Then add only --allow-fs-read and run it again. Finally attempt a write without granting write authority. Success at one boundary must not erase the other denial.
+Run the fixture reader without any allowances and observe the denial. Then add only --allow-fs-read and run it again. Finally attempt a write without granting write authority. Granting read authority must leave writes denied.
 
 The course verifier runs the allowed reader and a denied write as separate processes. The write targets a throwaway path and is never needed for success. Inspect the actual message and the nonzero status below.
 
 ## Professional pattern
 
-Build an authority table before running a new automation: operation, resource, native API, capability, and external control. Keep pure transformations capability-free. If a tool needs a child process, assess what that child can do outside Kujo's gates.
+Build an authority table before running a new automation program: operation, resource, native API, capability, and external control. Keep pure transformations capability-free. If a tool needs a child process, assess what that child can do outside Kujo's gates.
 
 Use external process/container/VM isolation where the threat model requires it. Apply resource and time limits outside the language for arbitrary untrusted code. A local course playground that accepts arbitrary server-side code would need that architecture; this site deliberately provides source and recorded results instead.
 

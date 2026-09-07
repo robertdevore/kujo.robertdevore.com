@@ -1,6 +1,6 @@
 ## Mental model
 
-JSON is a syntax, not a guarantee of correctness. A model can produce valid JSON with missing fields, wrong types, extra instructions, or a false claim of success. Acceptance needs several independent checks.
+JSON is a syntax, not a guarantee of correctness. A model can produce valid JSON with missing fields, wrong types, extra instructions, or a false claim of success. Accepting the result requires separate parsing, schema, and domain checks.
 
 ## Runtime contract
 
@@ -10,7 +10,7 @@ Unsupported keywords and remote references are rejected rather than silently acc
 
 ## Read the example
 
-The schema admits a bounded action and a short count. additionalProperties:false rejects unexpected fields, keeping the tool boundary small. The example verifies both acceptance and a rejected quantity. The failure drill deliberately asserts that malformed data was valid, ensuring the gate can fail.
+The schema requires an integer count between 0 and 100. additionalProperties:false rejects unexpected fields, keeping the accepted data shape small. The example verifies both acceptance and a rejected quantity. The failure drill deliberately asserts that malformed data was valid, ensuring the gate can fail.
 
 ## Professional pattern
 

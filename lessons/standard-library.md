@@ -12,7 +12,7 @@ Major families include strings and collections; files and paths; JSON, TOML, YAM
 
 Before using a native operation, answer: What arguments are accepted? What exact shape comes back? How is failure represented? What authority does it require? Then run a minimal example and an invalid-input drill.
 
-The example parses a small JSON document, selects a field, and serializes a deliberate result. parse_json accepts JSON root values, not just dictionaries, so a successful parse alone does not prove the structure you want. Stage 5 introduces schema validation as a general boundary tool.
+The example parses a small JSON document, selects a field, and serializes a deliberate result. parse_json accepts JSON root values, not just dictionaries, so a successful parse alone does not establish that the result has the expected structure. Stage 5 introduces schema validation as a general boundary tool.
 
 ## Professional pattern
 
