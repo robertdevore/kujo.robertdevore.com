@@ -1,5 +1,7 @@
 # Kujo course launch image
 
+Latest composition correction: removed the blocks, pedestal, and dotted backdrop. The K mark stands alone, centered on the right. Visually verified the uncluttered composition and preserved tagline. This supersedes the stacked-logo artwork.
+
 Revision: the user requested Departure Mono and the exact tagline `Clarity. Context. Control.`. The updated raster uses a browser-rendered specimen of `assets/fonts/DepartureMono-Regular.woff2` as the typography reference. Visually verified the corrected tagline and lighter letterforms. Typography is image-generated from that specimen, not embedded font text. This correction supersedes the previous `WRITE. RUN. PROVE.` poster tagline. The website itself was not changed.
 
 `kujo-course-launch.png` is a 1536 × 1024 social-media poster created on 2026-09-07 with built-in image generation. It follows the earlier Rust and TypeScript course launch posters, using monochrome artwork and the official Kujo K mark as a visual reference.
