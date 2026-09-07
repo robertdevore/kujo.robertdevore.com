@@ -1,0 +1,9 @@
+# Review record — 2026-09-06
+
+The expert lenses in the brief were applied as design questions, not endorsements or sources of Kujo semantics. Simplicity/data interfaces: small pure decisions and explicit dictionaries. Practical tooling: executable CLI programs and machine receipts. Gradual typing/editor ergonomics: annotations and LSP without a static-safety claim. Runtime rigor: official artifact verification, positive/negative cases, isolated project tests, and documented discrepancies. Concurrency/failure: owned results and finite budgets. Capability design: minimum native categories plus separate host isolation. AI security: model/retrieved text cannot authorize effects, replay is separate from live egress, and evaluation is independent of generated claims.
+
+Curriculum review consolidated the brief's 52 topic headings into 40 lessons while retaining six stages. Structs/enums, Result/Option/matching, project initialization/lockfiles, diagnostics/machine contracts, context/vectors, and operational architecture were combined where their boundaries are clearer together. Six stage builds and the capstone use learned prerequisites. The course is not a repository catalog.
+
+The authoritative source ledger pins released core documentation and records inspected ecosystem revisions. Official release probes corrected the initial builtin-name-collision diagnosis and isolated five genuine VM/interpreter differences. No runtime source was edited to make course examples pass.
+
+The general Kujo SSG was evaluated but did not meet the course's edit-loop latency needs. A smaller Kujo-native builder retains native Markdown rendering and explicitly handles fenced code and trusted authored HTML. No server-side code executor or browser/WASM claim is shipped. Node is limited to maintenance verification, local test fixtures, and deployment tools.

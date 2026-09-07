@@ -1,0 +1,14 @@
+{
+  "name": "kujo-course",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bash scripts/build.sh",
+    "verify": "node scripts/verify.mjs && node scripts/projects-test.mjs && bash scripts/build.sh && node scripts/site-test.mjs",
+    "preview": "node scripts/serve.mjs",
+    "deploy": "npm run verify && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "4.129.0"
+  }
+}

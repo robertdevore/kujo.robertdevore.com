@@ -1,0 +1,10 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';import dns from 'node:dns/promises';import https from 'node:https';
+const base='https://kujo.robertdevore.com';
+const addresses=await dns.lookup('kujo.robertdevore.com',{all:true});
+const tls=await new Promise((resolve,reject)=>https.get(base,res=>{const cert=res.socket.getPeerCertificate();resolve({authorized:res.socket.authorized,validTo:cert.valid_to,subject:cert.subject});res.resume();}).on('error',reject));assert.equal(tls.authorized,true);
+const sitemap=await fetch(base+'/sitemap.xml');assert.equal(sitemap.status,200);const xml=await sitemap.text();const urls=[...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>m[1]);let checked=0;
+for(let i=0;i<urls.length;i+=6)await Promise.all(urls.slice(i,i+6).map(async url=>{const r=await fetch(url);assert.equal(r.status,200,url);const html=await r.text();assert.ok(html.includes(`href="${url}"`),'canonical '+url);assert.match(html,/og:image/);checked++;}));
+for(const path of ['/robots.txt','/assets/js/course.js','/assets/css/course.css','/assets/social.png','/assets/course-search.json','/assets/course-examples.json'])assert.equal((await fetch(base+path)).status,200,path);
+assert.equal((await fetch(base+'/does-not-exist-course-qa/')).status,404);
+const headers=Object.fromEntries((await fetch(base)).headers);assert.ok(headers['content-security-policy']);
+fs.writeFileSync('evidence/production.json',JSON.stringify({verifiedAt:new Date().toISOString(),base,addresses,tls,checkedRoutes:checked,assets:true,unknownRoute404:true,headers,status:'passed'},null,2)+'\n');console.log(`PASS: DNS, verified TLS, ${checked} production routes, canonicals, metadata, assets, robots and 404`);

@@ -1,0 +1,88 @@
+# Repository-authored HTML is trusted; fenced code is always escaped.
+func course_markdown(source) {
+    rendered := ""
+    prose := ""
+    code := ""
+    language := ""
+    inside := false
+    for line in split(source, "\n") {
+        if starts_with(trim(line), "```") {
+            if inside {
+                rendered += "<pre><code class=\"language-" + escape(language) + "\">" + escape(code) + "</code></pre>\n"
+                code = ""
+                inside = false
+            } else {
+                rendered += render_markdown(prose)
+                prose = ""
+                language = trim(replace(trim(line), "```", ""))
+                inside = true
+            }
+        } else {
+            if inside {
+                code += line + "\n"
+            } else {
+                if starts_with(trim(line), "<") {
+                    rendered += render_markdown(prose) + line + "\n"
+                    prose = ""
+                } else {
+                    prose += line + "\n"
+                }
+            }
+        }
+    }
+    if inside { throw("unclosed course code fence") }
+    return rendered + render_markdown(prose)
+}
+
+func escape(value) { return escape_xml(to_string(value)) }
+func render_page(title, description, route, inner, layout) {
+    canonical := "https://kujo.robertdevore.com" + route
+    html := replace(layout, "{{page_title}}", escape(title + " · Kujo Course"))
+    html = replace(html, "{{meta_description}}", escape(description))
+    html = replace(html, "{{canonical_tag}}", "<link rel=\"canonical\" href=\"" + canonical + "\">")
+    html = replace(html, "{{seo_title}}", escape(title))
+    html = replace(html, "{{seo_description}}", escape(description))
+    html = replace(html, "{{og_url}}", canonical)
+    html = replace(html, "{{og_type}}", "website")
+    schema := {"@context": "https://schema.org", "@type": "LearningResource", "name": title, "description": description, "url": canonical, "inLanguage": "en", "isAccessibleForFree": true, "learningResourceType": "Course lesson"}
+    html = replace(html, "{{json_ld}}", "<script type=\"application/ld+json\">" + to_json(schema) + "</script>")
+    html = replace(html, "{{content}}", inner)
+    directory := "output" + route
+    create_dir(directory)
+    write_file(directory + "index.html", html, true)
+}
+func markdown_body(file) { return split(read_file(file), "---\n\n")[1] }
+func main() {
+    course := parse_json(read_file("course.json"))
+    pages := parse_json(read_file("pages.json"))
+    layout := read_file("templates/layout.html")
+    post := read_file("templates/post.html")
+    page := read_file("templates/page.html")
+    render_page("Learn Kujo: write, run, prove", "A practical Kujo programming course: 40 lessons, six stage builds, and a replay-backed AI operations capstone.", "/", read_file("templates/page-home.html"), layout)
+    render_page("The course map", "40 lessons across six stages, from Kujo foundations to reliable AI-native systems.", "/course/", read_file("templates/page-course.html"), layout)
+    sitemap := "<?xml version=\"1.0\" encoding=\"UTF-8\"?><urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"><url><loc>https://kujo.robertdevore.com/</loc></url><url><loc>https://kujo.robertdevore.com/course/</loc></url>"
+    for lesson in course["lessons"] {
+        body := course_markdown(markdown_body("content/posts/" + lesson["slug"] + ".md"))
+        inner := replace(post, "{{title}}", escape(lesson["title"]))
+        inner = replace(inner, "{{description}}", escape(lesson["description"]))
+        inner = replace(inner, "{{body}}", body)
+        route := "/course/" + lesson["slug"] + "/"
+        render_page(lesson["title"], lesson["description"], route, inner, layout)
+        sitemap += "<url><loc>https://kujo.robertdevore.com" + route + "</loc></url>"
+    }
+    for item in pages {
+        body := course_markdown(markdown_body("content/pages/" + item["slug"] + ".md"))
+        inner := replace(page, "{{title}}", escape(item["title"]))
+        inner = replace(inner, "{{body}}", body)
+        route := "/" + item["slug"] + "/"
+        render_page(item["title"], item["description"], route, inner, layout)
+        sitemap += "<url><loc>https://kujo.robertdevore.com" + route + "</loc></url>"
+    }
+    write_file("output/sitemap.xml", sitemap + "</urlset>", true)
+    write_file("output/robots.txt", "User-agent: *\nAllow: /\nSitemap: https://kujo.robertdevore.com/sitemap.xml\n", true)
+    write_file("output/llms.txt", "# Kujo Course\n\n40 lessons and seven builds, verified against Kujo 1.3.1.\n\n- [Curriculum](https://kujo.robertdevore.com/course/)\n- [Evidence](https://kujo.robertdevore.com/evidence/)\n- [Source](https://github.com/robertdevore/kujo.robertdevore.com)\n", true)
+    render_page("Page not found", "Return to the Kujo course map.", "/404/", read_file("templates/404.html"), layout)
+    write_file("output/404.html", read_file("output/404/index.html"), true)
+    print("Rendered 53 course routes with Kujo native Markdown")
+}
+main()

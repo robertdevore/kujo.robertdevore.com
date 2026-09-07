@@ -1,0 +1,271 @@
+{
+  "version": "1.3.1",
+  "verifiedDate": "2026-09-06",
+  "receipts": [
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "projects/report/main.kujo",
+        "--",
+        "jobs",
+        "alpha",
+        "beta"
+      ],
+      "cwd": ".",
+      "exit": 0,
+      "signal": null,
+      "stdout": "Accepted jobs: 2\n- alpha\n- beta\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "projects/report/main.kujo"
+      ],
+      "cwd": ".",
+      "exit": 4,
+      "signal": null,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: at least one job label is required; usage: -- jobs alpha beta\n  --> 0:0\n\nCall stack:\n  0 at main\n\n"
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "projects/concurrent/main.kujo"
+      ],
+      "cwd": ".",
+      "exit": 0,
+      "signal": null,
+      "stdout": "[{\"doubled\":4,\"label\":\"a\"},{\"doubled\":6,\"label\":\"b\"}]\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "projects/workflow/main.kujo"
+      ],
+      "cwd": ".",
+      "exit": 0,
+      "signal": null,
+      "stdout": "{\"attempts\":2,\"count\":2,\"verdict\":\"PASS\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-database",
+        "projects/native/database.kujo"
+      ],
+      "cwd": ".",
+      "exit": 0,
+      "signal": null,
+      "stdout": "[{\"name\":\"report\",\"units\":2}]\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-ai",
+        "projects/ai/main.kujo"
+      ],
+      "cwd": ".",
+      "exit": 0,
+      "signal": null,
+      "stdout": "{\"request\":\"0dfb77ee05e29b0bdea600e2d1e868b5e8b9e60446f329f2ac2a9bfc3c38a8f4\",\"schema\":\"course.ai/v1\",\"validated\":true}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-read",
+        "--allow-fs-write",
+        "--allow-process-exec",
+        "--allow-net-client",
+        "projects/native/main.kujo"
+      ],
+      "cwd": ".",
+      "exit": 0,
+      "signal": null,
+      "stdout": "{\"body\":\"{\\\"ok\\\":true}\",\"status\":200}\n{\"input\":\"Kujo fixture\",\"process_ok\":true,\"schema\":\"course.automation/v1\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "package-install",
+        "--frozen"
+      ],
+      "cwd": "temporary independent copy",
+      "exit": 0,
+      "signal": null,
+      "stdout": "lockfile verified\tkujo.lock\nno dependencies declared\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "test-run",
+        "--untrusted",
+        "--verbose",
+        "tests.kujo"
+      ],
+      "cwd": "temporary independent copy",
+      "exit": 0,
+      "signal": null,
+      "stdout": "setup\nteardown\nsetup\nteardown\n\n============================================================\nTest Results\n============================================================\n  ✓ empty input (4ms)\n  ✓ positive values (3ms)\n\nTests: 2 total, 2 passed, 0 failed\nTime:  8ms\n============================================================\n\nAll tests passed! ✨\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "src/main.kujo"
+      ],
+      "cwd": "temporary independent copy",
+      "exit": 0,
+      "signal": null,
+      "stdout": "{\"schema\":\"course.package/v1\",\"total\":5}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "package-install",
+        "--frozen"
+      ],
+      "cwd": "temporary independent copy",
+      "exit": 4,
+      "signal": null,
+      "stdout": "",
+      "stderr": "kujo.lock dependencies are out of date; run `kujo package-install` to regenerate lockfile\n"
+    },
+    {
+      "args": [
+        "package-install",
+        "--frozen"
+      ],
+      "cwd": "temporary independent copy",
+      "exit": 0,
+      "signal": null,
+      "stdout": "lockfile verified\tkujo.lock\nno dependencies declared\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "test-run",
+        "--untrusted",
+        "--verbose",
+        "tests.kujo"
+      ],
+      "cwd": "temporary independent copy",
+      "exit": 0,
+      "signal": null,
+      "stdout": "\n============================================================\nTest Results\n============================================================\n  ✓ unknown goal rejected (6ms)\n  ✓ excess budget rejected (5ms)\n  ✓ correct count accepted (5ms)\n  ✓ plausible wrong count rejected (4ms)\n  ✓ extra action rejected (7ms)\n\nTests: 5 total, 5 passed, 0 failed\nTime:  31ms\n============================================================\n\nAll tests passed! ✨\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-read",
+        "--allow-fs-write",
+        "--allow-ai",
+        "src/main.kujo"
+      ],
+      "cwd": "temporary independent copy",
+      "exit": 0,
+      "signal": null,
+      "stdout": "{\"evaluated\":true,\"input\":{\"goal\":\"count_jobs\",\"jobs\":[{\"name\":\"alpha\"},{\"name\":\"beta\"}],\"max_steps\":2},\"proposal\":{\"count\":2,\"status\":\"complete\"},\"replay\":\"strict\",\"runtime\":\"1.3.1\",\"schema\":\"course.operations/v1\",\"steps\":2,\"summary\":\"Validated count matches local jobs\",\"tool\":{\"arguments\":{},\"name\":\"count_jobs\",\"result\":2},\"verdict\":\"PASS\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-read",
+        "--allow-fs-write",
+        "--allow-ai",
+        "src/main.kujo"
+      ],
+      "cwd": "temporary independent copy",
+      "exit": 0,
+      "signal": null,
+      "stdout": "{\"evaluated\":true,\"input\":{\"goal\":\"count_jobs\",\"jobs\":[{\"name\":\"alpha\"},{\"name\":\"beta\"}],\"max_steps\":2},\"proposal\":{\"count\":2,\"status\":\"complete\"},\"replay\":\"strict\",\"runtime\":\"1.3.1\",\"schema\":\"course.operations/v1\",\"steps\":2,\"summary\":\"Validated count matches local jobs\",\"tool\":{\"arguments\":{},\"name\":\"count_jobs\",\"result\":2},\"verdict\":\"PASS\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-read",
+        "--allow-fs-write",
+        "--allow-ai",
+        "src/main.kujo"
+      ],
+      "cwd": "temporary independent copy",
+      "exit": 1,
+      "signal": null,
+      "stdout": "{\"reason\":\"invalid_request\",\"schema\":\"course.operations/v1\",\"verdict\":\"STOP\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-read",
+        "--allow-fs-write",
+        "--allow-ai",
+        "src/main.kujo"
+      ],
+      "cwd": "temporary independent copy",
+      "exit": 1,
+      "signal": null,
+      "stdout": "{\"reason\":\"invalid_request\",\"schema\":\"course.operations/v1\",\"verdict\":\"STOP\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-read",
+        "--allow-ai",
+        "src/main.kujo"
+      ],
+      "cwd": "temporary independent copy",
+      "exit": 1,
+      "signal": null,
+      "stdout": "{\"reason\":\"runtime_boundary\",\"schema\":\"course.operations/v1\",\"verdict\":\"STOP\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-read",
+        "--allow-fs-write",
+        "--allow-ai",
+        "src/main.kujo"
+      ],
+      "cwd": "temporary independent copy",
+      "exit": 1,
+      "signal": null,
+      "stdout": "{\"reason\":\"ai_response_rejected\",\"schema\":\"course.operations/v1\",\"verdict\":\"STOP\"}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "package-install",
+        "--frozen"
+      ],
+      "cwd": "temporary independent copy",
+      "exit": 4,
+      "signal": null,
+      "stdout": "",
+      "stderr": "kujo.lock dependencies are out of date; run `kujo package-install` to regenerate lockfile\n"
+    }
+  ]
+}

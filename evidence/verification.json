@@ -1,0 +1,888 @@
+{
+  "version": "1.3.1",
+  "verifiedDate": "2026-09-06",
+  "binarySha256": "3568432cb58119790779497b17f82a6d61aa65878667aacee181c92864ef844f",
+  "lessons": {
+    "10": {
+      "sourceSha256": "9e38230ee258ec77ae485c7cf332200226b0552ac0a21bf33a0755c5f2a31f98",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 61,\n  \"command\": \"check\",\n  \"file\": \"examples/10.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "3\nreport\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Index out of bounds: 2\n  --> 0:0\n\n"
+      }
+    },
+    "11": {
+      "sourceSha256": "688a8c300a5666f5ade7700c053de1504afff96c6adc7132bd3d7875607823af",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 34,\n  \"command\": \"check\",\n  \"file\": \"examples/11.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "rejected denominator\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: denominator must be nonzero\n  --> 0:0\n\n"
+      }
+    },
+    "12": {
+      "sourceSha256": "d29ee3e7b3e09cf8a549147f421237052fdcdf6bba381839e02f9d8d0407ac95",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 17,\n  \"command\": \"check\",\n  \"file\": \"examples/12.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "8\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Invalid binary operation: value * int\n  --> 0:0\n   = help: Use operands whose types support this operator, or convert values before applying it.\n\nCall stack:\n  0 at double\n\n"
+      }
+    },
+    "13": {
+      "sourceSha256": "e16ca7ed84403ba1b4b6282bedb907b910e92a94b0239e36798579b42eaaa9b1",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 21,\n  \"command\": \"check\",\n  \"file\": \"examples/13.kujo\",\n  \"statement_count\": 5,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "10\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: async operation rejected\n  --> 0:0\n\nCall stack:\n  0 at fail\n\n"
+      }
+    },
+    "14": {
+      "sourceSha256": "adca69dcaa36af458b3f547d499e5785610b72ce0580fc763d0757ce46a21eb1",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 28,\n  \"command\": \"check\",\n  \"file\": \"examples/14.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "[6,2,4]\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Promise rejected: parallel_map mapper 0 failed: worker rejected\n  --> 0:0\n\n"
+      }
+    },
+    "15": {
+      "sourceSha256": "cd0b03ac487dfd7ddc1d2f0b62af89207cb874c0e86fa295488ff53e116a5a64",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 22,\n  \"command\": \"check\",\n  \"file\": \"examples/15.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "5\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Module not found: missing_course_module; Check that 'missing_course_module' exists as a flat <module>.kujo file or a nested src/... path under the package root, and confirm the import name matches the on-disk layout.\n  --> 0:0\n   = help: Check that the module exists as <module>.kujo or as a dotted src/... path under the package root.\n\n"
+      }
+    },
+    "16": {
+      "sourceSha256": "518b96e4fdcea36bfed993115347129105897f015cf12c0846a11f8d95ee5ff9",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 19,\n  \"command\": \"check\",\n  \"file\": \"examples/16.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "{\"name\":\"course-report\",\"runtime\":\"1.3.1\"}\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Assertion failed: expected Str(\"lockfile synchronized\"), got Str(\"manifest changed\")\n  --> 0:0\n\n"
+      }
+    },
+    "17": {
+      "sourceSha256": "321d17aa9bfb5d77620ee29cf8112018376f7f412b6f59b23e3d7539c1ca6c8e",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 31,\n  \"command\": \"check\",\n  \"file\": \"examples/17.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "{\"count\":2}\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: JSON parse error: key must be a string at line 1 column 2\n  --> 0:0\n\n"
+      }
+    },
+    "18": {
+      "sourceSha256": "8131279b1be57fa2ba0a5a8a4bb0f8f44f5cd9392fc09924800abf14bf9aea00",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 23,\n  \"command\": \"check\",\n  \"file\": \"examples/18.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "2 assertions passed\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Assertion failed: expected Int(6), got Int(5)\n  --> 0:0\n\n"
+      }
+    },
+    "19": {
+      "sourceSha256": "c3d92d9112c853d6d5e7d155db9cd5b19cb8acfbf71bc671059b591b47f01c64",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 20,\n  \"command\": \"check\",\n  \"file\": \"examples/19.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "{\"count\":2,\"ok\":true,\"schema\":\"course.report/v1\"}\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: report validation failed\n  --> 0:0\n\n"
+      }
+    },
+    "20": {
+      "sourceSha256": "9acd940f26d8326fa31861910973d56a500621ab1c5fca685292ad7a5ad94bb5",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 16,\n  \"command\": \"check\",\n  \"file\": \"examples/20.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "6\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: doubled expects 1 arguments, got 0\n  --> 0:0\n\n"
+      }
+    },
+    "21": {
+      "sourceSha256": "1479d11f0b33cd760115916666d2ba9faa22e3d5e370768ed4814dd1096ec0d4",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 16,\n  \"command\": \"check\",\n  \"file\": \"examples/21.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "Report: jobs\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 3,
+        "stdout": "",
+        "stderr": "[KUJOPARSE001] [parser] error: Expected ')' to close function parameter list but found Punctuation('{')\n  --> examples/21-break.kujo:1:17\n  = help: Fix the parse error and rerun Kujo.\n[KUJOPARSE001] [parser] error: Expected expression\n  --> examples/21-break.kujo:1:26\n  = help: Fix the parse error and rerun Kujo.\n[KUJOPARSE001] [parser] error: Expected expression\n  --> examples/21-break.kujo:2:1\n  = help: Fix the parse error and rerun Kujo.\n"
+      }
+    },
+    "22": {
+      "sourceSha256": "0ef249345249952546fb8c7ed8c98ea74d73e490f74e7868708b5bfbe5249259",
+      "flags": [
+        "--allow-fs-read"
+      ],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 21,\n  \"command\": \"check\",\n  \"file\": \"examples/22.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "Kujo fixture\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: read_file_beneath[invalid_relative_path]: relative_path must contain only normal non-empty components\n  --> 0:0\n\n"
+      }
+    },
+    "23": {
+      "sourceSha256": "9529379503cca2e3c83061435799e556482c41d72142b049cf980b1419e0f37b",
+      "flags": [
+        "--allow-process-exec"
+      ],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 37,\n  \"command\": \"check\",\n  \"file\": \"examples/23.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "{\"exitcode\":0,\"ok\":true,\"stdout\":\"course-process\"}\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: spawn_process requires a non-empty array of command arguments\n  --> 0:0\n\n"
+      }
+    },
+    "24": {
+      "sourceSha256": "2b2bbeb4f3add88d6b7c2b103c7eee55c8ca2d8cbb699ae1bc4ae72904843015",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 27,\n  \"command\": \"check\",\n  \"file\": \"examples/24.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "response policy verified\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Capability denied: network-client required for http_get; rerun with --allow-net-client\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n"
+      }
+    },
+    "25": {
+      "sourceSha256": "90b3e50dcf3f11a7e279272641879706e56ff6d2ee1203d42f992833929fd571",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 26,\n  \"command\": \"check\",\n  \"file\": \"examples/25.kujo\",\n  \"statement_count\": 5,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "{\"completed\":[\"report\"],\"schema\":\"course.state/v1\"}\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: JSON parse error: key must be a string at line 1 column 2\n  --> 0:0\n\n"
+      }
+    },
+    "26": {
+      "sourceSha256": "9174329ad8532769ab8387db919a05ef29c44c91f6953b496e2a52b4d11d14a8",
+      "flags": [
+        "--allow-fs-read"
+      ],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 9,\n  \"command\": \"check\",\n  \"file\": \"examples/26.kujo\",\n  \"statement_count\": 1,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "Kujo fixture\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Capability denied: filesystem-write required for write_file; rerun with --allow-fs-write\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n"
+      }
+    },
+    "27": {
+      "sourceSha256": "ee84f7853c1d72aeb6c4c1af0b957d8cd4244de7231199a7c0cd70f2dc5382a2",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 31,\n  \"command\": \"check\",\n  \"file\": \"examples/27.kujo\",\n  \"statement_count\": 5,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "{\"key\":\"***\"}\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Assertion failed: expected Str(\"***\"), got Str(\"course-synthetic-key\")\n  --> 0:0\n\n"
+      }
+    },
+    "28": {
+      "sourceSha256": "a578abcc55bc1743f591bf8eadb7c27d5e182c06a0dbdec3d2b8ec30c4b3e776",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 45,\n  \"command\": \"check\",\n  \"file\": \"examples/28.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "[{\"content\":\"Return a bounded report.\",\"role\":\"system\"},{\"content\":[{\"text\":\"Inspect the fixture.\",\"type\":\"text\"},{\"image_url\":{\"detail\":\"low\",\"url\":\"https://example.test/image.png\"},\"type\":\"image_url\"}],\"role\":\"user\"}]\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Capability denied: network-ai required for ai_chat; rerun with --allow-ai\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n"
+      }
+    },
+    "29": {
+      "sourceSha256": "c140fe80bdd25b3274a0863a5011683c02556989f20569b05543f5d10c1aaad7",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 50,\n  \"command\": \"check\",\n  \"file\": \"examples/29.kujo\",\n  \"statement_count\": 6,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "acbd53505c25a09b7e1a11bcc272eaf8640c463f8ac6c5fbd13d53c7729a84cc\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Assertion failed: expected Str(\"a38da58802e6413a7c5fad4ca9cb578920ed23fed6244d2002046011abcbd48d\"), got Str(\"ad2bcd398f01df04170da5e85ba0bdad74a1e239d5997da0d1261a6a29999ccb\")\n  --> 0:0\n\n"
+      }
+    },
+    "30": {
+      "sourceSha256": "07677995d9ec60a2a233b800d284974a0c16fce2845a0e3bac60a2166e75a38a",
+      "flags": [
+        "--allow-ai"
+      ],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 50,\n  \"command\": \"check\",\n  \"file\": \"examples/30.kujo\",\n  \"statement_count\": 2,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "hello from cassette\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: ai_chat failed: kind:\"replay_miss\" cassette 'fixtures/ai/9887a414e54469ba6a51d7292f56d7da2920176a9d706d856c408e69cd01cccf.json' was not found; strict replay does not use the network\n  --> 0:0\n\n"
+      }
+    },
+    "31": {
+      "sourceSha256": "b439c72388ac18e8ab6856183fb62b935aae6c2e8ce840cbac708b77331a0f44",
+      "flags": [
+        "--allow-ai"
+      ],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 44,\n  \"command\": \"check\",\n  \"file\": \"examples/31.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "chunk one\nstream callback completed\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: ai_stream_chat() third argument must be a function\n  --> 0:0\n\n"
+      }
+    },
+    "32": {
+      "sourceSha256": "44e51deced6ebfe11037d685bd5cc60234737216ed2363a2ebd7b1e410e85a9a",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 44,\n  \"command\": \"check\",\n  \"file\": \"examples/32.kujo\",\n  \"statement_count\": 5,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "{\"errors\":[{\"keyword\":\"minimum\",\"message\":\"number is less than 0\",\"path\":\"/count\"}],\"valid\":false}\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Assertion failed: expected Bool(true), got Bool(false)\n  --> 0:0\n\n"
+      }
+    },
+    "33": {
+      "sourceSha256": "370929aafcfaf6d3d5f4e0061d0c017352af4e730823965e62465f0e37b555f6",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 55,\n  \"command\": \"check\",\n  \"file\": \"examples/33.kujo\",\n  \"statement_count\": 6,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "[{\"index\":1,\"score\":1.0}]\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: vec_dot() dimension mismatch: left has 1 dimensions but right has 2\n  --> 0:0\n\n"
+      }
+    },
+    "34": {
+      "sourceSha256": "0662e033889178eae229c14d9802914fc2b758f23182450480b4cd7b000fb3d9",
+      "flags": [
+        "--allow-ai"
+      ],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 53,\n  \"command\": \"check\",\n  \"file\": \"examples/34.kujo\",\n  \"statement_count\": 2,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "{\"count\":2,\"status\":\"complete\"}\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: ai_tool_loop() requires options.max_steps to be an integer between 1 and 16\n  --> 0:0\n\n"
+      }
+    },
+    "35": {
+      "sourceSha256": "1dff244c2b2685ebeefffd10fd7311238596a1549d09c8eb7c6b6d9a2ad787c3",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 34,\n  \"command\": \"check\",\n  \"file\": \"examples/35.kujo\",\n  \"statement_count\": 5,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "retry policy verified\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Assertion failed: expected Bool(true), got Bool(false)\n  --> 0:0\n\n"
+      }
+    },
+    "36": {
+      "sourceSha256": "a3a30d25171d329705cb6fdffe610e60ba90dcf69c17e45ef2b2f2820bd36512",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 36,\n  \"command\": \"check\",\n  \"file\": \"examples/36.kujo\",\n  \"statement_count\": 5,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "{\"attempts\":1,\"verdict\":\"PASS\"}\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Assertion failed: expected true, got false\n  --> 0:0\n\n"
+      }
+    },
+    "37": {
+      "sourceSha256": "e65158ae4197a9ca38d3b516d7422665ac28ac9a7adea446752dae7dd8bab69e",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 30,\n  \"command\": \"check\",\n  \"file\": \"examples/37.kujo\",\n  \"statement_count\": 5,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "correct accepted; plausible wrong rejected\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Assertion failed: expected Int(2), got Int(3)\n  --> 0:0\n\n"
+      }
+    },
+    "38": {
+      "sourceSha256": "c334cdf4e7a16b255490910f54f392de043ddfbb16749a43455ce83771585521",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 31,\n  \"command\": \"check\",\n  \"file\": \"examples/38.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "{\"attempts\":1,\"evaluated\":true,\"runtime\":\"1.3.1\",\"schema\":\"course.run/v1\",\"verdict\":\"PASS\"}\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Assertion failed: expected Bool(true), got Bool(false)\n  --> 0:0\n\n"
+      }
+    },
+    "39": {
+      "sourceSha256": "24a5ae76b69d6e087609fdf8873bfe396e79fdf74fa447b8befef5b09ed90290",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 25,\n  \"command\": \"check\",\n  \"file\": \"examples/39.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "watchdog policy verified\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Assertion failed: expected true, got false\n  --> 0:0\n\n"
+      }
+    },
+    "40": {
+      "sourceSha256": "29de8e2d252c0186eb5bc98103a10923b30e4681ccc38d71d17b71e24594d48c",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 41,\n  \"command\": \"check\",\n  \"file\": \"examples/40.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "{\"description\":\"Count the fixed local job fixture\",\"inputSchema\":{\"additionalProperties\":false,\"properties\":{},\"type\":\"object\"},\"name\":\"count_jobs\"}\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Assertion failed: expected Bool(true), got Bool(false)\n  --> 0:0\n\n"
+      }
+    },
+    "01": {
+      "sourceSha256": "424e6b197edd144c4be1a707f1d9a3710c58875b6b2c07c5be95e0409837fb3e",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 24,\n  \"command\": \"check\",\n  \"file\": \"examples/01.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "accepted total: 10\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Assertion failed: expected Int(11), got Int(10)\n  --> 0:0\n\n"
+      }
+    },
+    "02": {
+      "sourceSha256": "13b60e34c0f1371cbb8bceea7e3c2b82ce900175e4b493cd9cf247d2ddff6e02",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 6,\n  \"command\": \"check\",\n  \"file\": \"examples/02.kujo\",\n  \"statement_count\": 2,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "Kujo Kujo!\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 3,
+        "stdout": "",
+        "stderr": "[KUJOPARSE001] [parser] error: Expected ')' to close function parameter list but found Punctuation('{')\n  --> examples/02-break.kujo:1:13\n  = help: Fix the parse error and rerun Kujo.\n[KUJOPARSE001] [parser] error: Expected ':' in dictionary literal\n  --> examples/02-break.kujo:3:1\n  = help: Fix the parse error and rerun Kujo.\n"
+      }
+    },
+    "03": {
+      "sourceSha256": "0a0b6cafd0a4bec1c668f940413fe39f0db5cbb8e1a757dd8d681bc76ff0e3c4",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 40,\n  \"command\": \"check\",\n  \"file\": \"examples/03.kujo\",\n  \"statement_count\": 7,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "{\"count\":2,\"limit\":3}\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Cannot mutate immutable let binding: course_items\n  --> 0:0\n\n"
+      }
+    },
+    "04": {
+      "sourceSha256": "3cb6b541a6e3a358a4f919083f050f2e5895b94b77a95bb94d2898102132b65f",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 92,\n  \"command\": \"check\",\n  \"file\": \"examples/04.kujo\",\n  \"statement_count\": 7,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "2\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Integer overflow: 9223372036854775807 + 1\n  --> 0:0\n\n"
+      }
+    },
+    "05": {
+      "sourceSha256": "7d241e6d4bf9e31b24fe5712cd0adcf96e1d8e78d973db8124457b64896bc6b6",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 28,\n  \"command\": \"check\",\n  \"file\": \"examples/05.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "[2,4]\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Undefined variable: undefined_course_name\n  --> 0:0\n   = help: Define this name before using it, check the spelling, or import the module that provides it.\n\n"
+      }
+    },
+    "06": {
+      "sourceSha256": "6cc79d2c1e0bf893cddbbdff9f10b680d0375cb990a15dfba2549466e5a5892c",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 26,\n  \"command\": \"check\",\n  \"file\": \"examples/06.kujo\",\n  \"statement_count\": 6,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "12\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: add expects 2 arguments, got 1\n  --> 0:0\n\n"
+      }
+    },
+    "07": {
+      "sourceSha256": "a3dbb9e3755b23582c00dbb4d2cf013af8a0bf473dddedbeb8f26bef55266cc7",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 6,\n  \"command\": \"check\",\n  \"file\": \"examples/07.kujo\",\n  \"statement_count\": 2,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "8\n[0,1,2,3]\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Missing map key: \"missing\"\n  --> 0:0\n\n"
+      }
+    },
+    "08": {
+      "sourceSha256": "19b7e7234cc4e59b78e267ec59f203cd8617df7ab5918986e0a5fb04bb60ab17",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 37,\n  \"command\": \"check\",\n  \"file\": \"examples/08.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "inner\nouter\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Duplicate declaration in the same scope: label\n  --> 0:0\n\n"
+      }
+    },
+    "09": {
+      "sourceSha256": "93d21cf55cf3a548a6232658c7a1b18ab9146d8b91f48311edb55605a3360028",
+      "flags": [],
+      "check": {
+        "exit": 0,
+        "stdout": "{\n  \"bytecode_instruction_count\": 26,\n  \"command\": \"check\",\n  \"file\": \"examples/09.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stderr": ""
+      },
+      "success": {
+        "exit": 0,
+        "stdout": "{\"name\":\"report\",\"units\":3}\n",
+        "stderr": ""
+      },
+      "failure": {
+        "exit": 4,
+        "stdout": "",
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Cannot convert Struct { name: \"Job\", fields: {\"units\": Int(3)} } to JSON\n  --> 0:0\n\n"
+      }
+    }
+  },
+  "commands": {
+    "check": {
+      "args": [
+        "check",
+        "--json",
+        "examples/02.kujo"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"bytecode_instruction_count\": 6,\n  \"command\": \"check\",\n  \"file\": \"examples/02.kujo\",\n  \"statement_count\": 2,\n  \"status\": \"ok\"\n}\n",
+      "stderr": ""
+    },
+    "doctor": {
+      "args": [
+        "doctor"
+      ],
+      "exit": 0,
+      "stdout": "DOCTOR doctor\n  cwd: /Users/robertdevore/2026/kujo.robertdevore.com\n\nEnvironment\n  PASS Git: git version 2.42.0\n  PASS Node.js: v26.7.0\n  PASS npm: 11.19.0\n  PASS PHP: PHP 8.4.7 (cli) (built: May  6 2025 12:31:58) (NTS)\n  WARN Composer: Composer version 2.6-dev+c7bbd606216d2a5ceea93e6a536c39f6636a1f90 (2.6-dev) 2023-06-21 11:58:42\n        Composer emitted warning/deprecation/fatal output: Deprecation Notice: Constant E_STRICT is deprecated in phar:///usr/local/bin/composer/src/Composer/Util/Silencer.php:36\n        Suggested fix: Update Composer or adjust runtime compatibility to remove noisy output.\n\nRepository\n  PASS Git repository detected: inside repository\n  INFO Current Git branch: main\n  WARN Git working tree: 20 changed paths\n        Repository has uncommitted changes (?? .github/, ?? .gitignore, ?? LICENSE, ?? README.md, ?? THIRD_PARTY.md)\n        Suggested fix: Review/stage/commit changes before handoff to CI or automation.\n\nProject signals\n  INFO WP-CLI: missing\n  PASS package.json: present\n  INFO composer.json: missing\n  PASS node_modules directory: present\n  SKIP vendor directory\n  INFO WordPress project signal: not detected\n\nBuild scripts\n  INFO npm script inventory: build, deploy, preview, verify\n\nSummary\n  7 passed, 2 warnings, 0 failed, 1 skipped\n  5 info\n\nRecommended next actions\n  • Review/stage/commit changes before handoff to CI or automation.\n  • Update Composer or adjust runtime compatibility to remove noisy output.\n",
+      "stderr": ""
+    },
+    "lsp": {
+      "args": [
+        "lsp-diagnostics",
+        "examples/21-break.kujo",
+        "--json"
+      ],
+      "exit": 0,
+      "stdout": "[\n  {\n    \"code\": \"KUJOLSP001\",\n    \"column\": 11,\n    \"file\": null,\n    \"help\": null,\n    \"line\": 1,\n    \"message\": \"Unclosed opening parenthesis '('\",\n    \"severity\": \"error\",\n    \"subsystem\": \"lsp\"\n  },\n  {\n    \"code\": \"KUJOPARSE001\",\n    \"column\": 17,\n    \"file\": null,\n    \"help\": \"Fix the parse error and rerun Kujo.\",\n    \"line\": 1,\n    \"message\": \"Expected ')' to close function parameter list but found Punctuation('{')\",\n    \"severity\": \"error\",\n    \"subsystem\": \"parser\"\n  },\n  {\n    \"code\": \"KUJOPARSE001\",\n    \"column\": 26,\n    \"file\": null,\n    \"help\": \"Fix the parse error and rerun Kujo.\",\n    \"line\": 1,\n    \"message\": \"Expected expression\",\n    \"severity\": \"error\",\n    \"subsystem\": \"parser\"\n  },\n  {\n    \"code\": \"KUJOPARSE001\",\n    \"column\": 1,\n    \"file\": null,\n    \"help\": \"Fix the parse error and rerun Kujo.\",\n    \"line\": 2,\n    \"message\": \"Expected expression\",\n    \"severity\": \"error\",\n    \"subsystem\": \"parser\"\n  }\n]\n",
+      "stderr": ""
+    },
+    "docgen": {
+      "args": [
+        "docgen",
+        "examples/20.kujo",
+        "--out-dir",
+        "work/docgen",
+        "--no-builtins",
+        "--json"
+      ],
+      "exit": 0,
+      "stdout": "{\n  \"command\": \"docgen\",\n  \"file\": \"examples/20.kujo\",\n  \"output_dir\": \"/Users/robertdevore/2026/kujo.robertdevore.com/work/docgen\",\n  \"module_doc_path\": \"/Users/robertdevore/2026/kujo.robertdevore.com/work/docgen/index.html\",\n  \"builtin_doc_path\": null,\n  \"item_count\": 0,\n  \"project_symbol_count\": 0,\n  \"builtin_symbol_count\": 0,\n  \"symbol_kind_counts\": {},\n  \"languages\": [\n    \"kujo\"\n  ],\n  \"project_json_path\": \"/Users/robertdevore/2026/kujo.robertdevore.com/work/docgen/docgen.json\",\n  \"gaps_json_path\": \"/Users/robertdevore/2026/kujo.robertdevore.com/work/docgen/docgen-gaps.json\",\n  \"capabilities_json_path\": \"/Users/robertdevore/2026/kujo.robertdevore.com/work/docgen/docgen-capabilities.json\",\n  \"ai_tasks_path\": null,\n  \"diagnostics_count\": 0,\n  \"undocumented_count\": 0,\n  \"broken_link_count\": 0,\n  \"warning_count\": 0,\n  \"adapter_health\": {\n    \"kujo\": {\n      \"files_scanned\": 1,\n      \"symbols_extracted\": 0,\n      \"doc_blocks_attached\": 0,\n      \"placeholders_emitted\": 0\n    }\n  },\n  \"cache_stats\": {\n    \"hits\": 0,\n    \"misses\": 0\n  },\n  \"discovery_limits\": {\n    \"max_depth\": 64,\n    \"max_file_size_bytes\": 2097152,\n    \"max_files\": 20000\n  },\n  \"discovery_skip_counts\": {\n    \"invalid_encoding\": 0,\n    \"max_depth\": 0,\n    \"max_file_size\": 0,\n    \"max_files\": 0\n  },\n  \"link_validation_skip_counts\": {\n    \"max_external_checks\": 0,\n    \"max_link_checks\": 0,\n    \"max_total_time\": 0\n  },\n  \"gate_failures\": [],\n  \"summary\": {\n    \"schema_version\": \"docgen-summary/v1\",\n    \"item_count\": 0,\n    \"project_symbol_count\": 0,\n    \"builtin_symbol_count\": 0,\n    \"symbol_kind_counts\": {},\n    \"diagnostics_count\": 0,\n    \"undocumented_count\": 0,\n    \"broken_link_count\": 0,\n    \"warning_count\": 0,\n    \"adapter_health\": {\n      \"kujo\": {\n        \"files_scanned\": 1,\n        \"symbols_extracted\": 0,\n        \"doc_blocks_attached\": 0,\n        \"placeholders_emitted\": 0\n      }\n    },\n    \"cache_stats\": {\n      \"hits\": 0,\n      \"misses\": 0\n    },\n    \"discovery_limits\": {\n      \"max_depth\": 64,\n      \"max_file_size_bytes\": 2097152,\n      \"max_files\": 20000\n    },\n    \"discovery_skip_counts\": {\n      \"invalid_encoding\": 0,\n      \"max_depth\": 0,\n      \"max_file_size\": 0,\n      \"max_files\": 0\n    },\n    \"link_validation_skip_counts\": {\n      \"max_external_checks\": 0,\n      \"max_link_checks\": 0,\n      \"max_total_time\": 0\n    },\n    \"gate_failures_count\": 0,\n    \"gate_failed\": false,\n    \"languages\": [\n      \"kujo\"\n    ]\n  }\n}\n",
+      "stderr": ""
+    },
+    "runtimeDiagnostic": {
+      "args": [
+        "run",
+        "--untrusted",
+        "--json-runtime-diagnostics",
+        "examples/19-break.kujo"
+      ],
+      "exit": 4,
+      "stdout": "{\n  \"call_stack\": [],\n  \"command\": \"run\",\n  \"contract_version\": \"1.0.0\",\n  \"diagnostic\": {\n    \"code\": \"KUJOVM001\",\n    \"column\": 0,\n    \"file\": null,\n    \"help\": null,\n    \"line\": 0,\n    \"message\": \"report validation failed\",\n    \"severity\": \"error\",\n    \"subsystem\": \"vm\"\n  },\n  \"exit_code\": 4,\n  \"kind\": \"runtime_diagnostic\",\n  \"runtime_kind\": \"Runtime Error\",\n  \"status\": \"error\"\n}\n",
+      "stderr": ""
+    },
+    "embedding": {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-ai",
+        "examples/supplemental/embedding.kujo"
+      ],
+      "exit": 0,
+      "stdout": "[0.5,1.0,2.25]\n",
+      "stderr": ""
+    },
+    "endpointDenied": {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-ai",
+        "examples/supplemental/endpoint-denial.kujo"
+      ],
+      "exit": 0,
+      "stdout": "endpoint_denied\n",
+      "stderr": ""
+    },
+    "aiSeparate": {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-net-client",
+        "examples/28-break.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: Capability denied: network-ai required for ai_chat; rerun with --allow-ai\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n"
+    },
+    "privateNetworkDenied": {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-net-client",
+        "--deny-private-net",
+        "examples/24-break.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: HTTP GET blocked by outbound destination policy 'deny_private' (resolved to blocked addresses: 127.0.0.1). Set KUJO_ALLOW_PRIVATE_NETWORK_DESTINATIONS=1 to allow trusted local/private destinations.\n  --> 0:0\n\n"
+    },
+    "spawn": {
+      "args": [
+        "run",
+        "--untrusted",
+        "examples/supplemental/spawn.kujo"
+      ],
+      "exit": 0,
+      "stdout": "spawn accepted; completion not asserted\n",
+      "stderr": ""
+    }
+  }
+}

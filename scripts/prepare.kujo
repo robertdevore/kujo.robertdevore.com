@@ -1,0 +1,73 @@
+func escape(value) { return escape_xml(to_string(value)) }
+func fence(language, text) { return "\n```" + language + "\n" + text + "\n```\n" }
+func front(title, slug, description, order) {
+    return "---\ntitle: " + to_json(title) + "\nslug: " + slug + "\ndescription: " + to_json(description) + "\norder: " + to_string(order) + "\ndate: 2026-09-06\nauthor: Robert DeVore\n---\n\n"
+}
+func main() {
+    course := parse_json(read_file("course.json"))
+    receipts := parse_json(read_file("evidence/verification.json"))
+    lessons := course["lessons"]
+    stages := course["stages"]
+    mut sidebar := "<p>Your learning path</p><p><span data-progress-label>0 / 47 complete</span></p><progress data-progress max=\"47\" value=\"0\" aria-label=\"Course completion\"></progress>"
+    mut map := "<div class=\"map-heading\"><h2>Your learning path</h2><p>40 lessons · 6 stage builds · 1 capstone</p></div><div class=\"stages\">"
+    mut stage_id := 1
+    for stage in stages {
+        num := "0" + to_string(stage_id)
+        sidebar += "<details><summary>" + num + " / " + escape(stage) + "</summary><ul>"
+        map += "<section class=\"stage\"><div class=\"stage-header\"><span class=\"stage-num\">" + num + "</span><div><h2>" + escape(stage) + "</h2><p data-stage-progress=\"" + to_string(stage_id) + "\">Learn · practice · verify</p></div></div><ul>"
+        for item in lessons {
+            if item["stage"] == stage_id {
+                link := "/course/" + item["slug"] + "/"
+                sidebar += "<li><a href=\"" + link + "\">" + item["id"] + " · " + escape(item["title"]) + "</a></li>"
+                map += "<li><a data-lesson=\"" + item["slug"] + "\" data-stage=\"" + to_string(stage_id) + "\" href=\"" + link + "\"><span class=\"lesson-number\">" + item["id"] + "</span>" + escape(item["title"]) + "</a></li>"
+            }
+        }
+        sidebar += "<li><a href=\"/build-" + to_string(stage_id) + "/\">◆ Stage build</a></li></ul></details>"
+        map += "</ul><a class=\"stage-build\" data-lesson=\"build-" + to_string(stage_id) + "\" href=\"/build-" + to_string(stage_id) + "/\">◆ Build " + to_string(stage_id) + " · Put it to work →</a></section>"
+        stage_id += 1
+    }
+    sidebar += "<p><a href=\"/capstone/\">◆ Final capstone</a></p><p><a href=\"/course/\">Full curriculum →</a></p>"
+    map += "</div><section class=\"capstone\"><div><p class=\"eyebrow\">FINAL CAPSTONE</p><h2>Local-first AI operations runner.</h2><p>From validated request to evaluated result and evidence.</p></div><a class=\"button\" href=\"/capstone/\">Build the runner →</a></section>"
+    intro := "<main class=\"home\" id=\"main\"><section class=\"intro\"><div><p class=\"eyebrow\">A PROGRAMMING LANGUAGE FOR AI-NATIVE SOFTWARE</p><h1>Write it.<br>Run it.<br>Prove it.</h1><p class=\"lede\">Learn Kujo by building software you can inspect, reproduce, and trust with explicit authority.</p><a class=\"button\" href=\"/course/what-is-kujo/\" data-resume>Start lesson 01 →</a><a class=\"text-link\" href=\"/course/\">Explore the curriculum</a></div><div class=\"terminal\"><div class=\"terminal-head\"><span>your_first_step.kujo</span><span>VM / 1.3.1</span></div><pre><code>func greet() {\n    print(\"Kujo Kujo!\")\n}\n\ngreet()</code></pre><div class=\"result\">$ kujo run your_first_step.kujo<br>Kujo Kujo!</div></div></section><div class=\"course-strip\"><span><strong>40</strong> practical lessons</span><span><strong>06</strong> progressive stages</span><span><strong>01</strong> complete learning path</span><span>No account. Local progress.</span></div>"
+    write_file("templates/page-home.html", intro + map + "</main>", true)
+    write_file("templates/page-course.html", "<main class=\"home\" id=\"main\"><p class=\"eyebrow\">GOAL → WRITE → RUN → INSPECT → VERIFY → HARDEN → AUTOMATE</p><h1>The course map.</h1><p class=\"lede\">A practical path from your first Kujo program to bounded AI-native systems.</p>" + map + "</main>", true)
+    write_file("templates/post.html", replace(read_file("templates/post.base.html"), "{{COURSE_NAV}}", sidebar), true)
+    mut index := []
+    mut explorer := []
+    mut position := 0
+    for item in lessons {
+        id := item["id"]
+        result := receipts["lessons"][id]
+        code := read_file("examples/" + id + ".kujo")
+        broken := read_file("examples/" + id + "-break.kujo")
+        mut body := read_file("lessons/" + item["slug"] + ".md")
+        command := "kujo check examples/" + id + ".kujo\nkujo run --untrusted " + join(item["flags"], " ") + " examples/" + id + ".kujo"
+        body = replace(body, "{{example}}", fence("kujo", code))
+        body = replace(body, "{{command}}", fence("shell", command))
+        body = replace(body, "{{output}}", "### Captured output\n" + fence("output", result["success"]["stdout"]))
+        body = replace(body, "{{broken}}", fence("kujo", broken))
+        body = replace(body, "{{diagnostic}}", fence("shell", "kujo run --untrusted " + join(item["flags"], " ") + " examples/" + id + "-break.kujo") + "\nExit status: **" + to_string(result["failure"]["exit"]) + "**. Captured diagnostic:\n" + fence("diagnostic", result["failure"]["stderr"]))
+        stage := stages[item["stage"] - 1]
+        body = "<p class=\"eyebrow\">STAGE " + to_string(item["stage"]) + " / " + escape(stage) + " · LESSON " + id + "</p>\n\n" + body
+        body += "\n\n<p class=\"provenance\">Verified 2026-09-06 · Official Kujo 1.3.1 release · <a href=\"https://github.com/kujolang/kujo/blob/v1.3.1/" + item["source"] + "\">Source contract</a> · <a href=\"/examples/" + id + ".kujo\" download>Download example</a></p>"
+        body += "<div class=\"lesson-actions\"><button class=\"complete\" data-complete=\"" + item["slug"] + "\" type=\"button\">Mark lesson complete</button><span data-complete-status></span></div><nav class=\"lesson-pager\" aria-label=\"Lesson navigation\">"
+        if position > 0 { body += "<a href=\"/course/" + lessons[position - 1]["slug"] + "/\">← " + escape(lessons[position - 1]["title"]) + "</a>" }
+        if position < len(lessons) - 1 { body += "<a href=\"/course/" + lessons[position + 1]["slug"] + "/\">" + escape(lessons[position + 1]["title"]) + " →</a>" }
+        body += "</nav>"
+        if position == len(lessons) - 1 || lessons[position + 1]["stage"] != item["stage"] { body += "\n\n[Complete this stage’s build →](/build-" + to_string(item["stage"]) + "/)" }
+        write_file("content/posts/" + item["slug"] + ".md", front(item["title"], item["slug"], item["description"], position + 1) + body, true)
+        index = push(index, {"title": item["title"], "url": "/course/" + item["slug"] + "/", "text": item["description"] + " " + body})
+        explorer = push(explorer, {"id": id, "title": item["title"], "source": code, "output": result["success"]["stdout"], "diagnostic": result["failure"]["stderr"], "url": "/course/" + item["slug"] + "/"})
+        position += 1
+    }
+    pages := parse_json(read_file("pages.json"))
+    for page in pages {
+        body := read_file(page["file"])
+        write_file("content/pages/" + page["slug"] + ".md", front(page["title"], page["slug"], page["description"], 100) + body, true)
+        index = push(index, {"title": page["title"], "url": "/" + page["slug"] + "/", "text": body})
+    }
+    write_file("assets/course-search.json", to_json(index), true)
+    write_file("assets/course-examples.json", to_json(explorer), true)
+    print("Prepared 40 lessons and course pages with verified output")
+}
+main()
