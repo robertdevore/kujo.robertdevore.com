@@ -1,0 +1,34 @@
+{
+  "project": {
+    "name": "Kujo Course",
+    "tagline": "Programming language for AI-native software",
+    "url": "https://kujo.robertdevore.com"
+  },
+  "theme": {
+    "name": "minimal",
+    "mode": "light"
+  },
+  "cards": [
+    {
+      "id": "kujo-course",
+      "title": "Write it. Run it. Prove it.",
+      "tagline": "40 lessons. Six builds. One replay-backed capstone.",
+      "file": "examples/02.kujo",
+      "language": "kujo",
+      "concepts": [
+        "VM-first",
+        "local-first",
+        "evidence"
+      ],
+      "expected_output": "Kujo Kujo!",
+      "caption": "Learn Kujo through verified examples, explicit capabilities, and deterministic AI replay.",
+      "cta": "Start the Kujo course.",
+      "url": "https://kujo.robertdevore.com",
+      "variant": "social",
+      "label": "THE COURSE",
+      "font_file": "assets/fonts/DepartureMono-Regular.woff2",
+      "background_image": "assets/howl-background.svg",
+      "alt": "Kujo Course: write it, run it, prove it. 40 lessons, six builds, one replay-backed capstone."
+    }
+  ]
+}

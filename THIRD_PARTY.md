@@ -6,3 +6,5 @@
 - Python, Rust, and TypeScript course repositories informed learning-map/navigation and verification conventions. All Kujo lesson prose and course-specific programs were authored for this repository.
 - The course's custom tool-loop cassettes were recorded through Kujo 1.3.1 from a local deterministic HTTP responder, using synthetic data only. Re-recording is explicit; ordinary verification is strict replay.
 - scripts/social-card.svg is an original typography-only social card. assets/social.png is its 1200×630 rasterization with macOS sips.
+
+Departure Mono Regular is self-hosted from the official Kujo website repository; its SIL Open Font License is in assets/fonts/DepartureMono-LICENSE.txt. The unmodified Kujo logomark and favicon were retrieved from https://kujolang.ai/assets/images/kujo-logomark.svg on 2026-09-07 at the site owner’s request. Kujo branding identifies the language; no external endorsement is claimed. Howl produces the showcase SVG/HTML/Markdown from howl.json and the verified examples/02.kujo.
