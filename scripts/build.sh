@@ -3,6 +3,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 KUJO_BIN="${KUJO_BIN:-kujo}"
 if [[ -x .tools/kujo ]]; then KUJO_BIN="${KUJO_BIN_OVERRIDE:-$PWD/.tools/kujo}"; fi
+mkdir -p content/posts content/pages output
 "$KUJO_BIN" run scripts/prepare.kujo
 "$KUJO_BIN" run scripts/render.kujo
 cp -R assets output/
