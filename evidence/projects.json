@@ -164,7 +164,7 @@
       "cwd": "temporary independent copy",
       "exit": 0,
       "signal": null,
-      "stdout": "\n============================================================\nTest Results\n============================================================\n  ✓ unknown goal rejected (6ms)\n  ✓ excess budget rejected (4ms)\n  ✓ correct count accepted (6ms)\n  ✓ plausible wrong count rejected (6ms)\n  ✓ extra action rejected (5ms)\n\nTests: 5 total, 5 passed, 0 failed\nTime:  32ms\n============================================================\n\nAll tests passed! ✨\n",
+      "stdout": "\n============================================================\nTest Results\n============================================================\n  ✓ unknown goal rejected (4ms)\n  ✓ excess budget rejected (3ms)\n  ✓ correct count accepted (4ms)\n  ✓ plausible wrong count rejected (3ms)\n  ✓ extra action rejected (3ms)\n\nTests: 5 total, 5 passed, 0 failed\nTime:  22ms\n============================================================\n\nAll tests passed! ✨\n",
       "stderr": ""
     },
     {

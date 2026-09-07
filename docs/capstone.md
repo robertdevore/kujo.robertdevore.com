@@ -4,11 +4,11 @@ Build a Kujo-native operations runner that accepts a bounded request, assembles 
 
 <div class="flow">Request <span class="icon icon-arrow-right" aria-hidden="true"></span> Validate <span class="icon icon-arrow-right" aria-hidden="true"></span> Context <span class="icon icon-arrow-right" aria-hidden="true"></span> Bounded executor <span class="icon icon-arrow-right" aria-hidden="true"></span> Tool <span class="icon icon-arrow-right" aria-hidden="true"></span> Evaluate <span class="icon icon-arrow-right" aria-hidden="true"></span> Evidence <span class="icon icon-arrow-right" aria-hidden="true"></span> PASS / REVISE / STOP</div>
 
-This is a small complete system with a narrow operation: count a supplied local job fixture. Its value is the visible architecture. Expanding the set of operations is an exercise in maintaining these boundaries, not a reason to add arbitrary shell execution.
+This is a small complete system with a narrow operation: count a supplied local job fixture. The small operation lets you inspect every step, from validation through evaluation and evidence. Expanding the set of operations is an exercise in maintaining these boundaries, not a reason to add arbitrary shell execution.
 
 ## Prerequisites and scope
 
-Complete all six stage builds. Use the official 1.3.1 runtime and the supplied standalone project under projects/capstone. The package has no registry dependency, and its lockfile is checked in. Its modules, framework tests, fixtures, and strict replay cassettes travel with it.
+Complete all six stage builds. Use the official 1.3.1 runtime and the supplied standalone project under projects/capstone. The package has no registry dependency, and its lockfile is committed to Git. Its modules, framework tests, fixtures, and strict replay cassettes travel with it.
 
 The course's runtime discrepancy notes still apply. This implementation avoids silent struct mutation and affected loop patterns. It does not claim that the whole runtime has perfect VM/interpreter parity.
 

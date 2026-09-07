@@ -8,7 +8,7 @@
   {
     "slug": "build-2",
     "title": "Build 2: Concurrent data processor",
-    "description": "Turn a fixed set of typed-looking domain records into ordered results using bounded async work.",
+    "description": "Turn a fixed set of domain records into ordered results using bounded async work.",
     "file": "docs/build-2.md"
   },
   {

@@ -4,7 +4,7 @@ The signature loop is Goal → Write → Run → Inspect → Verify → Harden �
 
 ## How to study
 
-Read a lesson, predict its example, run it locally, inspect the captured comparison, then deliberately break it. Implement the exercise before marking the lesson complete. Stage builds consolidate the skills you already learned; the final capstone combines them into a small complete system.
+Read a lesson, predict the example's output, run it locally, compare it with the captured result, then deliberately break it. Implement the exercise before marking the lesson complete. Stage builds apply the skills you have learned; the final capstone combines them into a small complete system.
 
 Progress is stored in this browser only, without an account. If browser storage is unavailable, reading and navigation still work. Search is local to the published course. No submitted code is executed remotely.
 
@@ -16,7 +16,7 @@ The Python course informed the visible learning map, search, and lesson navigati
 
 ## Version and limitations
 
-Examples target the official Kujo 1.3.1 release, verified on 2026-09-06. Known differences between its VM and written contracts are documented openly in the [evidence ledger](/evidence/). Experimental JIT and deferred generics, FFI, WASM, and macros are not baseline course features.
+Examples target the official Kujo 1.3.1 release, verified on 2026-09-06. Known differences between its VM and written contracts are documented in the [evidence ledger](/evidence/). Experimental JIT and deferred generics, FFI, WASM, and macros are not baseline course features.
 
-Course source and examples are available in the [standalone repository](https://github.com/robertdevore/kujo.robertdevore.com). Third-party source and fixture provenance are recorded in THIRD_PARTY.md. This course makes bounded technical claims; it is not a universal production-security certification.
+Course source and examples are available in the [standalone repository](https://github.com/robertdevore/kujo.robertdevore.com). Third-party source and fixture provenance are recorded in THIRD_PARTY.md. The verification results cover the recorded examples and runtime version; they do not certify production deployments.
 

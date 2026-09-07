@@ -1,20 +1,20 @@
 ## Where you are
 
-Complete lessons 8–14 before starting. This is an implementation exercise, followed by a tested comparison solution. Write your own version first; the comparison is useful for reviewing boundaries, not merely copying a passing output.
+Complete lessons 8–14 before starting. Write your own implementation first, then compare it with the tested solution. Review how each version handles input, effects, and failure.
 
 ## Goal and acceptance contract
 
-Turn a fixed set of typed-looking domain records into ordered results using bounded async work.
+Turn a fixed set of domain records into ordered results using bounded async work.
 
 Two jobs produce doubled values in input order. A negative quantity becomes an Err and must not appear as a successful row. Result/Option consumers must handle absence and failure explicitly.
 
 ## Plan the boundary
 
-Write down the input, output, and failure states before changing code. Decide which values are required and which may be absent. Keep the calculation independent of printing so assertions can inspect a real return value.
+Write down the input, output, and failure states before changing code. Decide which values are required and which may be absent. Keep calculations separate from printing so tests can assert their return values.
 
 Pure worker calculations need no host-effect allowances. Concurrency does not add isolation.
 
-Do not broaden authority to make a failing test disappear. Diagnose the failed operation and compare it with the intended input and effect table. A successful command is only one part of the acceptance contract above.
+Do not grant more authority just to make a test pass. Compare the failed operation with the required inputs and allowed effects, then check every acceptance criterion.
 
 ## Implementation milestones
 
@@ -32,13 +32,13 @@ Clone the standalone course repository and run from its root unless the command 
 kujo run --untrusted projects/concurrent/main.kujo
 ```
 
-The repository's project verifier runs these comparisons and additional failure cases. A local fixture server is only needed for the native HTTP integration. AI comparisons replay committed cassettes and need no server.
+The project verifier runs these comparisons and additional failure cases.
 
 ## Break it deliberately
 
-Remove a required input or allowance, alter an expected value, or supply a malformed record. Identify whether the failure happened during parsing, input validation, capability checking, execution, or evaluation. Restore the smallest change that fixes the intended problem.
+Remove a required input or allowance, alter an expected value, or supply a malformed record. Identify whether the failure happened during parsing, input validation, capability checking, execution, or evaluation. Fix the cause of the failure, then rerun the test.
 
-A useful negative test cannot pass merely because something failed: a missing import is not evidence that your validator rejected a bad quantity. Check the reason and retain that diagnostic with your test.
+A negative test must fail for the intended reason. A missing import does not prove that a validator rejected bad input. Check and retain the diagnostic.
 
 ## Extend it
 
@@ -48,7 +48,7 @@ Add a sequential oracle and compare the entire result. Increase the fixture to f
 
 Explain the input contract, the authority required, and what proves success. Point to the test that rejects an incorrect result. Identify the finite bound on work. For concurrent or AI code, explain who owns completion and when a result may be accepted.
 
-The next stage adds another boundary to this working foundation. Keep this build as a regression fixture rather than discarding it after reading the lesson.
+Keep this build and its tests for regression checks as you progress.
 
 ## Comparison source
 
