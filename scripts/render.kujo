@@ -44,8 +44,31 @@ func render_page(title, description, route, inner, layout) {
     html = replace(html, "{{seo_description}}", escape(description))
     html = replace(html, "{{og_url}}", canonical)
     html = replace(html, "{{og_type}}", "website")
-    schema := {"@context": "https://schema.org", "@type": "LearningResource", "name": title, "description": description, "url": canonical, "inLanguage": "en", "isAccessibleForFree": true, "learningResourceType": "Course lesson"}
-    html = replace(html, "{{json_ld}}", "<script type=\"application/ld+json\">" + to_json(schema) + "</script>")
+    page_type := "WebPage"
+    if route == "/" { page_type = "Course" }
+    if route == "/course/" { page_type = "CollectionPage" }
+    if route == "/about/" { page_type = "AboutPage" }
+    if starts_with(route, "/course/") && route != "/course/" { page_type = "LearningResource" }
+    if starts_with(route, "/build-") || route == "/capstone/" { page_type = "LearningResource" }
+    schema := {"@context": "https://schema.org", "@type": page_type, "@id": canonical + "#resource", "name": title, "description": description, "url": canonical, "inLanguage": "en", "isAccessibleForFree": true, "author": {"@type": "Person", "name": "Robert DeVore", "url": "https://robertdevore.com"}}
+    if page_type == "LearningResource" {
+        schema["learningResourceType"] := "Lesson"
+        if route == "/capstone/" || starts_with(route, "/build-") { schema["learningResourceType"] = "Project" }
+        schema["isPartOf"] := {"@type": "Course", "@id": "https://kujo.robertdevore.com/#resource", "name": "Kujo Course"}
+    }
+    json_ld := "<script type=\"application/ld+json\">" + to_json(schema) + "</script>"
+    if route != "/" && route != "/404/" {
+        crumbs := [{"@type": "ListItem", "position": 1, "name": "Kujo Course", "item": "https://kujo.robertdevore.com/"}, {"@type": "ListItem", "position": 2, "name": title, "item": canonical}]
+        breadcrumb := {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": crumbs}
+        json_ld += "<script type=\"application/ld+json\">" + to_json(breadcrumb) + "</script>"
+        crumb_html := "<nav class=\"breadcrumbs\" aria-label=\"Breadcrumb\"><ol><li><a href=\"/\">Kujo Course</a></li><li aria-current=\"page\">" + escape(title) + "</li></ol></nav>"
+        inner = replace(inner, "<h1>", crumb_html + "<h1>")
+    }
+    if page_type == "LearningResource" {
+        inner = replace(inner, "</h1>", "</h1><p class=\"byline\">By <a href=\"https://robertdevore.com\">Robert DeVore</a> · Kujo examples verified <time datetime=\"2026-09-06\">September 6, 2026</time></p>")
+    }
+    if route == "/404/" { json_ld = "<meta name=\"robots\" content=\"noindex,follow\">" }
+    html = replace(html, "{{json_ld}}", json_ld)
     html = replace(html, "{{content}}", inner)
     directory := "output" + route
     create_dir(directory)
@@ -60,6 +83,7 @@ func main() {
     page := read_file("templates/page.html")
     render_page("Learn Kujo: write, run, prove", "A practical Kujo programming course: 40 lessons, six stage builds, and a replay-backed AI operations capstone.", "/", read_file("templates/page-home.html"), layout)
     render_page("The course map", "40 lessons across six stages, from Kujo foundations to reliable AI-native systems.", "/course/", read_file("templates/page-course.html"), layout)
+    redirects := "/course /course/ 301\n"
     sitemap := "<?xml version=\"1.0\" encoding=\"UTF-8\"?><urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"><url><loc>https://kujo.robertdevore.com/</loc></url><url><loc>https://kujo.robertdevore.com/course/</loc></url>"
     for lesson in course["lessons"] {
         body := course_markdown(markdown_body("content/posts/" + lesson["slug"] + ".md"))
@@ -68,6 +92,7 @@ func main() {
         inner = replace(inner, "{{body}}", body)
         route := "/course/" + lesson["slug"] + "/"
         render_page(lesson["title"], lesson["description"], route, inner, layout)
+        redirects += substring(route, 0, len(route) - 1) + " " + route + " 301\n"
         sitemap += "<url><loc>https://kujo.robertdevore.com" + route + "</loc></url>"
     }
     for item in pages {
@@ -76,8 +101,10 @@ func main() {
         inner = replace(inner, "{{body}}", body)
         route := "/" + item["slug"] + "/"
         render_page(item["title"], item["description"], route, inner, layout)
+        redirects += substring(route, 0, len(route) - 1) + " " + route + " 301\n"
         sitemap += "<url><loc>https://kujo.robertdevore.com" + route + "</loc></url>"
     }
+    write_file("output/_redirects", redirects, true)
     write_file("output/sitemap.xml", sitemap + "</urlset>", true)
     write_file("output/robots.txt", "User-agent: *\nAllow: /\nSitemap: https://kujo.robertdevore.com/sitemap.xml\n", true)
     write_file("output/llms.txt", "# Kujo Course\n\n40 lessons and seven builds, verified against Kujo 1.3.1.\n\n- [Curriculum](https://kujo.robertdevore.com/course/)\n- [Evidence](https://kujo.robertdevore.com/evidence/)\n- [Source](https://github.com/robertdevore/kujo.robertdevore.com)\n", true)

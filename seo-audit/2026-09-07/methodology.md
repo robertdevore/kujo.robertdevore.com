@@ -1,0 +1,13 @@
+# Methodology — 2026-09-07 UTC
+
+Scope: the standalone English Kujo course for experienced developers, canonical origin https://kujo.robertdevore.com. Conversion intent is beginning lessons and completing exercises, not a commercial checkout. All 52 sitemap routes, HTML internal links, referenced assets, external destinations, and the generated 404 are inspected. Source → Kujo prepare/render → static output → Cloudflare Workers Static Assets/custom domain → browser/crawler. Git source baseline: 843bc8d. No unrelated repositories or DNS records changed.
+
+Untouched output was rebuilt with the official checksum-verified Kujo 1.3.1 binary, archived in raw/baseline-output.tar.gz, and sealed with its SHA256. Baseline production responses and external-link receipts are compressed in raw/baseline-responses.json.gz. Baseline category tables are retained in raw/baseline-tables. Reopen those artifacts independently of the mutable output directory. scripts/seo-audit.mjs refuses to overwrite a phase once its summary exists. scripts/seo-edge.mjs records redirects and crawler UA probes.
+
+Crawl parsing uses static rendered HTML and sitemap inventories; it is not a browser DOM or platform index report. Baseline source_file lesson paths incorrectly used numeric ids; resolve them through course.json id → slug. The baseline remains unmodified; after inventory contains corrected source paths. Baseline schema mismatch count includes seven projects mislabeled as lessons; the corrected after classifier recognizes their explicit Project learningResourceType.
+
+Lighthouse 13.0.1 uses Chrome headless, default mobile simulated throttling on this Mac. Home, replay lesson, and capstone share the same commands before/after. These are single lab observations, not field CWV or causal proof of ranking improvement. User-agent probes do not prove verified provider-IP access. No third-party 401/403/405/429 is counted broken.
+
+No word-count targets or bulk lesson rewrites. Topic mapping is source-derived, combined with template/content review and existing verified executable evidence. Search observations are a limited web-search sample with unspecified engine/locale/device, not rankings. AI-answer benchmarks are prepared but not executed on unavailable provider sessions. Internal composite SEO/AI scores are deliberately NOT SCORED; category counts and raw Lighthouse measurements remain reproducible.
+
+Published HTTP receipts redact transport Set-Cookie/authentication header values. This deliberate privacy redaction changes no status, body, canonical, crawl or timing evidence. The immutable generated-output archive remains checksum-identical. Future probe scripts omit these headers before storage.

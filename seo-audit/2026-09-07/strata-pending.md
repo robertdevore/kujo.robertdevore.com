@@ -1,0 +1,13 @@
+# Session Memory · Kujo course · Branding and SEO audit · 2026-09-07
+
+Scope: /Users/robertdevore/2026/kujo.robertdevore.com, main, production https://kujo.robertdevore.com. Authority: user requested Departure Mono, official kujolang.ai SVG, SEO/AI-search audit and Howl.
+
+Current state/timeline: self-hosted Departure Mono headings, labels, code and carets; official unmodified Kujo SVG in header/footer/favicon; Howl 1.1.0 manifest plus deterministic showcase artifacts and reviewed social PNG. User typography preference should persist for course changes. Template schema now matches Course/CollectionPage/AboutPage/LearningResource/WebPage; visible authorship/breadcrumbs support markup. Known routes use permanent slash redirects; error document is noindex (direct /404/ still maps to an error asset with 200 at Cloudflare; unknown routes are real404).
+
+Evidence: seo-audit/2026-09-07 preserves immutable baseline, all52 before/after route crawls, external/internal links, schema/content/query maps, seven crawler UAs, redirect headers, and three-template Lighthouse13.0.1 reports. Zero missing/duplicate metadata, broken linked destinations or schema parse errors. Twelve page-purpose mismatches fixed. Homepage contrast now passes. Lighthouse performance remains around61–65 with Cloudflare security injection the dominant CPU cost; no security/training policy changed. Real rankings, analytics, field CWV and AI citations require platform access and were not invented. Full executable/project/build checks pass.
+
+Handoff: start with README and seo-audit/2026-09-07/executive-summary.md; use scripts/seo-audit.mjs and seo-edge.mjs for future dated comparisons, never overwrite baseline. 7/28/60/90-day measurement plan in recommendations.md. Howl rendering procedure in showcase/README.md; sips failed to preserve embedded font, so use a browser-capable renderer for PNG. Existing SignalBox cap_1d9aa44a-ac8f-44e0-b97f-84034f59beb0 already tracks the zone's challenge-platform performance cost; duplicate capture skipped.
+
+Retrieval cues: Kujo course Departure Mono; Kujo official logo; Howl social card; course SEO audit; Cloudflare challenge script performance.
+
+Persistence: pending. The supported agent summary write returned HTTP500 on2026-09-07; no note ID was returned. Intended target Agent Notes. Retry from /Users/robertdevore/2026/strata with `npm run strata -- --agent --json agent summary --file /absolute/path/to/this/file --project 'Agent Notes'`, then exact `notes get NOTE_ID --json` and concept search `Kujo course Departure Mono SEO` to verify. Prior session handoff remains separately pending in evidence/strata-pending.md.

@@ -1,0 +1,16 @@
+id:       kujo-course
+title:    Write it. Run it. Prove it.
+tagline:  40 lessons. Six builds. One replay-backed capstone.
+file:     examples/02.kujo
+language: kujo
+concepts: VM-first, local-first, evidence
+
+--- code preview ---
+func greet() {
+    print("Kujo Kujo!")
+}
+greet()
+
+
+--- expected output ---
+Kujo Kujo!

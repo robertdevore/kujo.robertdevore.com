@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-07",
+  "origins": [
+    "http://127.0.0.1:4191",
+    "https://kujo.robertdevore.com"
+  ],
+  "desktop": 1280,
+  "mobile": "390x844",
+  "computedHeadingAndCaretFont": "Departure Mono",
+  "logosLoaded": true,
+  "horizontalOverflow": false,
+  "visibleBreadcrumbAndAuthor": true,
+  "searchQuery": "record replay",
+  "firstSearchResult": "Record, replay, and offline evidence",
+  "consoleWarningsErrors": 0,
+  "viewportReset": true,
+  "howlSVG": "reviewed embedded font and official mark; repeated render bytes equal"
+}

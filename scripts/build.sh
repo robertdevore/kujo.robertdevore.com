@@ -6,6 +6,7 @@ if [[ -x .tools/kujo ]]; then KUJO_BIN="${KUJO_BIN_OVERRIDE:-$PWD/.tools/kujo}";
 mkdir -p content/posts content/pages output
 "$KUJO_BIN" run scripts/prepare.kujo
 "$KUJO_BIN" run scripts/render.kujo
+rm -f output/404/index.html
 cp -R assets output/
 cp assets/_headers output/_headers
 cp -R examples output/
