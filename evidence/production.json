@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-09-07T02:23:19.630Z",
+  "verifiedAt": "2026-09-07T02:52:56.032Z",
   "base": "https://kujo.robertdevore.com",
   "addresses": [
     {
@@ -33,15 +33,15 @@
     "alt-svc": "h3=\":443\"; ma=86400",
     "cache-control": "public, max-age=0, must-revalidate",
     "cf-cache-status": "HIT",
-    "cf-ray": "a37240341ab22279-ORD",
+    "cf-ray": "a3726b927c7e55fa-ORD",
     "content-encoding": "zstd",
     "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
     "content-type": "text/html",
-    "date": "Mon, 07 Sep 2026 02:23:19 GMT",
+    "date": "Mon, 07 Sep 2026 02:52:56 GMT",
     "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
     "permissions-policy": "camera=(), microphone=(), geolocation=()",
     "referrer-policy": "strict-origin-when-cross-origin",
-    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=s4Q3Nt6xm58%2BOf%2Fx0megoYZ%2FHTiCA%2Buq67WR5c1OWgI3ih1WBZH1h89Sm%2BhSxbKaIQpNqeIV7RwqQDsHHcLf5TFh%2FeshiWTIaGmarrmZYlzjZmwu4%2F%2BgTw7wV8%2B2AoINKRMDf%2BdYOOs%3D\"}]}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=zxKTuBuHkwdVFQTuYaI9Oa5rT75Djf%2Bx%2F9%2FcFJgcnv0r2dUrIpnWm%2BQQukZWIvavUrXkvYGeexp59qqkLZ%2FJvCqJ%2FrFMvylqG3g%2FTsOM%2Fe73YPVmqQsJP3pVogd2C1zKuz0IYyQgnBY%3D\"}]}",
     "server": "cloudflare",
     "x-content-type-options": "nosniff",
     "x-frame-options": "DENY"
