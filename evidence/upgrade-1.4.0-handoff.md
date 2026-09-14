@@ -1,0 +1,15 @@
+# Session Memory · Kujo course · 1.4.0 upgrade · 2026-09-14
+
+- Repository: /Users/robertdevore/2026/kujo.robertdevore.com, main. Automation: weekly-kujo-course-freshness.
+- State: upgraded official 1.3.1 to checksum-verified official 1.4.0. No intervening stable release. Artifact/source identity: evidence/upgrade-1.4.0.json.
+- Commits: dcc6fe4 (runtime/history), 0c4ecae (curriculum). Deployment: ce69d020-f370-4cb9-bd36-c4eb018a63f2.
+- Validation: 40 VM examples, 40 intended failures, 20 integration checks, 10 release checks, seven dual-runtime probes, 53 generated pages/2902 references. Linux CI 34804371373 passed. Production DNS/TLS/52 routes/assets/404 passed. Sampled changed main-content regions match the build; homepage title and new search entries verified.
+- Added byte_length, imported callbacks, isolated imports, confined publication, bounded web data, POSIX launcher boundaries, supervised scheduler limits, and separate Kennel first-party registry guidance. Preserved technical precision and visual design. Original receipts archived in evidence/history/v1.3.1.
+- Repeated loop-local declarations and loop-variable scope are fixed. Struct assignment, qualified custom-enum matching, and combined break/continue timeout remain divergent; course examples avoid them. Do not remove caveats without fresh probes.
+- Tagged docs retain stale version/unreleased labels; official release metadata, artifact behavior, and tests take precedence. AI_RUNTIME.md unchanged between tags. Other ecosystem references remain historical pinned reviews; Kennel README reviewed at f4ba246d5cb339a57a0d42eee7f8b52d568af5f7. Registry dependencies remain outside offline tests.
+- SignalBox: cap_013c7347-f02a-44bd-975a-88cd1a2a845a / sig_3d43bff7-1214-48a3-b56e-c12d289a24bb narrow original cap_9185e292-b3f5-4740-abb7-7533660b4713 with new 1.4.0 evidence. Exact/concept retrieval passed. Unchanged observations were not duplicated separately.
+- Separate unresolved item: Dependabot alert 1, development-only transitive sharp/libheif high-severity advisory; patched sharp 0.35.4. cap_b226d522-5d84-4963-af12-88fcae9f58b0 / sig_45cd4b88-76c0-4917-afc6-d4e0a5958be8. Review parent-tool compatibility before remediation; no static-site runtime exploitability inferred.
+- Next run: compare against 1.4.0, run release-checks.mjs and full course verification, inspect remaining parity probes before revising claims.
+- Strata target: Agent Notes. Dedup search found historical launch/image records, no equivalent upgrade. Retrieval cues: Kujo course 1.4.0 upgrade, weekly freshness, remaining parity failures.
+
+Persistence verification: Strata note `8238aaa1-8e25-4137-8fdb-39ce0d5fab98` saved the upgrade state, verification, caveats, and next-run handoff; exact-ID and conceptual retrieval passed. Both SignalBox capture/signal pairs passed exact-ID and concept retrieval. Two captures/two signals created; the old five-case capture was linked as prior evidence rather than copied. Routine successful checks and resolved scope fixes were not filed as separate open findings.
