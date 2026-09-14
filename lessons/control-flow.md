@@ -30,7 +30,7 @@ The failure drill uses a name that was never declared. The release-specific loop
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.3.1 runtime.
+From the course repository root, use the pinned Kujo 1.4.0 runtime.
 
 {{command}}
 
@@ -58,5 +58,5 @@ Rewrite the selection as a while-loop with an explicit index bound. Test empty i
 
 ## Contract versus release behavior
 
-> The written contract says a for-loop variable does not leak. In the official 1.3.1 VM, a top-level loop variable remained visible afterward; interpreter mode rejected that reference. A continue/break collection loop also exceeded the external two-second probe deadline. The successful lesson uses a finite for-loop without those control transfers. Do not infer that the release meets the documented scope contract in every case. See [the evidence ledger](/evidence/) for exact probes and runtime results.
+> Kujo 1.4.0 fixes the loop-variable leak observed in 1.3.1: both runtimes now reject the reference after the loop. However, the combined continue/break collection probe still exceeds its external two-second deadline on the VM; the interpreter completes. The successful lesson uses a finite for-loop without those control transfers. See [the evidence ledger](/evidence/) for current probes and historical results.
 

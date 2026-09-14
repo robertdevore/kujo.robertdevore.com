@@ -28,7 +28,7 @@ Returning Err is not the same as throwing. Calling a successful constructor does
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.3.1 runtime.
+From the course repository root, use the pinned Kujo 1.4.0 runtime.
 
 {{command}}
 

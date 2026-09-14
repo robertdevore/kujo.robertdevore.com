@@ -26,7 +26,7 @@ Do not grant all capabilities to resolve the first denial. Do not infer that --u
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.3.1 runtime.
+From the course repository root, use the pinned Kujo 1.4.0 runtime.
 
 {{command}}
 

@@ -26,7 +26,7 @@ Calling reveal and then printing the result defeats redaction by design. A redac
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.3.1 runtime.
+From the course repository root, use the pinned Kujo 1.4.0 runtime.
 
 {{command}}
 

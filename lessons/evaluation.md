@@ -32,7 +32,7 @@ Do not let the actor choose expected output after seeing its own answer. Do not 
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.3.1 runtime.
+From the course repository root, use the pinned Kujo 1.4.0 runtime.
 
 {{command}}
 

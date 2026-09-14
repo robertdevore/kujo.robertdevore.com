@@ -4,7 +4,7 @@ A standalone course for https://kujo.robertdevore.com: 40 lessons, six stage bui
 
 ## Reproduce
 
-Install official Kujo **1.3.1**, verify the release checksum, and use Node 24+ with npm for the maintenance verification and Cloudflare deployment tools.
+Install official Kujo **1.4.0**, verify the release checksum, and use Node 24+ with npm for the maintenance verification and Cloudflare deployment tools.
 
 ```sh
 npm ci
@@ -52,4 +52,4 @@ The full SEO/AI-search audit lives in `seo-audit/2026-09-07/`, including immutab
 
 ## Freshness
 
-Verification date: **2026-09-06** (America/Detroit). Recheck the latest release, stable spec/scope, native and AI contracts, roadmap/changelog, security/parity matrix, and selected ecosystem revisions before updating the course. Run the gates and explain any changed expected behavior. Never silently promote a roadmap candidate into a stable lesson.
+Verification date: **2026-09-14** (America/Detroit). Recheck the latest release, stable spec/scope, native and AI contracts, roadmap/changelog, security/parity matrix, and selected ecosystem revisions before updating the course. Run the gates and explain any changed expected behavior. Never silently promote a roadmap candidate into a stable lesson.

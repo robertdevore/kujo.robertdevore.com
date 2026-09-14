@@ -67,7 +67,7 @@ func render_page(title, description, route, inner, layout) {
         inner = replace(inner, "<h1>", crumb_html + "<h1>")
     }
     if page_type == "LearningResource" {
-        inner = replace(inner, "</h1>", "</h1><p class=\"byline\">By <a href=\"https://robertdevore.com\">Robert DeVore</a> · Kujo examples verified <time datetime=\"2026-09-06\">September 6, 2026</time></p>")
+        inner = replace(inner, "</h1>", "</h1><p class=\"byline\">By <a href=\"https://robertdevore.com\">Robert DeVore</a> · Kujo examples verified <time datetime=\"2026-09-14\">September 14, 2026</time></p>")
     }
     if route == "/404/" { json_ld = "<meta name=\"robots\" content=\"noindex,follow\">" }
     html = replace(html, "{{json_ld}}", json_ld)
@@ -109,7 +109,7 @@ func main() {
     write_file("output/_redirects", redirects, true)
     write_file("output/sitemap.xml", sitemap + "</urlset>", true)
     write_file("output/robots.txt", "User-agent: *\nAllow: /\nSitemap: https://kujo.robertdevore.com/sitemap.xml\n", true)
-    write_file("output/llms.txt", "# Kujo Course\n\n40 lessons and seven builds, verified against Kujo 1.3.1.\n\n- [Curriculum](https://kujo.robertdevore.com/course/)\n- [Evidence](https://kujo.robertdevore.com/evidence/)\n- [Source](https://github.com/robertdevore/kujo.robertdevore.com)\n", true)
+    write_file("output/llms.txt", "# Kujo Course\n\n40 lessons and seven builds, verified against Kujo 1.4.0.\n\n- [Curriculum](https://kujo.robertdevore.com/course/)\n- [Evidence](https://kujo.robertdevore.com/evidence/)\n- [Source](https://github.com/robertdevore/kujo.robertdevore.com)\n", true)
     render_page("Page not found", "Return to the Kujo course map.", "/404/", read_file("templates/404.html"), layout)
     write_file("output/404.html", read_file("output/404/index.html"), true)
     print("Rendered 53 course routes with Kujo native Markdown")

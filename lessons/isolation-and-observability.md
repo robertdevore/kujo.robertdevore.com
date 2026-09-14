@@ -28,7 +28,7 @@ A timeout inside one tool does not bound the entire workflow. A language's defau
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.3.1 runtime.
+From the course repository root, use the pinned Kujo 1.4.0 runtime.
 
 {{command}}
 
@@ -51,3 +51,7 @@ Write a threat model for running a third-party script. Identify language gates, 
 - I separate capability controls from isolation.
 - I keep correlation distinct from authorization.
 - I assign an owner to stop and cleanup behavior.
+
+## Supervised services in 1.4.0
+
+The top-level cooperative scheduler normally uses a 120-second deadline. `--scheduler-timeout-ms` selects a finite replacement. `--scheduler-no-timeout` removes that top-level deadline for an externally supervised trusted service; the flags are mutually exclusive. It does not remove native-operation bounds, capabilities, or socket timeouts. Keep the course exercises bounded. Do not use the unlimited mode for arbitrary untrusted code; the external supervisor must enforce liveness, resource, restart, stop, and drain policy.

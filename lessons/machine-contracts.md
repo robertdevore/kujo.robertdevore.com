@@ -28,7 +28,7 @@ Run check --json on the success example, then run the breaking example with --js
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.3.1 runtime.
+From the course repository root, use the pinned Kujo 1.4.0 runtime.
 
 {{command}}
 

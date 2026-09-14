@@ -28,7 +28,7 @@ Before running the example, write down the number of truthy inputs. Then predict
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.3.1 runtime.
+From the course repository root, use the pinned Kujo 1.4.0 runtime.
 
 {{command}}
 
@@ -51,3 +51,9 @@ Build a truthiness table for ten values. Add separate tests for null and empty i
 - I can enumerate falsey values.
 - I know logical operators return booleans.
 - I expect checked integer arithmetic.
+
+## UTF-8 size and predicate results in 1.4.0
+
+Use `byte_length` when a protocol or resource limit counts bytes. It accepts strings and bytes without allocating a converted representation. `len("é")` is 1 Unicode scalar; `byte_length("é")` is 2 UTF-8 bytes. String `contains` returns integer 0/1; array and dictionary membership return booleans. The 1.4.0 typing fix reflects these existing runtime results, without changing user-defined function signatures.
+
+Run `kujo run --untrusted examples/supplemental/v1-4-values.kujo` from the course repository. The verifier also runs it in interpreter mode.

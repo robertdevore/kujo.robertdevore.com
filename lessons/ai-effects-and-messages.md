@@ -28,7 +28,7 @@ Do not call all text a trusted system instruction. Do not assume an AI helper's 
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.3.1 runtime.
+From the course repository root, use the pinned Kujo 1.4.0 runtime.
 
 {{command}}
 

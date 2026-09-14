@@ -28,7 +28,7 @@ Display output and JSON serialization are not interchangeable. A runtime struct 
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.3.1 runtime.
+From the course repository root, use the pinned Kujo 1.4.0 runtime.
 
 {{command}}
 
@@ -51,3 +51,11 @@ Choose one string helper and one filesystem helper from the inventory. Record th
 - I consult the canonical builtin inventory.
 - I distinguish parsing from validation.
 - I know how to inspect handler-defined contracts.
+
+## Bounded data APIs added in 1.4.0
+
+The native inventory now includes HTML tokenization, URL normalization/components, bounded text decoding, streaming XML selection, JSON/JSONL file operations, external sorting, regular-file digests, and no-replace publication. These mechanisms do not implement crawling rules, retries, report schemas, or retrieval policy.
+
+Use each API's explicit byte, event, depth, or row limits; their larger explicit bounds do not raise the existing buffered file/network defaults. XML projection rejects DTD/entity declarations and bounds gzip expansion. JSONL append may leave partial staged output on failure and is not transactional. Keep staging cleanup in the application.
+
+The pure `examples/supplemental/v1-4-values.kujo` checks HTML tokenization and URL normalization without network access. Consult the tagged [native inventory](https://github.com/kujolang/kujo/blob/v1.4.0/docs/STANDARD_LIBRARY.md) for each operation's arity, bounds, failure shape, and primary/secondary capabilities.

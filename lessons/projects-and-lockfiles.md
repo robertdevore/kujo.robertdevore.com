@@ -28,7 +28,7 @@ Do not run a normal install in CI and then claim frozen reproducibility. Do not 
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.3.1 runtime.
+From the course repository root, use the pinned Kujo 1.4.0 runtime.
 
 {{command}}
 
@@ -51,3 +51,9 @@ Initialize a temporary package, add a dependency declaration using package-add -
 - I can initialize and run a standalone project.
 - I distinguish snapshot determinism from package transport.
 - I verify frozen mode with a deliberate drift case.
+
+## Kennel is a separate distribution system
+
+The built-in package commands still handle local manifests and lockfiles. Separately, [Kennel](https://github.com/kujolang/kennel) now distributes immutable first-party releases through [its official registry](https://kennel.kujolang.ai). The reviewed Kennel 1.1.0 client requires Kujo 1.4.0 and adds per-user installation and global tools on macOS/Linux. Accounts and third-party publishing remain deferred. Kujo's package-publish preview does not upload to Kennel.
+
+The course package and capstone retain local dependencies so their tests remain offline. Before adopting Kennel, review its versioned registry protocol, artifact verification, installation roots, and lockfile contracts. Runtime upgrades and package upgrades remain separate operations.

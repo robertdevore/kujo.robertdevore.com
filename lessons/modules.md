@@ -30,7 +30,7 @@ The package build later creates a standalone project and validates it from its o
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.3.1 runtime.
+From the course repository root, use the pinned Kujo 1.4.0 runtime.
 
 {{command}}
 
@@ -53,3 +53,9 @@ Extract a validator and a renderer into separate modules. Export only their publ
 - I declare reusable functions with export.
 - I know imports do not fetch dependencies.
 - I can diagnose module roots and cycles.
+
+## Installed-tool imports and callbacks in 1.4.0
+
+`kujo run --isolated-imports` excludes implicit caller-directory/module roots and caller lockfile discovery. Imports use the entry-file and explicitly configured roots. The inherited `KUJO_ISOLATED_IMPORTS=1` enables the same mode for child Kujo processes. File operations still use the caller's working directory: import isolation does not restrict host effects or create a sandbox. Default import resolution is unchanged.
+
+The imported-function bridge now invokes VM-defined callbacks through the full VM, preserving shared globals, captured cells, errors, and capability restrictions. Synchronous cross-runtime nesting is bounded to 32 entries. This does not remove unrelated closure or runtime discrepancies. Run `kujo run --untrusted examples/supplemental/v1-4-callback.kujo` for the course's small imported-callback check; upstream `tests/imported_vm_callback.rs` covers the wider contract.

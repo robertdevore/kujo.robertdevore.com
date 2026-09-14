@@ -1,0 +1,115 @@
+{
+  "version": "1.4.0",
+  "date": "2026-09-14",
+  "receipts": [
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "examples/supplemental/v1-4-values.kujo"
+      ],
+      "exit": 0,
+      "stdout": "byte lengths, predicates, URL normalization and HTML tokens verified\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "examples/supplemental/v1-4-callback.kujo"
+      ],
+      "exit": 0,
+      "stdout": "imported callback verified\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--isolated-imports",
+        "examples/02.kujo"
+      ],
+      "exit": 0,
+      "stdout": "Kujo Kujo!\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-write",
+        "examples/supplemental/v1-4-publication.kujo"
+      ],
+      "exit": 0,
+      "stdout": "confined atomic publication verified\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "examples/supplemental/v1-4-publication.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: Capability denied: filesystem-write required for write_file_atomic_beneath; rerun with --allow-fs-write\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n"
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "examples/supplemental/v1-4-values.kujo"
+      ],
+      "exit": 0,
+      "stdout": "byte lengths, predicates, URL normalization and HTML tokens verified\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "examples/supplemental/v1-4-callback.kujo"
+      ],
+      "exit": 0,
+      "stdout": "imported callback verified\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--isolated-imports",
+        "--interpreter",
+        "examples/02.kujo"
+      ],
+      "exit": 0,
+      "stdout": "Kujo Kujo!\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-write",
+        "--interpreter",
+        "examples/supplemental/v1-4-publication.kujo"
+      ],
+      "exit": 0,
+      "stdout": "confined atomic publication verified\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "examples/supplemental/v1-4-publication.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: Capability denied: filesystem-write required for write_file_atomic_beneath; rerun with --allow-fs-write\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n"
+    }
+  ]
+}

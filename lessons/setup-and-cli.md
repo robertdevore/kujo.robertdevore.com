@@ -1,12 +1,12 @@
 ## Where you are
 
-You have a development goal; now establish an execution environment you can identify and reproduce. All captured course results use the official Kujo 1.3.1 release binary, not an unreleased checkout that happens to report the same version.
+You have a development goal; now establish an execution environment you can identify and reproduce. All captured course results use the official Kujo 1.4.0 release binary, not an unreleased checkout that happens to report the same version.
 
 ## Install and identify
 
-Download the archive for your operating system and architecture from [the 1.3.1 release](https://github.com/kujolang/kujo/releases/tag/v1.3.1). Verify it against the published SHA-256 file before extracting it. Put the extracted `kujo` binary in a directory on your PATH. On Windows, use `kujo.exe` and verify the archive with `Get-FileHash -Algorithm SHA256`. On macOS use `shasum -a 256`; on Linux use `sha256sum`. Compare the full hash, not a prefix.
+Download the archive for your operating system and architecture from [the 1.4.0 release](https://github.com/kujolang/kujo/releases/tag/v1.4.0). Verify it against the published SHA-256 file before extracting it. Put the extracted `kujo` binary in a directory on your PATH. On Windows, use `kujo.exe` and verify the archive with `Get-FileHash -Algorithm SHA256`. On macOS use `shasum -a 256`; on Linux use `sha256sum`. Compare the full hash, not a prefix.
 
-Run `kujo --version` and `kujo --help`. If your shell finds an older binary first, inspect your PATH before changing source code. The course verifier refuses versions other than 1.3.1, making version drift visible.
+Run `kujo --version` and `kujo --help`. If your shell finds an older binary first, inspect your PATH before changing source code. The course verifier refuses versions other than 1.4.0, making version drift visible.
 
 ## Runtime contract
 
@@ -28,7 +28,7 @@ Use an editor integration that starts `kujo lsp` over standard input/output. Con
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.3.1 runtime.
+From the course repository root, use the pinned Kujo 1.4.0 runtime.
 
 {{command}}
 

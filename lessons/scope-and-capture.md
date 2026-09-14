@@ -32,7 +32,7 @@ An assignment to a mutable outer name and a new inner declaration are not interc
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.3.1 runtime.
+From the course repository root, use the pinned Kujo 1.4.0 runtime.
 
 {{command}}
 
@@ -59,4 +59,4 @@ Create a nested function with two visible names and predict which binding each r
 
 ## Release boundary drill
 
-The official 1.3.1 VM rejects a repeated let declaration inside a top-level for-loop on its second iteration, while the interpreter accepts it. See the exact loop_declaration probe in the [evidence ledger](/evidence/). Keep this separate from deliberate duplicate declarations in a single scope.
+Kujo 1.4.0 fixes repeated loop-local declarations: the loop_declaration probe now prints 1 and 2 in both runtimes. The same probe failed on the second VM iteration in 1.3.1. Duplicate declarations within one scope remain errors. See the current and historical results in the [evidence ledger](/evidence/).

@@ -28,7 +28,7 @@ The breaking example attempts parent traversal under the bounded API. This tests
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.3.1 runtime.
+From the course repository root, use the pinned Kujo 1.4.0 runtime.
 
 {{command}}
 
@@ -51,3 +51,11 @@ Write a bounded reader for a named fixture. Reject parent traversal, an oversize
 - I distinguish capability categories from path containment.
 - I bound file reads.
 - I test failure before using real files.
+
+## Confined publication in 1.4.0
+
+`write_file_atomic_beneath(root, relative_path, payload, overwrite?)` publishes text or bytes using held directory handles. It requires filesystem-write, creates missing parents, and defaults to no overwrite. It rejects unsafe relative components and symlink/reparse traversal. The caller must choose a trusted root; a filesystem without the required operations fails rather than falling back to path-based publication.
+
+The guarantee follows directory identity, not continuous ancestry: if another actor moves an open directory, publication still targets that directory. Protect the workspace from hostile writers. Synced file contents do not guarantee crash-durable directory metadata. A `cleanup_failed_after_publish` error means publication happened but cleanup failed; inspect the target before retrying.
+
+Create the course's ignored `work` directory, then run `kujo run --untrusted --allow-fs-write examples/supplemental/v1-4-publication.kujo`. Repeat without the allowance and inspect the real denial. Both paths run in the release verifier. Also note that `delete_file` now unlinks directory and dangling symlinks themselves while still rejecting actual directories.

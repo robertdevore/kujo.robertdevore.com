@@ -16,7 +16,7 @@ The Python course informed the visible learning map, search, and lesson navigati
 
 ## Version and limitations
 
-Examples target the official Kujo 1.3.1 release, verified on 2026-09-06. Known differences between its VM and written contracts are documented in the [evidence ledger](/evidence/). Experimental JIT and deferred generics, FFI, WASM, and macros are not baseline course features.
+Examples target the official Kujo 1.4.0 release, verified on 2026-09-14. Known differences between its VM and written contracts are documented in the [evidence ledger](/evidence/). Experimental JIT and deferred generics, FFI, WASM, and macros are not baseline course features.
 
 Course source and examples are available in the [standalone repository](https://github.com/robertdevore/kujo.robertdevore.com). Third-party source and fixture provenance are recorded in THIRD_PARTY.md. The verification results cover the recorded examples and runtime version; they do not certify production deployments.
 
