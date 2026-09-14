@@ -1,0 +1,2 @@
+assert_equal(write_file_atomic_beneath("work", "v1-4/report.json", "{}", true), true)
+print("confined atomic publication verified")

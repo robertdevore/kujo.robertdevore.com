@@ -1,0 +1,8 @@
+assert_equal(len("é"), 1)
+assert_equal(byte_length("é"), 2)
+assert_equal(byte_length(bytes([0, 128, 255])), 3)
+assert_equal(contains("email", "x"), 0)
+assert_equal(contains([1, 2], 2), true)
+assert_equal(url_normalize("/docs#part", "https://example.com", {}), "https://example.com/docs")
+assert_equal(len(html_tokens("<title>Hi</title>", 100)), 3)
+print("byte lengths, predicates, URL normalization and HTML tokens verified")

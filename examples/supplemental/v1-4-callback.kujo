@@ -1,0 +1,4 @@
+from examples.modules.callback import apply
+func double(value) { return value * 2 }
+assert_equal(apply(double, 21), 42)
+print("imported callback verified")

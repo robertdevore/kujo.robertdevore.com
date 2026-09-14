@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "bash scripts/build.sh",
-    "verify": "node scripts/verify.mjs && node scripts/projects-test.mjs && bash scripts/build.sh && node scripts/site-test.mjs",
+    "verify": "node scripts/verify.mjs && node scripts/projects-test.mjs && node scripts/release-checks.mjs && bash scripts/build.sh && node scripts/site-test.mjs",
     "preview": "node scripts/serve.mjs",
     "deploy": "npm run verify && wrangler deploy"
   },
