@@ -1,0 +1,8 @@
+phase,source_url,source_variant,http_status,target_url,chain_length,final_status,canonical_target,query_preserved,verification,issues
+"after","http://kujo.robertdevore.com/","kujo.robertdevore.com","301","https://kujo.robertdevore.com/","1","200","https://kujo.robertdevore.com/","n/a","received",""
+"after","http://kujo.robertdevore.com/course/record-and-replay/?audit=1","kujo.robertdevore.com","301","https://kujo.robertdevore.com/course/record-and-replay/?audit=1","1","200","https://kujo.robertdevore.com/course/record-and-replay/?audit=1","true","received",""
+"after","https://kujo.robertdevore.com/course/record-and-replay?audit=1","kujo.robertdevore.com","301","/course/record-and-replay/?audit=1","1","200","https://kujo.robertdevore.com/course/record-and-replay/?audit=1","true","received",""
+"after","https://kujo.robertdevore.com/course/record-and-replay/?audit=1","kujo.robertdevore.com","200","","0","200","https://kujo.robertdevore.com/course/record-and-replay/?audit=1","true","received",""
+"after","https://www.kujo.robertdevore.com/","www.kujo.robertdevore.com","","","-1","","","n/a","fetch failed","unconfigured optional www alias; not advertised"
+"after","https://kujo.robertdevore.com/not-a-course-route/","kujo.robertdevore.com","404","","0","404","https://kujo.robertdevore.com/not-a-course-route/","n/a","received",""
+"after","https://kujo.robertdevore.com/404/","kujo.robertdevore.com","200","","0","200","https://kujo.robertdevore.com/404/","n/a","received",""

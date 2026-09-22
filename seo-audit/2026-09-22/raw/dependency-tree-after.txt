@@ -1,0 +1,5 @@
+kujo-course@ /Users/robertdevore/2026/kujo.robertdevore.com
+└─┬ wrangler@4.131.0
+  └─┬ miniflare@5.20260910.0-alpha
+    └── sharp@0.35.4
+

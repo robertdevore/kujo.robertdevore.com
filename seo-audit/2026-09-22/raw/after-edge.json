@@ -1,0 +1,898 @@
+{
+  "redirects": [
+    {
+      "phase": "after",
+      "source_url": "http://kujo.robertdevore.com/",
+      "chain": [
+        {
+          "url": "http://kujo.robertdevore.com/",
+          "status": 301,
+          "location": "https://kujo.robertdevore.com/",
+          "headers": {
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "cf-ray": "a3f48b573f6aab71-ORD",
+            "connection": "keep-alive",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Tue, 22 Sep 2026 21:53:46 GMT",
+            "location": "https://kujo.robertdevore.com/",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=yykr7%2BY7XnUxmAIASuX%2BujvQ9J1V1X7WEwLpfhi9l0qQ3eeyKVgHzGyteUvvQMqJlXH%2FglLBRK4iu4YIF9nJv%2FIkslaL1Uv%2BzAXO6bumprMw19MAMxpnlOuXOpwy31Mgjq4J0ZGj%2BMyNzQxj4clVzH2yy7I%3D\"}]}",
+            "server": "cloudflare",
+            "transfer-encoding": "chunked"
+          }
+        },
+        {
+          "url": "https://kujo.robertdevore.com/",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "cf-cache-status": "HIT",
+            "cf-ray": "a3f48b58fd46c8d4-ORD",
+            "content-encoding": "zstd",
+            "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+            "content-type": "text/html",
+            "date": "Tue, 22 Sep 2026 21:53:46 GMT",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "permissions-policy": "camera=(), microphone=(), geolocation=()",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=pNa0oHHBLdiH8Ip2NJGedl4htSznrKWKe7QkYsZuc2bibmS23Jd%2F50OwsiYqJ430CSamofkUTZXLU%2FC5vMZz8Y2IZSP1gRADsvDuGN6%2FvTDcpxbyK0UtAru4TUFyCif4F%2FOZb1qGM7JjHXouH5dm469mpE0%3D\"}]}",
+            "server": "cloudflare",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "DENY"
+          }
+        }
+      ],
+      "final": "https://kujo.robertdevore.com/"
+    },
+    {
+      "phase": "after",
+      "source_url": "http://kujo.robertdevore.com/course/record-and-replay/?audit=1",
+      "chain": [
+        {
+          "url": "http://kujo.robertdevore.com/course/record-and-replay/?audit=1",
+          "status": 301,
+          "location": "https://kujo.robertdevore.com/course/record-and-replay/?audit=1",
+          "headers": {
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "cf-ray": "a3f48b59b999ab71-ORD",
+            "connection": "keep-alive",
+            "content-type": "text/html; charset=UTF-8",
+            "date": "Tue, 22 Sep 2026 21:53:46 GMT",
+            "location": "https://kujo.robertdevore.com/course/record-and-replay/?audit=1",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=osIpXpO6u%2BZMfdp9gZdUcWncGfjXU2j2LVYVg%2Fm5NBefzo20HIgjyqlOA%2FnXJRUH5oDM6zEPX%2B%2FrfFGHPBI%2BDt0wIjuvoDwYkrIsbfjZWwsE%2BDVMHeYNeQ7GfOUP2pK31g0lpl0nn0T1MVt4%2B1CKbP%2B9%2Byk%3D\"}]}",
+            "server": "cloudflare",
+            "transfer-encoding": "chunked"
+          }
+        },
+        {
+          "url": "https://kujo.robertdevore.com/course/record-and-replay/?audit=1",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "cf-cache-status": "HIT",
+            "cf-ray": "a3f48b5a7bbac8d4-ORD",
+            "content-encoding": "zstd",
+            "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+            "content-type": "text/html",
+            "date": "Tue, 22 Sep 2026 21:53:46 GMT",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "permissions-policy": "camera=(), microphone=(), geolocation=()",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=q5LLhRB%2Fq3AhiUsXMPFOpouaJtqaE2ksm2yj0PtvbSQ2%2FZMJOcx2hufVONhde97wnNwumCPrKozBe437I1OxgobDorLzUTt%2FaFSvEZNGXNAIGGqtK7tA4sTOX5WW%2BYptyyLD2TxqHr2iE1eDcbDExYhb75k%3D\"}]}",
+            "server": "cloudflare",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "DENY"
+          }
+        }
+      ],
+      "final": "https://kujo.robertdevore.com/course/record-and-replay/?audit=1"
+    },
+    {
+      "phase": "after",
+      "source_url": "https://kujo.robertdevore.com/course/record-and-replay?audit=1",
+      "chain": [
+        {
+          "url": "https://kujo.robertdevore.com/course/record-and-replay?audit=1",
+          "status": 301,
+          "location": "/course/record-and-replay/?audit=1",
+          "headers": {
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "cf-ray": "a3f48b5add5ec8d4-ORD",
+            "content-length": "0",
+            "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+            "date": "Tue, 22 Sep 2026 21:53:46 GMT",
+            "location": "/course/record-and-replay/?audit=1",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "permissions-policy": "camera=(), microphone=(), geolocation=()",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=qkyxnszq0AXB0fgpW3OVcF8n3bNfEgbgoC0FdnSMkSzqjgLjvVLtx7Mpv%2F5Fxd1dohDX%2Fx%2BAzEmplNyU7k61C6GnjFrAgC5BnNWMH7Nd8QaPaKQxgQAUbH6KqWDvRrhhPPjW8ECRtrJHP%2FQGIXwwd3PUuzQ%3D\"}]}",
+            "server": "cloudflare",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "DENY"
+          }
+        },
+        {
+          "url": "https://kujo.robertdevore.com/course/record-and-replay/?audit=1",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "cf-cache-status": "HIT",
+            "cf-ray": "a3f48b5b5f8ec8d4-ORD",
+            "content-encoding": "zstd",
+            "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+            "content-type": "text/html",
+            "date": "Tue, 22 Sep 2026 21:53:46 GMT",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "permissions-policy": "camera=(), microphone=(), geolocation=()",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=KYiF3wie8%2FHZHhvN3vPrZLfhvyx4WMFSv%2Be%2B5ubxAZt7wNhzUhsvEZGhz6hlWJLaJ02%2F11pLijctR53H3M0hrW6JmzOOohBTUAg%2BOLdsOPqbkEb7EhUQ8ezb5iXsRzYSvnF66vl9t9MuAlDveTmLUJzsnSM%3D\"}]}",
+            "server": "cloudflare",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "DENY"
+          }
+        }
+      ],
+      "final": "https://kujo.robertdevore.com/course/record-and-replay/?audit=1"
+    },
+    {
+      "phase": "after",
+      "source_url": "https://kujo.robertdevore.com/course/record-and-replay/?audit=1",
+      "chain": [
+        {
+          "url": "https://kujo.robertdevore.com/course/record-and-replay/?audit=1",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "cf-cache-status": "HIT",
+            "cf-ray": "a3f48b5ba90fc8d4-ORD",
+            "content-encoding": "zstd",
+            "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+            "content-type": "text/html",
+            "date": "Tue, 22 Sep 2026 21:53:46 GMT",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "permissions-policy": "camera=(), microphone=(), geolocation=()",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=9Yz8QxlIp0kEidOvxnXA%2FdeyblumRGKhxCyJZmyAcYzP7V5QwBIIc9EVTZYSRRjwUOsXDZtGbXWLmuYTQ2rkxKAfVO9zE41E%2Fj0h2bGV2UTOI3acl0HmPyBm5HTKGorit9mA3aJOmYsNdaqlU7MWcHK25Co%3D\"}]}",
+            "server": "cloudflare",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "DENY"
+          }
+        }
+      ],
+      "final": "https://kujo.robertdevore.com/course/record-and-replay/?audit=1"
+    },
+    {
+      "phase": "after",
+      "source_url": "https://www.kujo.robertdevore.com/",
+      "error": "fetch failed",
+      "chain": []
+    },
+    {
+      "phase": "after",
+      "source_url": "https://kujo.robertdevore.com/not-a-course-route/",
+      "chain": [
+        {
+          "url": "https://kujo.robertdevore.com/not-a-course-route/",
+          "status": 404,
+          "location": null,
+          "headers": {
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "cf-cache-status": "HIT",
+            "cf-ray": "a3f48b5c1af5c8d4-ORD",
+            "content-encoding": "zstd",
+            "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+            "content-type": "text/html",
+            "date": "Tue, 22 Sep 2026 21:53:46 GMT",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "permissions-policy": "camera=(), microphone=(), geolocation=()",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=d0pVzOyRzZf5HmJvgjCwNpy1%2B7OxYSuXLLpMdlLAJQV8u6ZwNJGOeK%2Br1eAYqhX3NRphwpMC74FHEvWs0S4QCpakeOO%2FzWGsyIjrGcpA2l%2BCmuFyl0JzmLiYPma6qWiBzn2iod%2BofdO1EUBglPIjWvl5pWI%3D\"}]}",
+            "server": "cloudflare",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "DENY"
+          }
+        }
+      ],
+      "final": "https://kujo.robertdevore.com/not-a-course-route/"
+    },
+    {
+      "phase": "after",
+      "source_url": "https://kujo.robertdevore.com/404/",
+      "chain": [
+        {
+          "url": "https://kujo.robertdevore.com/404/",
+          "status": 200,
+          "location": null,
+          "headers": {
+            "alt-svc": "h3=\":443\"; ma=86400",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "cf-cache-status": "HIT",
+            "cf-ray": "a3f48b5cadb6c8d4-ORD",
+            "content-encoding": "zstd",
+            "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+            "content-type": "text/html",
+            "date": "Tue, 22 Sep 2026 21:53:47 GMT",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "permissions-policy": "camera=(), microphone=(), geolocation=()",
+            "referrer-policy": "strict-origin-when-cross-origin",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=OIcBAsMtVWmowiddkzh7tVY8KjtB8yvPX14TWuG8RQ0kUKQRecCBc5LuW340qq2WL%2BljWVKpOmKXjY3vT8v1WbbkSomI6WvGCquuMuGdOucV6yUjp3MQf90W2nI7MgjfAqi%2BN35kuDmmDmZc7Z9Tzk3tZac%3D\"}]}",
+            "server": "cloudflare",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "DENY"
+          }
+        }
+      ],
+      "final": "https://kujo.robertdevore.com/404/"
+    }
+  ],
+  "crawlers": [
+    {
+      "phase": "after",
+      "user_agent": "Googlebot",
+      "url": "https://kujo.robertdevore.com/robots.txt",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b5d0f32c8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/plain",
+        "date": "Tue, 22 Sep 2026 21:53:47 GMT",
+        "etag": "W/\"65f1a63d24d9d25b74abf4d5fb439498\"",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=mC2eiYDcl6you%2F%2FCoYn5ae3by41eZAkoU8gR1IwF80ZtSlcEWRmTukA0JmIeJrGg0DBf2edwc0AG1HnZHZfxA47nxu7oR%2Fwy9B8Dd089yBc4bBOVbPUmzdcuJIKcV3pLjyA7Nk9RRAcugX54SrClBybxzR4%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "Googlebot",
+      "url": "https://kujo.robertdevore.com/sitemap.xml",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b5dba47c8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "application/xml",
+        "date": "Tue, 22 Sep 2026 21:53:47 GMT",
+        "etag": "W/\"8b91089743a86403609f34c230d08fc9\"",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=pK7nq%2FiLRtqUs6sb81GYN5pHsZ80DWOFgDJMOmqZ%2FC0FyucnQFS%2BKuJpaGoPanDKZcICPqVVr9RQnj3Y0GaNsGUxd5PEX%2FVpBMfof2foj0TBdwpOoetmmj7a8Ukm6hXfIVWuS8VAvO%2BlKqS98vxb0VL%2FuCc%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "Googlebot",
+      "url": "https://kujo.robertdevore.com/",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b5e1c23c8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/html",
+        "date": "Tue, 22 Sep 2026 21:53:47 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=A9yzdUgoG6%2Funur9e9WVlpvEK6l1%2B58f9LMgJUYL6BzhD5fJzOjCjZz5BFgD%2BK6m8MAUmkBgr2qqj1hLS7qKTh4%2BB8knR27LODQ%2FJTy%2BdhOzfOmGBdfUlKP77NF2kAAEKSgobaOpEwDxI%2B9XEFwA37LDdFE%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "Googlebot",
+      "url": "https://kujo.robertdevore.com/course/record-and-replay/",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b5e7dd5c8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/html",
+        "date": "Tue, 22 Sep 2026 21:53:47 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=UL2SNffJ3a54hLNyuksgZYfQDdgkreQ7GaFyC9eKSer3l1wH0eS%2FrrhlUfqB%2FpIcUKDeO01gimI8fO5nKkkkcUs3jzt4MwaNrmAM3ZzzpsYyEDA0Ie1jFeBGc0yQdtVszNKTGmyN8%2FSl5%2FM%2FVD5Ijp6ilqM%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "bingbot",
+      "url": "https://kujo.robertdevore.com/robots.txt",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b5ecf74c8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/plain",
+        "date": "Tue, 22 Sep 2026 21:53:47 GMT",
+        "etag": "W/\"65f1a63d24d9d25b74abf4d5fb439498\"",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=joGzCslA459tDx6n8QPG4XkCRIafWwcDSfr6qHdMN3MjM6rWnU%2BOdztDdlpXuLnnLI5s%2F0YDoiy32beXRAq0MyAUZ8zMO1Zz9duJLzLvWA1Q5k9fXoJCSJuuIz7aTn7ykM2hQ%2ByjINwlRuSh%2BCg0yw1Gtz8%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "bingbot",
+      "url": "https://kujo.robertdevore.com/sitemap.xml",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b5f2911c8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "application/xml",
+        "date": "Tue, 22 Sep 2026 21:53:47 GMT",
+        "etag": "W/\"8b91089743a86403609f34c230d08fc9\"",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=5OFW9OQ3GwxN%2FZAdrJd5%2FsZcUPOLnzlwudjAIvPFuEO76bdRmmKt3DB%2FbkREyZbiM6SNjXqX7DYVJdZlv1rldj4OICGqfOHiTNTg4fFAm9%2F3cwSHDx3XvPavIty7WWWi0ijGWLN7xsTPAfhA8mtd%2BEY3jtI%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "bingbot",
+      "url": "https://kujo.robertdevore.com/",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b5f7abfc8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/html",
+        "date": "Tue, 22 Sep 2026 21:53:47 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=p%2BBmPIZ5%2FHi%2FLL2ZxVGanNpV%2BUGnVK2nhPsON7D%2F4u%2FiIT5z%2Flm0FxI3swk6lf9jwU3SnwsIKlnLalY0mMCx6xbhIn4DTZZ1mBJuNdlFhNfB3%2FWUWDm4MKh68sAcvTR8JpoM5HmitPNm3k7nCwQlVPF4%2BE0%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "bingbot",
+      "url": "https://kujo.robertdevore.com/course/record-and-replay/",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b602d74c8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/html",
+        "date": "Tue, 22 Sep 2026 21:53:47 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=8GH6pNbZ5JTQ2ERCQiMv251YOxTKNB%2BgPmZSmN%2FJAGK%2BLX9ZqQUqqFgg146O%2F%2FGZXBugweP5USTQWByUyefux%2FGDhg0kSYrmJ91IIq3sgYuBwr6Y%2F3nkaWnrx%2BMtfVLKKsQ1IOfftlJfclZKngulStvsiEY%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "OAI-SearchBot",
+      "url": "https://kujo.robertdevore.com/robots.txt",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b60f8e2c8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/plain",
+        "date": "Tue, 22 Sep 2026 21:53:47 GMT",
+        "etag": "W/\"65f1a63d24d9d25b74abf4d5fb439498\"",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=3kngXOToVxByA6ZKnlzCBJ9nk5Z7WSSBL16BI6hGWWmbWKWUMWgMbwk%2BmMaxzA6v1OVtVwZTwh%2BOUYjbFMk33sn6aLs8SPhsRvugIhpP1r9mbk0t%2FDW4dgOlFbdKvLb9kDqrAUOn%2FxJBl9OfjWS4By%2FHKXw%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "OAI-SearchBot",
+      "url": "https://kujo.robertdevore.com/sitemap.xml",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b614a84c8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "application/xml",
+        "date": "Tue, 22 Sep 2026 21:53:47 GMT",
+        "etag": "W/\"8b91089743a86403609f34c230d08fc9\"",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=krRL62WEiNOtq%2BJjWVEfpgoNCWfzmRqQLcXStOO0I0nfPerhH07KIqdChIJT23M12QdCtIUCvF8S92KAQc5cGJvOZWTGsuj8caEUN%2BqDUa5DT3l%2BWv107URulhBkyhmdZ2qRCoSQnFsRIufg44jNqYZ%2Bq0w%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "OAI-SearchBot",
+      "url": "https://kujo.robertdevore.com/",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b61ac3fc8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/html",
+        "date": "Tue, 22 Sep 2026 21:53:47 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=ofAaATlx%2BLCbWd%2F5Ajq3NnRMcPSYHUytRf0Tp5Rjmrr6tuaQdLrufdzBcitx0hEFYcNyys9Gn0VUlhWAAtUYDuHrZWJ5Q6uee%2BlPK5PZOYk7nMDzelM1BTQVmvGdGUZzFYiQVdz%2FOwuOBkmYyT4NXLqVLKM%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "OAI-SearchBot",
+      "url": "https://kujo.robertdevore.com/course/record-and-replay/",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b61fdefc8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/html",
+        "date": "Tue, 22 Sep 2026 21:53:47 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=4APArIRksyCuwD7NNT8GAS3cNqrf9UZ1lGZu4uGsZdqf%2FOGPNAlcbetI6JPDQQtabx7nkpD%2Fd5k7ZD43EWilfGu8juA2frFiecFGwKWmC9qlpf7givW0k%2FYqt0TTEEY7rxWeeSVO99IbdYG7HJBM35uOJSI%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "ChatGPT-User",
+      "url": "https://kujo.robertdevore.com/robots.txt",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b624fbcc8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/plain",
+        "date": "Tue, 22 Sep 2026 21:53:47 GMT",
+        "etag": "W/\"65f1a63d24d9d25b74abf4d5fb439498\"",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=Z0YVhP%2B0yn83qM5yl151IDdxiS6nLsWx9LxnyH3NRyOT4flnfI6uuHI5dF2b%2BmNWk8mJoSxrVtwokTBy7ErLDKlarBeL6s9QSR4j0gHPwqQm2h9rutEs0bS%2BSbNy99c0k8VIBuVONG63boLvp%2BTifVciJC4%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "ChatGPT-User",
+      "url": "https://kujo.robertdevore.com/sitemap.xml",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b62b972c8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "application/xml",
+        "date": "Tue, 22 Sep 2026 21:53:47 GMT",
+        "etag": "W/\"8b91089743a86403609f34c230d08fc9\"",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=t%2BXiblVZxCX0dyoOLfLjeiHqZKYs29tvewDcy1TRRQX5m8ET84%2FC4gpmaAA%2FTd1MG8Kl%2Fxte%2BXZBqaPzyActZELfAV1pC770pemh4jWmOIH78ypnFNAUjynWdgS4pRH4uXOPqbEledRX%2FhxXs18apLJlbn8%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "ChatGPT-User",
+      "url": "https://kujo.robertdevore.com/",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b630a7fc8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/html",
+        "date": "Tue, 22 Sep 2026 21:53:48 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=3oUpsXSogTDescbNn3OpwZGT2opuqt1DjobFDE6h5uG1y9l1fMZl69brrhp974vCZgNVhhNCsuQa%2FbwpVBzMU5KYFZONRVpuUS5WhdcKwEw2mpwsPrD3dzRa1YQmfJFmoAwxaG2ffbGZGIiltRqtzLXQdqg%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "ChatGPT-User",
+      "url": "https://kujo.robertdevore.com/course/record-and-replay/",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b635bc0c8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/html",
+        "date": "Tue, 22 Sep 2026 21:53:48 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=dcYv1ShJJnRolHhiI10TXMD7jq0F1euUPVLVOSMibHFeLtxJVdzc29Rci%2BpneiF7nmrfHdT%2FR%2BXL%2F6kEpCo3OKX0sRHlMS0brBSNBEaYLjcbEz14%2BbgQtU40wJz04OoYaboGq%2Fmrt8aIVydBotd2%2FCRRzvs%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "GPTBot",
+      "url": "https://kujo.robertdevore.com/robots.txt",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b644ff4c8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/plain",
+        "date": "Tue, 22 Sep 2026 21:53:48 GMT",
+        "etag": "W/\"65f1a63d24d9d25b74abf4d5fb439498\"",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=OKS6R93Le7wVyOvV63UegTFjGHHNPJwmwtcvI%2F%2BqvVjWTTxkyxrXPQA8XNNWAWTx9e84ORNQWF9onP58p8XnGKbqGoaJ8TZbRDcNS4hw5eLXNNF9V%2B1l14%2FjafguJm1brpe7USHlZxxHRqcOEy7%2B8QihU34%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "GPTBot",
+      "url": "https://kujo.robertdevore.com/sitemap.xml",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b64a968c8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "application/xml",
+        "date": "Tue, 22 Sep 2026 21:53:48 GMT",
+        "etag": "W/\"8b91089743a86403609f34c230d08fc9\"",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=YGNyKXfPfgwjIUXVUQzro%2BY530HYDcn5KMyai9vj6EyfGfsb0EevFE7zS5AafUOgnl9SrY2NhGUlYZfyi%2Bv3RnYEUhthAg8DHV855lR1P0PulO9VUTFcjW3Ied%2BOQ%2FxZqZXHAkpUeH0KwMsiOdqcph7ZNN4%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "GPTBot",
+      "url": "https://kujo.robertdevore.com/",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b64eabbc8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/html",
+        "date": "Tue, 22 Sep 2026 21:53:48 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=wxfK57C2nQLYxBj6CDWwa6fCQFTi3B8I0MWojBUjNWTUF0qqdruW%2F%2Fj0mNfMljPo4FY6ooDI2BzI69s%2BDgiZgMstCvokZ1mjiPaoIwfYuAx7JsPkRSXDjyFnICqJPcmW448hanKG2VbRnb0B%2F0DjPkeID0Y%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "GPTBot",
+      "url": "https://kujo.robertdevore.com/course/record-and-replay/",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b654c1cc8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/html",
+        "date": "Tue, 22 Sep 2026 21:53:48 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=VNxOzSCQjG%2BgHR1cIDcYmw07C4F0mLg7R6kDbv7eBzWkURXMxDqAFLrwUKS8W7eRjk8D%2B%2BEifJjtSKF3h6hArnEW389bryMH7K7wbk%2FwAZbD2hYFWLoazTvkUbnU7tfTssxLAev0rCsURRv1fKxM5FLXurU%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "Claude-SearchBot",
+      "url": "https://kujo.robertdevore.com/robots.txt",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b659d9ac8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/plain",
+        "date": "Tue, 22 Sep 2026 21:53:48 GMT",
+        "etag": "W/\"65f1a63d24d9d25b74abf4d5fb439498\"",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=7bRulB0bPsyFc8uy3%2FytS%2BNKA4YOlcoS7a6%2F4GVZGq1kgcJJQwosJqIyN%2FbZwZmS1ltPAREWFmrgjfQZ8Zq%2FwRyLPORQ5P6BZz7s1rRDXWp6CfD2nueSJQTyEijDlYUfctCRYTd0MBg8MudMUnEOYJdRlLo%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "Claude-SearchBot",
+      "url": "https://kujo.robertdevore.com/sitemap.xml",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b65fef4c8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "application/xml",
+        "date": "Tue, 22 Sep 2026 21:53:48 GMT",
+        "etag": "W/\"8b91089743a86403609f34c230d08fc9\"",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=YXXqWALjOk7I7dNuwQiKwwGdbXBbHA8mQwyZQ1td2TGu7p7uf1Oc65PEXJfhtfpreJ%2FhgSFk%2FlP35j6lXfLWH%2FC5hIBEfNwgYWmo6Kl62STJP%2FUv9ziFwwNL8i50y%2FhNNS9arMafhf1QRTAMc28XRRD5kOo%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "Claude-SearchBot",
+      "url": "https://kujo.robertdevore.com/",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b66aa03c8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/html",
+        "date": "Tue, 22 Sep 2026 21:53:48 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=MxO%2BsSv4bXzYXvj93DzevQcKchijkFErfDMZrPlhbwckD%2BbQ3x8MVRZv9kuwvyXC1w0OAd719dyZ5xkb9vAEF4keBnGThON6%2FLVaE0QKmsWMDuJkC%2Bgwb4Tt%2F%2FWnjEaBeeNIRS0FNDkzJlNNyRom6LpcTPM%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "Claude-SearchBot",
+      "url": "https://kujo.robertdevore.com/course/record-and-replay/",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b677dbbc8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/html",
+        "date": "Tue, 22 Sep 2026 21:53:48 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=FeKHgphGf4c6llXxXf9rbzp7u8W5r09ICklCVzza7XCsNjFl1B2%2F3eTFaLf9WmMIoDb8lSCt48szlXWacYBYDYfazWWoPdoIAZaaAst6E9fNlovhSQfvVEcitT0sEQliqFzPt9Vhi1ZmkOdLM%2Ftw3u4WLl8%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "PerplexityBot",
+      "url": "https://kujo.robertdevore.com/robots.txt",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b67df48c8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/plain",
+        "date": "Tue, 22 Sep 2026 21:53:48 GMT",
+        "etag": "W/\"65f1a63d24d9d25b74abf4d5fb439498\"",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=2xTiIrMfuxe194AkaPPfC7fzyuyUwjQGWl7MJWdMWZ3bvhn0HNrAmzK8ZrFZw1j4miRxQXKVWSLknAJD25H3ka3T94IaIdecvl4LCp%2FhKrF5d50SSB2O%2BQUNrWXVrPbtRg8P07urumeCImUOSJ4t8JWZGC8%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "PerplexityBot",
+      "url": "https://kujo.robertdevore.com/sitemap.xml",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b6828abc8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "application/xml",
+        "date": "Tue, 22 Sep 2026 21:53:48 GMT",
+        "etag": "W/\"8b91089743a86403609f34c230d08fc9\"",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=A5%2FyNAhjtEpJDDXo7BoOMVpHPkhDeUjXzkBdV9haMUjGafEBMDie2RloeJt58Z3k89Knsov%2B3R8trfcG2iJqwMkpOYjBaktS7%2BXsue4%2BMGX9g1gKa6486fGvoP36rEhLnpReKxjh%2F5O2g4COoVmIIX6kV2M%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "PerplexityBot",
+      "url": "https://kujo.robertdevore.com/",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b687a1bc8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/html",
+        "date": "Tue, 22 Sep 2026 21:53:48 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=IAYI492CYU5VlJgC4IsgKj13530y6bkJYOC0FPO5khL%2BoR8SQMcmXvoHt%2FCjL3qvD%2F7eEXEdItAJEl2716XNHItKn8aRiUdwzJqJAqj3TwdT7m3aEWR4nxzc9x7tGxvzBezlBHOxR8KIDJ9St6Tj2AkUyZM%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    },
+    {
+      "phase": "after",
+      "user_agent": "PerplexityBot",
+      "url": "https://kujo.robertdevore.com/course/record-and-replay/",
+      "status": 200,
+      "headers": {
+        "alt-svc": "h3=\":443\"; ma=86400",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "cf-cache-status": "HIT",
+        "cf-ray": "a3f48b68cb7bc8d4-ORD",
+        "content-encoding": "zstd",
+        "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
+        "content-type": "text/html",
+        "date": "Tue, 22 Sep 2026 21:53:48 GMT",
+        "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+        "permissions-policy": "camera=(), microphone=(), geolocation=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=gZCmKVsa%2FmAThlGjjycjKck%2FOCsfwxbRwVkPaBYkNkWJnLutYsilDZ9Hh2e3E0TMcofVNiHp%2FZGG33n%2Bn%2B2jQSjpGbA4yMdKT6sdMNUqbkL8LH3clae69f3kuSXdAkhI8kKjk%2FRVo%2FKVHxwQCGyKh201fHA%3D\"}]}",
+        "server": "cloudflare",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "DENY"
+      }
+    }
+  ]
+}
