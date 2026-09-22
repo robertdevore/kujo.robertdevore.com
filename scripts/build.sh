@@ -19,3 +19,4 @@ cp evidence/verification.json output/verification.json
 
 cp evidence/source-ledger.json output/source-ledger.json
 cp evidence/runtime-discrepancies.json output/runtime-discrepancies.json
+node -e 'import("./scripts/webmcp.mjs").then(({emitWebMcp}) => emitWebMcp({output:"output",siteTitle:"Kujo Course",tagline:"Clarity. Context. Control.",siteUrl:"https://kujo.robertdevore.com"}))'
