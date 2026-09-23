@@ -28,7 +28,7 @@ A tools schema describes an interface, not permission. max_steps bounds this loo
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.4.0 runtime.
+From the course repository root, use the pinned Kujo 1.5.0 runtime.
 
 {{command}}
 

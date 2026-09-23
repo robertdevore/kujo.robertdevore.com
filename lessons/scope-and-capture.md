@@ -32,7 +32,7 @@ An assignment to a mutable outer name and a new inner declaration are not interc
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.4.0 runtime.
+From the course repository root, use the pinned Kujo 1.5.0 runtime.
 
 {{command}}
 
@@ -60,3 +60,25 @@ Create a nested function with two visible names and predict which binding each r
 ## Release boundary drill
 
 Kujo 1.4.0 fixes repeated loop-local declarations: the loop_declaration probe now prints 1 and 2 in both runtimes. The same probe failed on the second VM iteration in 1.3.1. Duplicate declarations within one scope remain errors. See the current and historical results in the [evidence ledger](/evidence/).
+
+## Caller locals are not lexical context
+
+Kujo 1.5.0 fixes interpreter calls that could read or overwrite unrelated caller-local bindings. A top-level function sees globals and its own locals; a nested function retains its captured lexical environment. This applies to direct, indirect, callback, and pipe calls.
+
+examples/supplemental/v1-5-scope.kujo declares a global label and shadows it in the caller. The top-level lookup still returns the global label. The course verifies that assertion in both runtimes. Pass a value explicitly when the function should depend on the caller's data.
+
+
+### Verified 1.5.0 example
+
+```kujo
+let scope_label := "global"
+func lookup() { return scope_label }
+func caller() {
+    let scope_label := "caller"
+    return lookup()
+}
+assert(caller() == "global")
+print("lexical scope verified")
+```
+
+[Download this example](/examples/supplemental/v1-5-scope.kujo). The repository release verifier supplies its fixtures and records success and failure diagnostics.

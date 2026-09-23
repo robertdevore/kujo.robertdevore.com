@@ -8,7 +8,7 @@ This is a small complete system with a narrow operation: count a supplied local 
 
 ## Prerequisites and scope
 
-Complete all six stage builds. Use the official 1.4.0 runtime and the supplied standalone project under projects/capstone. The package has no registry dependency, and its lockfile is committed to Git. Its modules, framework tests, fixtures, and strict replay cassettes travel with it.
+Complete all six stage builds. Use the official 1.5.0 runtime and the supplied standalone project under projects/capstone. The package has no registry dependency, and its lockfile is committed to Git. Its modules, framework tests, fixtures, and strict replay cassettes travel with it.
 
 The course's runtime discrepancy notes still apply. This implementation avoids the remaining silent struct mutation and combined break/continue patterns. It does not claim that the whole runtime has perfect VM/interpreter parity.
 

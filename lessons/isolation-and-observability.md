@@ -28,7 +28,7 @@ A timeout inside one tool does not bound the entire workflow. A language's defau
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.4.0 runtime.
+From the course repository root, use the pinned Kujo 1.5.0 runtime.
 
 {{command}}
 

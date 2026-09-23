@@ -28,7 +28,7 @@ Display output and JSON serialization are not interchangeable. A runtime struct 
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.4.0 runtime.
+From the course repository root, use the pinned Kujo 1.5.0 runtime.
 
 {{command}}
 
@@ -58,4 +58,26 @@ The native inventory now includes HTML tokenization, URL normalization/component
 
 Use each API's explicit byte, event, depth, or row limits; their larger explicit bounds do not raise the existing buffered file/network defaults. XML projection rejects DTD/entity declarations and bounds gzip expansion. JSONL append may leave partial staged output on failure and is not transactional. Keep staging cleanup in the application.
 
-The pure `examples/supplemental/v1-4-values.kujo` checks HTML tokenization and URL normalization without network access. Consult the tagged [native inventory](https://github.com/kujolang/kujo/blob/v1.4.0/docs/STANDARD_LIBRARY.md) for each operation's arity, bounds, failure shape, and primary/secondary capabilities.
+The pure `examples/supplemental/v1-4-values.kujo` checks HTML tokenization and URL normalization without network access. Consult the tagged [native inventory](https://github.com/kujolang/kujo/blob/v1.5.0/docs/STANDARD_LIBRARY.md) for each operation's arity, bounds, failure shape, and primary/secondary capabilities.
+
+## Documents and dates in 1.5.0
+
+pdf_render_html accepts a strict HTML/CSS business-document profile, explicit byte assets, and bounded options. It renders in-process without filesystem or network access. It is not a browser: JavaScript, external stylesheets, SVG, remote asset URLs, and arbitrary markup are outside the profile. The file variant, pdf_render_html_to_file, requires filesystem-write, an absolute destination with an existing parent, and atomic no-replace publication.
+
+The supplemental v1-5-pdf.kujo example verifies a repeatable output digest for identical input under the installed renderer. Do not compare render_duration_ms as deterministic evidence. The release verifier also checks rejection of a remote image. Consult the [PDF profile](https://github.com/kujolang/kujo/blob/v1.5.0/docs/PDF_RENDERING.md) for bounds and fonts. Tagged-PDF accessibility, PDF/A, signatures, and general complex-script shaping are not claimed. A render deadline stops waiting but cannot forcibly terminate its Rust thread; external CPU/memory limits and restart policy still matter.
+
+parse_datetime accepts RFC 3339 with an explicit offset. format_date_tz applies an IANA timezone, including daylight-saving transitions. Both require clock capability even when operating on supplied timestamps. The course checks a fixed Detroit timestamp in both runtimes.
+
+
+### Verified 1.5.0 example
+
+```kujo
+let first := pdf_render_html("<h1>Operations receipt</h1>", {"page_size": "Letter"}, {})
+let second := pdf_render_html("<h1>Operations receipt</h1>", {"page_size": "Letter"}, {})
+assert(first["output_sha256"] == second["output_sha256"])
+assert(first["pages"] == 1)
+assert(first["bytes"] > 0)
+print("PDF digest repeatable")
+```
+
+[Download this example](/examples/supplemental/v1-5-pdf.kujo). The repository release verifier supplies its fixtures and records success and failure diagnostics.

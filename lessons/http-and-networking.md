@@ -28,7 +28,7 @@ Do not make the default suite depend on a live public endpoint. Do not retry mal
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.4.0 runtime.
+From the course repository root, use the pinned Kujo 1.5.0 runtime.
 
 {{command}}
 
@@ -57,3 +57,9 @@ Build a response evaluator with success, non-success status, and malformed-body 
 `http_request` adds `header_values`, mapping each header name to an array of values, while preserving existing `headers` behavior. Use it when repeated headers matter. `http_get_file_response` streams into a new file with explicit limits, requires network-client and filesystem-write, and requires redirects set to none. It can save a non-success HTTP response, so inspect status before accepting the file.
 
 Explicitly DNS-pinned or deny-private HTTP clients now disable ambient proxy discovery: a proxy must not independently re-resolve a pinned destination. Unpinned clients keep their existing proxy behavior. Destination preflight may perform DNS work and requires network-client authority even though it sends no HTTP request.
+
+## Routed request headers in 1.5.0
+
+Routed server requests now expose header_values: lowercase header names mapped to all received values in wire order. The compatibility headers dictionary cannot preserve duplicates. Authentication middleware should reject ambiguous repeated authorization headers under an explicit policy.
+
+The release also fixes VM dispatch of closures created by imported modules, supporting route registrars that capture application context. These details are reviewed against the tagged standard-library contract and release notes; the course's local HTTP build remains the executable baseline. Do not infer proxy trust from header presence.

@@ -28,7 +28,7 @@ Run check --json on the success example, then run the breaking example with --js
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.4.0 runtime.
+From the course repository root, use the pinned Kujo 1.5.0 runtime.
 
 {{command}}
 
@@ -51,3 +51,21 @@ Add human and machine renderers to your report. Keep the same underlying data. T
 - I preserve authoritative exit status.
 - I know the documented JSON failure exceptions.
 - I version application result shapes.
+
+## Bounded stdin in 1.5.0
+
+read_stdin(max_bytes) reads exact UTF-8 through EOF, preserving whitespace. The limit must be 1–8,388,608 bytes. Overflow, malformed UTF-8, and I/O failures are errors; the API does not truncate silently. It needs no ambient filesystem capability because stdin is an explicit process input stream.
+
+The caller must close the stream and enforce a process deadline. A byte ceiling cannot terminate a producer that stalls before EOF. examples/supplemental/v1-5-stdin.kujo uses a four-byte ceiling. The release verifier sends whitespace-preserving input, five bytes, and invalid UTF-8, then checks the actual success or diagnostic in both runtimes.
+
+Professional pattern: read a bounded request, parse it, validate its schema, and emit a separate structured result. Exercise: add schema validation to the stdin example and test an empty stream, malformed JSON, and an oversized request.
+
+
+### Verified 1.5.0 example
+
+```kujo
+// The caller must close stdin and enforce a process deadline.
+print(to_json(read_stdin(4)))
+```
+
+[Download this example](/examples/supplemental/v1-5-stdin.kujo). The repository release verifier supplies its fixtures and records success and failure diagnostics.

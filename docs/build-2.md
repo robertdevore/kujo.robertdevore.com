@@ -26,7 +26,7 @@ Do not grant more authority just to make a test pass. Compare the failed operati
 
 ## Run the comparison
 
-Clone the standalone course repository and run from its root unless the command changes directory. Create the ignored work directory before file-output exercises. Use Kujo 1.4.0.
+Clone the standalone course repository and run from its root unless the command changes directory. Create the ignored work directory before file-output exercises. Use Kujo 1.5.0.
 
 ```shell
 kujo run --untrusted projects/concurrent/main.kujo
