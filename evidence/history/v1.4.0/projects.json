@@ -1,6 +1,6 @@
 {
-  "version": "1.5.0",
-  "verifiedDate": "2026-09-23",
+  "version": "1.4.0",
+  "verifiedDate": "2026-09-14",
   "receipts": [
     {
       "args": [
@@ -117,7 +117,7 @@
       "cwd": "temporary independent copy",
       "exit": 0,
       "signal": null,
-      "stdout": "setup\nteardown\nsetup\nteardown\n\n============================================================\nTest Results\n============================================================\n  ✓ empty input (4ms)\n  ✓ positive values (2ms)\n\nTests: 2 total, 2 passed, 0 failed\nTime:  7ms\n============================================================\n\nAll tests passed! ✨\n",
+      "stdout": "setup\nteardown\nsetup\nteardown\n\n============================================================\nTest Results\n============================================================\n  ✓ empty input (4ms)\n  ✓ positive values (2ms)\n\nTests: 2 total, 2 passed, 0 failed\nTime:  8ms\n============================================================\n\nAll tests passed! ✨\n",
       "stderr": ""
     },
     {
@@ -164,7 +164,7 @@
       "cwd": "temporary independent copy",
       "exit": 0,
       "signal": null,
-      "stdout": "\n============================================================\nTest Results\n============================================================\n  ✓ unknown goal rejected (4ms)\n  ✓ excess budget rejected (3ms)\n  ✓ correct count accepted (3ms)\n  ✓ plausible wrong count rejected (3ms)\n  ✓ extra action rejected (3ms)\n\nTests: 5 total, 5 passed, 0 failed\nTime:  19ms\n============================================================\n\nAll tests passed! ✨\n",
+      "stdout": "\n============================================================\nTest Results\n============================================================\n  ✓ unknown goal rejected (6ms)\n  ✓ excess budget rejected (3ms)\n  ✓ correct count accepted (3ms)\n  ✓ plausible wrong count rejected (3ms)\n  ✓ extra action rejected (5ms)\n\nTests: 5 total, 5 passed, 0 failed\nTime:  24ms\n============================================================\n\nAll tests passed! ✨\n",
       "stderr": ""
     },
     {
@@ -179,7 +179,7 @@
       "cwd": "temporary independent copy",
       "exit": 0,
       "signal": null,
-      "stdout": "{\"evaluated\":true,\"input\":{\"goal\":\"count_jobs\",\"jobs\":[{\"name\":\"alpha\"},{\"name\":\"beta\"}],\"max_steps\":2},\"proposal\":{\"count\":2,\"status\":\"complete\"},\"replay\":\"strict\",\"runtime\":\"1.5.0\",\"schema\":\"course.operations/v1\",\"steps\":2,\"summary\":\"Validated count matches local jobs\",\"tool\":{\"arguments\":{},\"name\":\"count_jobs\",\"result\":2},\"verdict\":\"PASS\"}\n",
+      "stdout": "{\"evaluated\":true,\"input\":{\"goal\":\"count_jobs\",\"jobs\":[{\"name\":\"alpha\"},{\"name\":\"beta\"}],\"max_steps\":2},\"proposal\":{\"count\":2,\"status\":\"complete\"},\"replay\":\"strict\",\"runtime\":\"1.4.0\",\"schema\":\"course.operations/v1\",\"steps\":2,\"summary\":\"Validated count matches local jobs\",\"tool\":{\"arguments\":{},\"name\":\"count_jobs\",\"result\":2},\"verdict\":\"PASS\"}\n",
       "stderr": ""
     },
     {
@@ -194,7 +194,7 @@
       "cwd": "temporary independent copy",
       "exit": 0,
       "signal": null,
-      "stdout": "{\"evaluated\":true,\"input\":{\"goal\":\"count_jobs\",\"jobs\":[{\"name\":\"alpha\"},{\"name\":\"beta\"}],\"max_steps\":2},\"proposal\":{\"count\":2,\"status\":\"complete\"},\"replay\":\"strict\",\"runtime\":\"1.5.0\",\"schema\":\"course.operations/v1\",\"steps\":2,\"summary\":\"Validated count matches local jobs\",\"tool\":{\"arguments\":{},\"name\":\"count_jobs\",\"result\":2},\"verdict\":\"PASS\"}\n",
+      "stdout": "{\"evaluated\":true,\"input\":{\"goal\":\"count_jobs\",\"jobs\":[{\"name\":\"alpha\"},{\"name\":\"beta\"}],\"max_steps\":2},\"proposal\":{\"count\":2,\"status\":\"complete\"},\"replay\":\"strict\",\"runtime\":\"1.4.0\",\"schema\":\"course.operations/v1\",\"steps\":2,\"summary\":\"Validated count matches local jobs\",\"tool\":{\"arguments\":{},\"name\":\"count_jobs\",\"result\":2},\"verdict\":\"PASS\"}\n",
       "stderr": ""
     },
     {

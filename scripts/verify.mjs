@@ -9,10 +9,10 @@ const env={...process.env};for(const key of Object.keys(env))if(/^(KUJO_|OPENAI_
 env.KUJO_AI_REPLAY_MODE='strict';
 export function run(args,{cwd=root,extraEnv={},timeout=15000}={}){const result=spawnSync(binary,args,{cwd,encoding:'utf8',env:{...env,...extraEnv},timeout,maxBuffer:4*1024*1024});assert.ifError(result.error);return {exit:result.status,stdout:result.stdout,stderr:result.stderr};}
 const course=JSON.parse(fs.readFileSync('course.json'));
-assert.equal(run(['--version']).stdout.trim(),'kujo 1.4.0');
+assert.equal(run(['--version']).stdout.trim(),'kujo 1.5.0');
 const reasons=['Assertion failed',"Expected ')'",'Cannot mutate immutable','Integer overflow','Undefined variable','expects 2 arguments','Missing map key','Duplicate declaration','Cannot convert','Index out of bounds','denominator must be nonzero','Invalid binary operation','async operation rejected','worker rejected','Module not found','Assertion failed','JSON parse error','Assertion failed','report validation failed','expects 1 arguments',"Expected ')'",'invalid_relative_path','non-empty array','Capability denied: network-client','JSON parse error','Capability denied: filesystem-write','Assertion failed','Capability denied: network-ai','Assertion failed','replay_miss','third argument must be a function','Assertion failed','dimension mismatch','max_steps','Assertion failed','Assertion failed','Assertion failed','Assertion failed','Assertion failed','Assertion failed'];
 const expected=JSON.parse(fs.readFileSync('fixtures/expected.json'));
-const evidence={version:'1.4.0',verifiedDate:'2026-09-14',binarySha256:createHash('sha256').update(fs.readFileSync(binary)).digest('hex'),lessons:{},commands:{}};
+const evidence={version:'1.5.0',verifiedDate:'2026-09-23',binarySha256:createHash('sha256').update(fs.readFileSync(binary)).digest('hex'),lessons:{},commands:{}};
 for(const [i,l] of course.lessons.entries()){
  const file=`examples/${l.id}.kujo`;
  const check=run(['check','--json',file]);assert.equal(check.exit,0,`${file}: ${check.stderr}`);assert.equal(JSON.parse(check.stdout).status,'ok');

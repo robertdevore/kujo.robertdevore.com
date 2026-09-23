@@ -16,7 +16,7 @@ func main() {
         case Ok(payload): {
             let proposal := parse_json(payload["message"])
             if evaluate(proposal, actual) == false { stop("evaluation_failed") }
-            let evidence := {"schema": "course.operations/v1", "runtime": "1.4.0", "verdict": "PASS", "steps": payload["steps"], "input": request, "tool": {"name": "count_jobs", "arguments": {}, "result": actual}, "proposal": proposal, "evaluated": true, "replay": "strict", "summary": "Validated count matches local jobs"}
+            let evidence := {"schema": "course.operations/v1", "runtime": "1.5.0", "verdict": "PASS", "steps": payload["steps"], "input": request, "tool": {"name": "count_jobs", "arguments": {}, "result": actual}, "proposal": proposal, "evaluated": true, "replay": "strict", "summary": "Validated count matches local jobs"}
             write_file("work/evidence.json", to_json_pretty(evidence), true)
             print(to_json(evidence))
         }

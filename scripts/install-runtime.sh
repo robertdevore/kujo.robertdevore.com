@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "$0")/.."
-version=v1.4.0
+version=v1.5.0
 case "$(uname -s)" in Darwin) platform=macos;; Linux) platform=linux;; *) echo 'Use the official Windows ZIP and verify its SHA-256 manually.' >&2; exit 1;; esac
 case "$(uname -m)" in arm64|aarch64) arch=arm64;; x86_64|amd64) arch=x64;; *) echo 'Unsupported architecture' >&2; exit 1;; esac
 mkdir -p .tools

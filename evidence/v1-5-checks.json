@@ -1,0 +1,369 @@
+{
+  "version": "1.5.0",
+  "date": "2026-09-23",
+  "receipts": [
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-read",
+        "--allow-fs-write",
+        "examples/supplemental/v1-5-files.kujo"
+      ],
+      "exit": 0,
+      "stdout": "bounded files verified\n",
+      "stderr": "",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "examples/supplemental/v1-5-files.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: Capability denied: filesystem-read required for sha256_file_beneath; rerun with --allow-fs-read\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-read",
+        "examples/supplemental/v1-5-files.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: Capability denied: filesystem-write required for copy_file_beneath; rerun with --allow-fs-write\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-read",
+        "--allow-fs-write",
+        "examples/supplemental/v1-5-files.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: write_file_atomic_beneath[publish_failed]: File exists (os error 17)\n  --> 0:0\n\n",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "examples/supplemental/v1-5-stdin.kujo"
+      ],
+      "exit": 0,
+      "stdout": "\" a\\n\"\n",
+      "stderr": "",
+      "input": " a\n"
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "examples/supplemental/v1-5-stdin.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: read_stdin() input exceeds byte limit\n  --> 0:0\n\n",
+      "input": "abcde"
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "examples/supplemental/v1-5-stdin.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: read_stdin() input is not valid UTF-8\n  --> 0:0\n\n",
+      "input": "invalid UTF-8 fixture"
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-random",
+        "examples/supplemental/v1-5-token.kujo"
+      ],
+      "exit": 0,
+      "stdout": "***\n",
+      "stderr": "",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "examples/supplemental/v1-5-token.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: Capability denied: random required for secure_random_token; rerun with --allow-random\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "examples/supplemental/v1-5-scope.kujo"
+      ],
+      "exit": 0,
+      "stdout": "lexical scope verified\n",
+      "stderr": "",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "examples/supplemental/v1-5-pdf.kujo"
+      ],
+      "exit": 0,
+      "stdout": "PDF digest repeatable\n",
+      "stderr": "",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-read",
+        "work/v1-5/oversize.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: sha256_file_beneath[size_limit_exceeded]: target 'a.json' exceeds maximum read size (3 bytes > 1 bytes)\n  --> 0:0\n\n",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-read",
+        "work/v1-5/scan-ceiling.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: list_dir_beneath[scan_limit]: directory exceeds max_entries; no complete page can be returned\n  --> 0:0\n\n",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "work/v1-5/pdf-remote.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: unsupported or unsafe pdf HTML attribute 'src' on 'img'\n  --> 0:0\n\n",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-clock",
+        "work/v1-5/dates.kujo"
+      ],
+      "exit": 0,
+      "stdout": "dates verified\n",
+      "stderr": "",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "--allow-fs-read",
+        "--allow-fs-write",
+        "examples/supplemental/v1-5-files.kujo"
+      ],
+      "exit": 0,
+      "stdout": "bounded files verified\n",
+      "stderr": "",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "examples/supplemental/v1-5-files.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: Capability denied: filesystem-read required for sha256_file_beneath; rerun with --allow-fs-read\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "--allow-fs-read",
+        "examples/supplemental/v1-5-files.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: Capability denied: filesystem-write required for copy_file_beneath; rerun with --allow-fs-write\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "--allow-fs-read",
+        "--allow-fs-write",
+        "examples/supplemental/v1-5-files.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: write_file_atomic_beneath[publish_failed]: File exists (os error 17)\n  --> 0:0\n\n",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "examples/supplemental/v1-5-stdin.kujo"
+      ],
+      "exit": 0,
+      "stdout": "\" a\\n\"\n",
+      "stderr": "",
+      "input": " a\n"
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "examples/supplemental/v1-5-stdin.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: read_stdin() input exceeds byte limit\n  --> 0:0\n\n",
+      "input": "abcde"
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "examples/supplemental/v1-5-stdin.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: read_stdin() input is not valid UTF-8\n  --> 0:0\n\n",
+      "input": "invalid UTF-8 fixture"
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "--allow-random",
+        "examples/supplemental/v1-5-token.kujo"
+      ],
+      "exit": 0,
+      "stdout": "***\n",
+      "stderr": "",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "examples/supplemental/v1-5-token.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: Capability denied: random required for secure_random_token; rerun with --allow-random\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "examples/supplemental/v1-5-scope.kujo"
+      ],
+      "exit": 0,
+      "stdout": "lexical scope verified\n",
+      "stderr": "",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "examples/supplemental/v1-5-pdf.kujo"
+      ],
+      "exit": 0,
+      "stdout": "PDF digest repeatable\n",
+      "stderr": "",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "--allow-fs-read",
+        "work/v1-5/oversize.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: sha256_file_beneath[size_limit_exceeded]: target 'a.json' exceeds maximum read size (3 bytes > 1 bytes)\n  --> 0:0\n\n",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "--allow-fs-read",
+        "work/v1-5/scan-ceiling.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: list_dir_beneath[scan_limit]: directory exceeds max_entries; no complete page can be returned\n  --> 0:0\n\n",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "work/v1-5/pdf-remote.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: unsupported or unsafe pdf HTML attribute 'src' on 'img'\n  --> 0:0\n\n",
+      "input": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "--allow-clock",
+        "work/v1-5/dates.kujo"
+      ],
+      "exit": 0,
+      "stdout": "dates verified\n",
+      "stderr": "",
+      "input": ""
+    }
+  ]
+}

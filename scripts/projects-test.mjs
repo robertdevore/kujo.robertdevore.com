@@ -33,4 +33,4 @@ try{
   fs.appendFileSync(path.join(cwd,'kujo.toml'),'\ncourse_missing = "1.0.0"\n');const drift=await run(['package-install','--frozen'],{cwd,expected:4});assert.match(drift.stderr,/lock|frozen|sync/i);
  }
 }finally{fs.rmSync(temp,{recursive:true,force:true});}
-fs.writeFileSync('evidence/projects.json',JSON.stringify({version:'1.4.0',verifiedDate:'2026-09-14',receipts},null,2)+'\n');console.log(`PASS: ${receipts.length} project, package, HTTP, database, replay, and capstone checks`);
+fs.writeFileSync('evidence/projects.json',JSON.stringify({version:'1.5.0',verifiedDate:'2026-09-23',receipts},null,2)+'\n');console.log(`PASS: ${receipts.length} project, package, HTTP, database, replay, and capstone checks`);

@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-23",
+  "release": {
+    "html_url": "https://github.com/kujolang/kujo/releases/tag/v1.5.0",
+    "published_at": "2026-09-22T22:39:45Z",
+    "tag_name": "v1.5.0",
+    "target_commitish": "main"
+  },
+  "releaseNotes": "Kujo 1.5.0 adds confined streaming SHA-256 and exact-byte file copies with bounded memory, atomic no-replace publication, and explicit filesystem capabilities. Bounded directory pagination supports larger local evidence collections. It preserves the existing smaller digest API and includes upstream bounded-stdin and lexical-scope fixes.\n\nThe complete release gate, native upgrade checks, five native builds, and npm packaging passed in [run 35787043614](https://github.com/kujolang/kujo/actions/runs/35787043614). Source revision: `cc2d7dbb59a8dc05f00d629e100932f56f4062f6`, integrated through PR #10. CLI/language contract versions remain 1.0.0; preview APIs retain their documented guarantees.\n\nDownload the archive for your platform and verify its SHA-256 using the accompanying file or `checksums.txt`. The signed v1.5.0 tag also contains all five archive digests. Native archives are the canonical distribution; this release does not publish a Cargo registry package. npm 1.5.0 publication remains blocked: the separate publisher returned registry E404; the public npm channel remains 1.4.0 pending maintainer authorization review.\n\n[Published-download installation checks](https://github.com/kujolang/kujo/actions/runs/35793560616) passed on Linux x64/ARM64, macOS x64/ARM64 and Windows x64. The first macOS ARM64 upgrade check hit a public GitHub API rate limit; its unchanged retry passed. These checks are not a universal enterprise-readiness certification.\n",
+  "tagCommit": "cc2d7dbb59a8dc05f00d629e100932f56f4062f6",
+  "archive": ".tools/kujo-v1.5.0-macos-x64.tar.gz",
+  "archiveSha256": "1aebcd482125031104b2df79abae6db57973f1874ceb196f95989b14e287d820",
+  "checksumVerified": true,
+  "seo": {
+    "scope": "Release content and verification dates; routes, canonical URLs, homepage title and design preserved.",
+    "baseline": "work/upgrade-1.5-baseline/output",
+    "guidance": "https://developers.google.com/search/docs/appearance/publication-dates",
+    "retrieved": "2026-09-23",
+    "claims": "No ranking, indexing, traffic or AI-citation outcome claimed."
+  }
+}

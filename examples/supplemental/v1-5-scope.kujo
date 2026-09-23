@@ -1,0 +1,8 @@
+let scope_label := "global"
+func lookup() { return scope_label }
+func caller() {
+    let scope_label := "caller"
+    return lookup()
+}
+assert(caller() == "global")
+print("lexical scope verified")

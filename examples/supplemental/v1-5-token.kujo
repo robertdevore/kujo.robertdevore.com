@@ -1,0 +1,5 @@
+let token := secure_random_token(32)
+assert(is_secret(token))
+assert(len(reveal(token)) == 43)
+// Never print the revealed credential. Only verify the redaction boundary.
+print(token)

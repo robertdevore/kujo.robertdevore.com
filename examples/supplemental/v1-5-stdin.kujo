@@ -1,0 +1,2 @@
+// The caller must close stdin and enforce a process deadline.
+print(to_json(read_stdin(4)))

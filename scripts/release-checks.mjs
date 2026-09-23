@@ -12,5 +12,5 @@ run(['run','--untrusted',...mode,'examples/supplemental/v1-4-publication.kujo'],
 const original=JSON.parse(fs.readFileSync('evidence/history/v1.3.1/runtime-discrepancies.json'));const probes=[];
 for(const p of original.probes){const modes={};for(const mode of ['vm','interpreter']){const r=spawnSync(binary,['run','--untrusted',...(mode==='interpreter'?['--interpreter']:[]),p.file],{encoding:'utf8',env,timeout:2000});modes[mode]={exit:r.status,signal:r.signal,stdout:r.stdout,stderr:r.stderr,timeout:r.error?.code==='ETIMEDOUT'};}probes.push({...p,modes});}
 for(const name of ['loop_scope','loop_declaration']){const p=probes.find(x=>x.name===name);assert.equal(p.modes.vm.exit,p.modes.interpreter.exit);assert.equal(p.modes.vm.stdout,p.modes.interpreter.stdout);assert.equal(p.modes.vm.timeout,false);}
-fs.writeFileSync('evidence/runtime-discrepancies.json',JSON.stringify({version:'1.4.0',date:'2026-09-14',probes},null,2)+'\n');
-fs.writeFileSync('evidence/release-checks.json',JSON.stringify({version:'1.4.0',date:'2026-09-14',receipts},null,2)+'\n');console.log('PASS: 10 release checks and 7 dual-runtime discrepancy probes');
+fs.writeFileSync('evidence/runtime-discrepancies.json',JSON.stringify({version:'1.5.0',date:'2026-09-23',probes},null,2)+'\n');
+fs.writeFileSync('evidence/release-checks.json',JSON.stringify({version:'1.5.0',date:'2026-09-23',receipts},null,2)+'\n');console.log('PASS: 10 release checks and 7 dual-runtime discrepancy probes');

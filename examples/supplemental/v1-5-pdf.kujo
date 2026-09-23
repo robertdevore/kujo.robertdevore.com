@@ -1,0 +1,6 @@
+let first := pdf_render_html("<h1>Operations receipt</h1>", {"page_size": "Letter"}, {})
+let second := pdf_render_html("<h1>Operations receipt</h1>", {"page_size": "Letter"}, {})
+assert(first["output_sha256"] == second["output_sha256"])
+assert(first["pages"] == 1)
+assert(first["bytes"] > 0)
+print("PDF digest repeatable")
