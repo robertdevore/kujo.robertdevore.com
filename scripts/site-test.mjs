@@ -15,3 +15,5 @@ assert.match(routes.get('/course/mechanism-and-policy/'), /experimental beta/);
 assert.match(routes.get('/course/mechanism-and-policy/'), /experimental alpha/);
 for (const html of routes.values()) assert.ok(!html.includes('Verified against 1.5.0'));
 assert.equal(JSON.parse(fs.readFileSync('output/verification.json')).version,'1.6.0');
+assert.ok(!fs.readFileSync('output/assets/js/course.js','utf8').includes('1.5.0'));
+assert.ok(!fs.readFileSync('output/projects/capstone/src/main.kujo','utf8').includes('1.5.0'));
