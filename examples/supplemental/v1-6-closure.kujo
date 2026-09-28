@@ -1,0 +1,12 @@
+func counter() {
+    mut count := 0
+    func next_count() { count += 1; return count }
+    return next_count
+}
+let first := counter()
+let alias := first
+let second := counter()
+assert(first() == 1)
+assert(alias() == 2)
+assert(second() == 1)
+print("closure identity verified")

@@ -6,7 +6,7 @@ You can write small programs. This stage asks what their execution means. Begin 
 
 Top-level script bindings live in global scope. Functions and control-flow blocks introduce lexical scopes. Duplicate declarations in the same scope are rejected; a declaration in a nested scope may shadow an outer one. Name resolution chooses the nearest visible binding.
 
-Closures capture the nearest visible lexical binding. The stable specification does not give you a universal cross-runtime shared-memory ownership model. Captured environment implementation details and deferred VM work remain documented in the parity matrix. Test the particular pattern you intend to rely on, especially across asynchronous or imported callbacks.
+Closures capture snapshots of the nearest visible lexical bindings. Parent assignment after capture does not update an existing closure. Aliases and repeated calls of the same closure share captured cells; separate closures have independent snapshots. Captured mutability is retained: capturing a let or const binding does not make it mutable. This is not a universal shared-memory model for asynchronous work.
 
 ## Read the example
 
@@ -32,7 +32,7 @@ An assignment to a mutable outer name and a new inner declaration are not interc
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.5.0 runtime.
+From the course repository root, use the pinned Kujo 1.6.0 runtime.
 
 {{command}}
 
@@ -82,3 +82,7 @@ print("lexical scope verified")
 ```
 
 [Download this example](/examples/supplemental/v1-5-scope.kujo). The repository release verifier supplies its fixtures and records success and failure diagnostics.
+
+## Captured state drill for 1.6
+
+[Run the closure regression](/examples/supplemental/v1-6-closure.kujo) in the VM and interpreter. It checks repeated calls, an alias of the same closure, and an independent factory result. The course records exact matching output. Use explicit task/shared-state contracts when crossing scheduling boundaries.

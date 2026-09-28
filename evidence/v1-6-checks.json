@@ -1,0 +1,76 @@
+{
+  "version": "1.6.0",
+  "date": "2026-09-28",
+  "receipts": [
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "examples/supplemental/v1-6-control.kujo"
+      ],
+      "mode": "vm",
+      "exit": 0,
+      "stdout": "loop return verified\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "examples/supplemental/v1-6-control.kujo"
+      ],
+      "mode": "interpreter",
+      "exit": 0,
+      "stdout": "loop return verified\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "examples/supplemental/v1-6-closure.kujo"
+      ],
+      "mode": "vm",
+      "exit": 0,
+      "stdout": "closure identity verified\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "examples/supplemental/v1-6-closure.kujo"
+      ],
+      "mode": "interpreter",
+      "exit": 0,
+      "stdout": "closure identity verified\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "examples/supplemental/v1-6-generator.kujo"
+      ],
+      "mode": "vm",
+      "exit": 0,
+      "stdout": "generator verified\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "examples/supplemental/v1-6-generator.kujo"
+      ],
+      "mode": "interpreter",
+      "exit": 0,
+      "stdout": "generator verified\n",
+      "stderr": ""
+    }
+  ],
+  "loopControlParity": true
+}

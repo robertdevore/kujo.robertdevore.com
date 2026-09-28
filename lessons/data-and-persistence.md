@@ -26,7 +26,7 @@ Do not use a timestamp as the only identity for reproducible evidence. Do not eq
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.5.0 runtime.
+From the course repository root, use the pinned Kujo 1.6.0 runtime.
 
 {{command}}
 
@@ -56,4 +56,4 @@ Kujo 1.5.0 adds db_pool_postgres_tls for verified TLS pooling. The API requires 
 
 Release each lease exactly once to the same pool. Before reuse, the verified pool rolls back, discards session state, and restores the statement timeout; failed resets evict connections. During shutdown, stop accepting work, drain requests within an application deadline, then close the pool.
 
-This course's executable persistence build remains offline SQLite. The PostgreSQL pool discussion is source-reviewed against the [tagged contract and its dedicated local-server harness](https://github.com/kujolang/kujo/blob/v1.5.0/docs/POSTGRES_TLS_POOL.md); it is not a claim that the course ran a live PostgreSQL service. Database capability controls and verified TLS do not replace application authorization or tenant-isolation tests.
+This course's executable persistence build remains offline SQLite. The PostgreSQL pool discussion is source-reviewed against the [tagged contract and its dedicated local-server harness](https://github.com/kujolang/kujo/blob/v1.6.0/docs/POSTGRES_TLS_POOL.md); it is not a claim that the course ran a live PostgreSQL service. Database capability controls and verified TLS do not replace application authorization or tenant-isolation tests.

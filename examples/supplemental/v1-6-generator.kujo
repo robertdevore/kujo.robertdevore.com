@@ -1,0 +1,9 @@
+func* sequence() {
+    yield 2
+    yield 4
+    return
+}
+mut total := 0
+for entry in sequence() { total += entry }
+assert(total == 6)
+print("generator verified")

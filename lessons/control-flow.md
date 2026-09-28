@@ -22,7 +22,7 @@ Prefer a for-loop over known bounded input when possible. For a while-loop, iden
 
 A `continue` placed before a counter update can make a while-loop run forever. A shadowed counter may leave the condition unchanged. Nested loops need clear break behavior; break does not express a general escape from all enclosing work.
 
-The failure drill uses a name that was never declared. The release-specific loop-scope discrepancy is documented below.
+The failure drill uses a name that was never declared. The current loop-scope and control-flow probes are documented below.
 
 ## Working example
 
@@ -30,7 +30,7 @@ The failure drill uses a name that was never declared. The release-specific loop
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.5.0 runtime.
+From the course repository root, use the pinned Kujo 1.6.0 runtime.
 
 {{command}}
 
@@ -38,7 +38,7 @@ From the course repository root, use the pinned Kujo 1.5.0 runtime.
 
 ## Break it and diagnose it
 
-A never-declared name is a runtime error. The separate scope probe records the release discrepancy.
+A never-declared name is a runtime error. The separate scope probe checks the lexical boundary.
 
 {{broken}}
 
@@ -56,7 +56,20 @@ Rewrite the selection as a while-loop with an explicit index bound. Test empty i
 
 
 
-## Contract versus release behavior
+## Loop control in 1.6
 
-> Kujo 1.4.0 fixes the loop-variable leak observed in 1.3.1: both runtimes now reject the reference after the loop. However, the combined continue/break collection probe still exceeds its external two-second deadline on the VM; the interpreter completes. The successful lesson uses a finite for-loop without those control transfers. See [the evidence ledger](/evidence/) for current probes and historical results.
+The course's combined break/continue probe now returns `[2, 4]` in both runtimes. Loop-local declarations and post-loop name rejection also agree. Kujo 1.6 fixes optimized VM control flow for conditional early returns from iteration; a return exits the function, not just the current iteration.
 
+```kujo
+func first_positive(records) {
+    for record in records {
+        if record > 0 { return record }
+    }
+    return null
+}
+assert(first_positive([-1, 0, 4]) == 4)
+assert(first_positive([-1, 0]) == null)
+print("loop return verified")
+```
+
+[Download the full regression example](/examples/supplemental/v1-6-control.kujo). The course checks first/later matches, no match, nested loops, and a returned value used by the caller in both runtimes. These checks do not imply universal VM/interpreter parity; see the remaining [evidence boundaries](/evidence/).

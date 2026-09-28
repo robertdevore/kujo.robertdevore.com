@@ -1,12 +1,12 @@
 ## Where you are
 
-You have a development goal; now establish an execution environment you can identify and reproduce. All captured course results use the official Kujo 1.5.0 release binary, not an unreleased checkout that happens to report the same version.
+You have a development goal; now establish an execution environment you can identify and reproduce. All captured course results use the official Kujo 1.6.0 release binary, not an unreleased checkout that happens to report the same version.
 
 ## Install and identify
 
-Download the archive for your operating system and architecture from [the 1.5.0 release](https://github.com/kujolang/kujo/releases/tag/v1.5.0). Verify it against the published SHA-256 file before extracting it. Put the extracted `kujo` binary in a directory on your PATH. On Windows, use `kujo.exe` and verify the archive with `Get-FileHash -Algorithm SHA256`. On macOS use `shasum -a 256`; on Linux use `sha256sum`. Compare the full hash, not a prefix.
+Download the archive for your operating system and architecture from [the 1.6.0 release](https://github.com/kujolang/kujo/releases/tag/v1.6.0). Verify it against the published SHA-256 file before extracting it. Put the extracted `kujo` binary in a directory on your PATH. On Windows, use `kujo.exe` and verify the archive with `Get-FileHash -Algorithm SHA256`. On macOS use `shasum -a 256`; on Linux use `sha256sum`. Compare the full hash, not a prefix.
 
-Run `kujo --version` and `kujo --help`. If your shell finds an older binary first, inspect your PATH before changing source code. The course verifier refuses versions other than 1.5.0, making version drift visible.
+Run `kujo --version` and `kujo --help`. If your shell finds an older binary first, inspect your PATH before changing source code. The course verifier refuses versions other than 1.6.0, making version drift visible.
 
 ## Runtime contract
 
@@ -28,7 +28,7 @@ Use an editor integration that starts `kujo lsp` over standard input/output. Con
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.5.0 runtime.
+From the course repository root, use the pinned Kujo 1.6.0 runtime.
 
 {{command}}
 
@@ -52,6 +52,15 @@ Install and identify the runtime, check and run the greeting, then run the inter
 - I use the VM as the normal execution path.
 - I can separate a parser error from a runtime error.
 
-## Distribution boundary for 1.5.0
+## Published installation channels
 
-Use the checksum-verified native archive for this course. At verification on September 23, the official release notes reported npm 1.5.0 publication blocked; the public npm channel remained at 1.4.0. A successful npm installation therefore does not establish the course runtime version. This release does not publish a Cargo registry package. Check the executable itself with kujo --version.
+Kujo 1.6.0 is published for Linux x64/arm64, macOS x64/arm64, and Windows x64. The runtime npm package selects the matching native binary:
+
+```sh
+npm install --global @kujolang/kujo-runtime@1.6.0
+kujo --version
+```
+
+Expected output: `kujo 1.6.0`. Node/npm is needed for this installation route; ordinary Kujo programs run in the native runtime. Native archives are an alternative. No 1.6 Cargo registry publication is claimed; building the tagged source requires Rust.
+
+For a standalone native installation, `kujo upgrade` supports upgrading an existing 1.3+ runtime. For npm-managed installations, update through npm instead. These runtime packages are public; experimental participant SDK packages are separate and remain private/unpublished.

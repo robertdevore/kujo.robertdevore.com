@@ -28,7 +28,7 @@ A timeout inside one tool does not bound the entire workflow. A language's defau
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.5.0 runtime.
+From the course repository root, use the pinned Kujo 1.6.0 runtime.
 
 {{command}}
 
@@ -55,3 +55,7 @@ Write a threat model for running a third-party script. Identify language gates, 
 ## Supervised services in 1.4.0
 
 The top-level cooperative scheduler normally uses a 120-second deadline. `--scheduler-timeout-ms` selects a finite replacement. `--scheduler-no-timeout` removes that top-level deadline for an externally supervised trusted service; the flags are mutually exclusive. It does not remove native-operation bounds, capabilities, or socket timeouts. Keep the course exercises bounded. Do not use the unlimited mode for arbitrary untrusted code; the external supervisor must enforce liveness, resource, restart, stop, and drain policy.
+
+## Measurements are observations
+
+Kujo 1.6 includes a runtime-measurement foundation. Watchdog telemetry and RunLedger evidence correlation remain companion concerns. Measurements can explain timing and lifecycle behavior; they do not authenticate an effect, authorize continuation, or replace a durable Dispatch checkpoint. Keep private payloads and credentials out of observational records.

@@ -30,7 +30,7 @@ The current ecosystem evolves faster than the stable language contract. Link to 
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.5.0 runtime.
+From the course repository root, use the pinned Kujo 1.6.0 runtime.
 
 {{command}}
 
@@ -53,3 +53,13 @@ Draw your application as mechanisms and decisions. Move retry and acceptance dec
 - I can name the owner of each policy.
 - I test decisions without external effects.
 - I keep ecosystem tools distinct from language features.
+
+## The 1.6 ecosystem boundary
+
+The runtime release does not turn companion packages into language syntax. Dispatch owns durable workflow state, review checkpoints, restart/resume, replay admission and continuation. Ability owns application actions and receipts; Workcell owns its Git CAS effect predicate. Watchdog observes runtime activity, while RunLedger correlates evidence. Neither observation tool grants replay permission.
+
+Wave C effect assurance remains **experimental beta, opt-in**, in its bounded required/deny single-effect domain; alpha support remains. SQLite, Git CAS and Ability profiles are validated, but an assurance document alone does not authorize a retry. Dispatch resolves operator-owned configuration and performs live verification.
+
+Wave D remains **experimental alpha**: Agents SDK, local MCP STDIO, HTTP, Workcell process, and independent TypeScript/Python participants carry bounded references into the same generic correlation boundary. Participant SDK APIs and private packages remain unpublished under a trusted-local-host model. Correlation is not admission, and participant completion knowledge is not effect truth.
+
+These companions do not claim exactly-once execution, universal rollback, general machine-loss recovery, remote participant trust or multi-effect assurance. The source-blind agent adopter rehearsal passed; human adopter usability validation remains unperformed and post-release. See the [release record](https://github.com/kujolang/kujo/blob/main/docs/KUJO_1_6_RELEASE.md) and [current ecosystem documentation](https://docs.kujolang.ai/ecosystem/).

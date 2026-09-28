@@ -28,7 +28,7 @@ Do not store an entire transcript as a substitute for a useful receipt. Do not r
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.5.0 runtime.
+From the course repository root, use the pinned Kujo 1.6.0 runtime.
 
 {{command}}
 
@@ -51,3 +51,9 @@ Design a receipt for your runner and a handoff for one bounded subtask. Include 
 - I distinguish dispatched work from completed work.
 - I tie verdicts to evidence.
 - I carry explicit boundaries through handoffs.
+
+## Experimental participant handoffs
+
+The alpha `kujo.interop-handoff/v1alpha1` contract carries controller-owned subject IDs, exact content-addressed result/selected-assurance references, participant correlation and completion knowledge. Closed participant and effect extensions retain their own semantics; private bodies, credentials and arbitrary metadata do not belong in the core.
+
+`reported` and `unknown` describe what a participant observed. A lost response may leave knowledge unknown even after a business commit. A `sha256:` reference identifies exact bytes; it is neither a path nor authorization. The SDK encodes, parses and compares snapshots. The trusted host supplies configuration, admission, evidence storage and effect execution; Dispatch decides replay. Do not add participant-side retries after uncertainty.

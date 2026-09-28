@@ -28,7 +28,7 @@ Printing a handle is not inspecting the completed value. Starting work and immed
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.5.0 runtime.
+From the course repository root, use the pinned Kujo 1.6.0 runtime.
 
 {{command}}
 
@@ -51,3 +51,22 @@ Create an async transform and a synchronous pure equivalent. Assert equal succes
 - I distinguish a handle from its resolved result.
 - I await work required for success.
 - I preserve async failures.
+
+## Generators and task ownership in 1.6
+
+A generator is a lazy sequence, not an async task. `yield` suspends its state; `return` finishes without yielding another item. Aliases share iteration progress and a terminal error is cached. Breaking iteration does not drain the sequence. Async generators and struct generator methods are explicitly unsupported.
+
+```kujo
+func* sequence() {
+    yield 2
+    yield 4
+    return
+}
+mut total := 0
+for entry in sequence() { total += entry }
+assert(total == 6)
+```
+
+[Download the generator drill](/examples/supplemental/v1-6-generator.kujo). Both runtimes consume its yields in a for-loop. The existing async and bounded-concurrency lessons test awaited completion separately.
+
+Task globals are submission snapshots. Detached `spawn` copies referenced transferable values, retaining binding mutability; referenced callables, promises, generators, channels and host handles reject before submission. Use documented `shared_*` operations for shared state, and await required work. Process exit and an unobserved task are not evidence that an external effect committed.

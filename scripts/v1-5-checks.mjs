@@ -36,5 +36,5 @@ for(const mode of [[],['--interpreter']]){
  run(probe('pdf-remote','pdf_render_html("<img src=\\"https://example.test/logo.png\\" />", {}, {})'),mode,[],4,'unsupported or unsafe pdf HTML attribute');
  run(probe('dates','assert(parse_datetime("2026-09-16T09:30:00-04:00") == 1789565400)\nassert(format_date_tz(1789565400, "YYYY-MM-DD HH:mm", "America/Detroit") == "2026-09-16 09:30")\nprint("dates verified")'),mode,['--allow-clock'],0,'dates verified');
 }
-fs.writeFileSync('evidence/v1-5-checks.json',JSON.stringify({version:'1.5.0',date:'2026-09-23',receipts},null,2)+'\n');
+fs.writeFileSync('evidence/v1-5-checks.json',JSON.stringify({version:'1.6.0',date:'2026-09-28',receipts},null,2)+'\n');
 console.log(`PASS: ${receipts.length} Kujo 1.5 bounded-input, file, security, PDF, date and scope checks`);

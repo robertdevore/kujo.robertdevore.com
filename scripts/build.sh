@@ -2,7 +2,9 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 KUJO_BIN="${KUJO_BIN:-kujo}"
-if [[ -x .tools/kujo ]]; then KUJO_BIN="${KUJO_BIN_OVERRIDE:-$PWD/.tools/kujo}"; fi
+if [[ -z "${KUJO_BIN_OVERRIDE:-}" && "$KUJO_BIN" == kujo && -x .tools/kujo ]]; then KUJO_BIN="$PWD/.tools/kujo"; fi
+KUJO_BIN="${KUJO_BIN_OVERRIDE:-$KUJO_BIN}"
+[[ "$("$KUJO_BIN" --version)" == "kujo 1.6.0" ]] || { echo "Course build requires Kujo 1.6.0" >&2; exit 1; }
 mkdir -p content/posts content/pages output
 "$KUJO_BIN" run scripts/prepare.kujo
 "$KUJO_BIN" run scripts/render.kujo

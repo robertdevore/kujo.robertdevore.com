@@ -4,7 +4,7 @@ A standalone course for https://kujo.robertdevore.com: 40 lessons, six stage bui
 
 ## Reproduce
 
-Install official Kujo **1.5.0**, verify the release checksum, and use Node 24+ with npm for the maintenance verification and Cloudflare deployment tools.
+Install official Kujo **1.6.0**, verify the release checksum, and use Node 24+ with npm for the maintenance verification and Cloudflare deployment tools.
 
 ```sh
 npm ci
@@ -12,7 +12,7 @@ KUJO_BIN=/absolute/path/to/kujo npm run verify
 npm run preview
 ```
 
-A locally downloaded `.tools/kujo` takes precedence in the build wrapper. Set `KUJO_BIN_OVERRIDE` to override it for build experiments. No binary or credentials are committed. The supplied `scripts/install-runtime.sh` downloads and checksum-verifies the pinned official macOS/Linux binary into `.tools`.
+An explicit `KUJO_BIN` takes precedence over a locally downloaded `.tools/kujo`; both verification and building require 1.6.0. Set `KUJO_BIN_OVERRIDE` to override it for build experiments. No binary or credentials are committed. The supplied `scripts/install-runtime.sh` downloads and checksum-verifies the pinned official macOS/Linux binary into `.tools`.
 
 The site is built by **Kujo**: `scripts/prepare.kujo` joins authored lessons with actual verification receipts; `scripts/render.kujo` emits static HTML through the native Markdown primitive. The full Kujo SSG was evaluated and replaced with this smaller course-specific pipeline after measured latency made iterative verification impractical. All layout, search, progress, code highlighting, and the example explorer are independent of other repositories.
 
@@ -33,7 +33,7 @@ Browser QA is performed through the Codex in-app browser and recorded in `eviden
 
 ## Known runtime boundaries
 
-See `evidence/runtime-discrepancies.json` and the public evidence page. Minimal official-release probes reproduce VM/interpreter disagreements in loop scope, repeated loop declarations, loop control, struct assignment, and qualified custom-enum matching. Builtin-name collisions were separately tested and are not mislabeled as mutable-collection failures. Course examples avoid the affected patterns and state the limits explicitly. The Kujo core checkout was not modified.
+See `evidence/runtime-discrepancies.json` and the public evidence page. Minimal official-release probes reproduce VM/interpreter disagreements in struct assignment and qualified custom-enum matching. Builtin-name collisions were separately tested and are not mislabeled as mutable-collection failures. Course examples avoid the affected patterns and state the limits explicitly. The Kujo core checkout was not modified.
 
 The framework `test-run` path is interpreter-hosted; test modules are imported inside test bodies because top-level imports were not available there in the tested runner. VM assertion entrypoints independently cover application behavior.
 
@@ -52,4 +52,4 @@ The full SEO/AI-search audit lives in `seo-audit/2026-09-07/`, including immutab
 
 ## Freshness
 
-Verification date: **2026-09-23** (America/Detroit). Recheck the latest release, stable spec/scope, native and AI contracts, roadmap/changelog, security/parity matrix, and selected ecosystem revisions before updating the course. Run the gates and explain any changed expected behavior. Never silently promote a roadmap candidate into a stable lesson.
+Verification date: **2026-09-28** (America/Detroit). Recheck the latest release, stable spec/scope, native and AI contracts, roadmap/changelog, security/parity matrix, and selected ecosystem revisions before updating the course. Run the gates and explain any changed expected behavior. Never silently promote a roadmap candidate into a stable lesson.

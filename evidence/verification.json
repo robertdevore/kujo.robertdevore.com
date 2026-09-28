@@ -1,14 +1,14 @@
 {
-  "version": "1.5.0",
-  "verifiedDate": "2026-09-23",
-  "binarySha256": "3e1e475ea165c8b4a714495596fe8661ad970b27119ad44f1db4d9779f7f05d4",
+  "version": "1.6.0",
+  "verifiedDate": "2026-09-28",
+  "binarySha256": "930e0da1fec2562f6990d1226a479330640c8c78eb4c36c148cee3f950b29a47",
   "lessons": {
     "10": {
       "sourceSha256": "9e38230ee258ec77ae485c7cf332200226b0552ac0a21bf33a0755c5f2a31f98",
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 61,\n  \"command\": \"check\",\n  \"file\": \"examples/10.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 62,\n  \"command\": \"check\",\n  \"file\": \"examples/10.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -27,7 +27,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 34,\n  \"command\": \"check\",\n  \"file\": \"examples/11.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 35,\n  \"command\": \"check\",\n  \"file\": \"examples/11.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -46,7 +46,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 17,\n  \"command\": \"check\",\n  \"file\": \"examples/12.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 18,\n  \"command\": \"check\",\n  \"file\": \"examples/12.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -65,7 +65,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 21,\n  \"command\": \"check\",\n  \"file\": \"examples/13.kujo\",\n  \"statement_count\": 5,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 22,\n  \"command\": \"check\",\n  \"file\": \"examples/13.kujo\",\n  \"statement_count\": 5,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -76,7 +76,7 @@
       "failure": {
         "exit": 4,
         "stdout": "",
-        "stderr": "[KUJOVM001] [vm] Runtime Error: async operation rejected\n  --> 0:0\n\nCall stack:\n  0 at fail\n\n"
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Promise rejected: async operation rejected\n  --> 0:0\n\n"
       }
     },
     "14": {
@@ -84,7 +84,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 28,\n  \"command\": \"check\",\n  \"file\": \"examples/14.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 29,\n  \"command\": \"check\",\n  \"file\": \"examples/14.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -95,7 +95,7 @@
       "failure": {
         "exit": 4,
         "stdout": "",
-        "stderr": "[KUJOVM001] [vm] Runtime Error: Promise rejected: parallel_map mapper 0 failed: worker rejected\n  --> 0:0\n\n"
+        "stderr": "[KUJOVM001] [vm] Runtime Error: Promise rejected: parallel_map mapper 0 failed: Promise rejected: worker rejected\n  --> 0:0\n\n"
       }
     },
     "15": {
@@ -160,7 +160,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 23,\n  \"command\": \"check\",\n  \"file\": \"examples/18.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 24,\n  \"command\": \"check\",\n  \"file\": \"examples/18.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -198,7 +198,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 16,\n  \"command\": \"check\",\n  \"file\": \"examples/20.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 17,\n  \"command\": \"check\",\n  \"file\": \"examples/20.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -217,7 +217,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 16,\n  \"command\": \"check\",\n  \"file\": \"examples/21.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 17,\n  \"command\": \"check\",\n  \"file\": \"examples/21.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -278,7 +278,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 27,\n  \"command\": \"check\",\n  \"file\": \"examples/24.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 28,\n  \"command\": \"check\",\n  \"file\": \"examples/24.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -417,7 +417,7 @@
       ],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 44,\n  \"command\": \"check\",\n  \"file\": \"examples/31.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 45,\n  \"command\": \"check\",\n  \"file\": \"examples/31.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -495,7 +495,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 34,\n  \"command\": \"check\",\n  \"file\": \"examples/35.kujo\",\n  \"statement_count\": 5,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 35,\n  \"command\": \"check\",\n  \"file\": \"examples/35.kujo\",\n  \"statement_count\": 5,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -514,7 +514,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 36,\n  \"command\": \"check\",\n  \"file\": \"examples/36.kujo\",\n  \"statement_count\": 5,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 37,\n  \"command\": \"check\",\n  \"file\": \"examples/36.kujo\",\n  \"statement_count\": 5,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -533,7 +533,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 30,\n  \"command\": \"check\",\n  \"file\": \"examples/37.kujo\",\n  \"statement_count\": 5,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 31,\n  \"command\": \"check\",\n  \"file\": \"examples/37.kujo\",\n  \"statement_count\": 5,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -571,7 +571,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 25,\n  \"command\": \"check\",\n  \"file\": \"examples/39.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 26,\n  \"command\": \"check\",\n  \"file\": \"examples/39.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -609,7 +609,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 24,\n  \"command\": \"check\",\n  \"file\": \"examples/01.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 25,\n  \"command\": \"check\",\n  \"file\": \"examples/01.kujo\",\n  \"statement_count\": 4,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -628,7 +628,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 6,\n  \"command\": \"check\",\n  \"file\": \"examples/02.kujo\",\n  \"statement_count\": 2,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 7,\n  \"command\": \"check\",\n  \"file\": \"examples/02.kujo\",\n  \"statement_count\": 2,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -666,7 +666,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 96,\n  \"command\": \"check\",\n  \"file\": \"examples/04.kujo\",\n  \"statement_count\": 7,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 94,\n  \"command\": \"check\",\n  \"file\": \"examples/04.kujo\",\n  \"statement_count\": 7,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -685,7 +685,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 28,\n  \"command\": \"check\",\n  \"file\": \"examples/05.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 29,\n  \"command\": \"check\",\n  \"file\": \"examples/05.kujo\",\n  \"statement_count\": 3,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -704,7 +704,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 26,\n  \"command\": \"check\",\n  \"file\": \"examples/06.kujo\",\n  \"statement_count\": 6,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 28,\n  \"command\": \"check\",\n  \"file\": \"examples/06.kujo\",\n  \"statement_count\": 6,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -723,7 +723,7 @@
       "flags": [],
       "check": {
         "exit": 0,
-        "stdout": "{\n  \"bytecode_instruction_count\": 6,\n  \"command\": \"check\",\n  \"file\": \"examples/07.kujo\",\n  \"statement_count\": 2,\n  \"status\": \"ok\"\n}\n",
+        "stdout": "{\n  \"bytecode_instruction_count\": 7,\n  \"command\": \"check\",\n  \"file\": \"examples/07.kujo\",\n  \"statement_count\": 2,\n  \"status\": \"ok\"\n}\n",
         "stderr": ""
       },
       "success": {
@@ -784,7 +784,7 @@
         "examples/02.kujo"
       ],
       "exit": 0,
-      "stdout": "{\n  \"bytecode_instruction_count\": 6,\n  \"command\": \"check\",\n  \"file\": \"examples/02.kujo\",\n  \"statement_count\": 2,\n  \"status\": \"ok\"\n}\n",
+      "stdout": "{\n  \"bytecode_instruction_count\": 7,\n  \"command\": \"check\",\n  \"file\": \"examples/02.kujo\",\n  \"statement_count\": 2,\n  \"status\": \"ok\"\n}\n",
       "stderr": ""
     },
     "doctor": {
@@ -792,7 +792,7 @@
         "doctor"
       ],
       "exit": 0,
-      "stdout": "DOCTOR doctor\n  cwd: /Users/robertdevore/2026/kujo.robertdevore.com\n\nEnvironment\n  PASS Git: git version 2.42.0\n  PASS Node.js: v26.7.0\n  PASS npm: 11.19.0\n  PASS PHP: PHP 8.4.7 (cli) (built: May  6 2025 12:31:58) (NTS)\n  WARN Composer: Composer version 2.6-dev+c7bbd606216d2a5ceea93e6a536c39f6636a1f90 (2.6-dev) 2023-06-21 11:58:42\n        Composer emitted warning/deprecation/fatal output: Deprecation Notice: Constant E_STRICT is deprecated in phar:///usr/local/bin/composer/src/Composer/Util/Silencer.php:36\n        Suggested fix: Update Composer or adjust runtime compatibility to remove noisy output.\n\nRepository\n  PASS Git repository detected: inside repository\n  INFO Current Git branch: main\n  WARN Git working tree: 51 changed paths\n        Repository has uncommitted changes (M README.md, M assets/js/course.js, M course.json, M docs/about.md, M docs/build-1.md)\n        Suggested fix: Review/stage/commit changes before handoff to CI or automation.\n\nProject signals\n  INFO WP-CLI: missing\n  PASS package.json: present\n  INFO composer.json: missing\n  PASS node_modules directory: present\n  SKIP vendor directory\n  INFO WordPress project signal: not detected\n\nBuild scripts\n  INFO npm script inventory: build, deploy, preview, verify\n\nSummary\n  7 passed, 2 warnings, 0 failed, 1 skipped\n  5 info\n\nRecommended next actions\n  • Review/stage/commit changes before handoff to CI or automation.\n  • Update Composer or adjust runtime compatibility to remove noisy output.\n",
+      "stdout": "DOCTOR doctor\n  cwd: /Users/robertdevore/2026/kujo.robertdevore.com\n\nEnvironment\n  PASS Git: git version 2.42.0\n  PASS Node.js: v26.7.0\n  PASS npm: 11.19.0\n  PASS PHP: PHP 8.4.7 (cli) (built: May  6 2025 12:31:58) (NTS)\n  WARN Composer: Composer version 2.6-dev+c7bbd606216d2a5ceea93e6a536c39f6636a1f90 (2.6-dev) 2023-06-21 11:58:42\n        Composer emitted warning/deprecation/fatal output: Deprecation Notice: Constant E_STRICT is deprecated in phar:///usr/local/bin/composer/src/Composer/Util/Silencer.php:36\n        Suggested fix: Update Composer or adjust runtime compatibility to remove noisy output.\n\nRepository\n  PASS Git repository detected: inside repository\n  INFO Current Git branch: main\n  WARN Git working tree: 51 changed paths\n        Repository has uncommitted changes (M README.md, M course.json, M docs/about.md, M docs/build-1.md, M docs/build-2.md)\n        Suggested fix: Review/stage/commit changes before handoff to CI or automation.\n\nProject signals\n  INFO WP-CLI: missing\n  PASS package.json: present\n  INFO composer.json: missing\n  PASS node_modules directory: present\n  SKIP vendor directory\n  INFO WordPress project signal: not detected\n\nBuild scripts\n  INFO npm script inventory: build, deploy, preview, verify\n\nSummary\n  7 passed, 2 warnings, 0 failed, 1 skipped\n  5 info\n\nRecommended next actions\n  • Review/stage/commit changes before handoff to CI or automation.\n  • Update Composer or adjust runtime compatibility to remove noisy output.\n",
       "stderr": ""
     },
     "lsp": {

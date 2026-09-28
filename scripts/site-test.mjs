@@ -9,3 +9,9 @@ const search=JSON.parse(fs.readFileSync('output/assets/course-search.json'));ass
 const webmcp=JSON.parse(fs.readFileSync('output/.well-known/kujo-site-index.json'));assert.equal(webmcp.schema,'kujo-ssg-site-index/v1');assert.equal(webmcp.site.url,'https://kujo.robertdevore.com');assert.equal(webmcp.items.filter(x=>x.type==='lessons').length,40);assert.ok(fs.statSync('output/assets/js/kujo-webmcp.js').size<12288);assert.match(routes.get('/'),/data-kujo-webmcp/);assert.doesNotMatch(routes.get('/404.html'),/data-kujo-webmcp/);
 fs.writeFileSync('evidence/site.json',JSON.stringify({date:new Date().toISOString().slice(0,10),htmlPages:htmlFiles.length,localReferences:localRefs.length,lessons:40,searchEntries:search.length,jsBytes:fs.statSync('output/assets/js/course.js').size,cssBytes:fs.statSync('output/assets/css/course.css').size,status:'passed'},null,2)+'\n');
 console.log(`PASS: ${htmlFiles.length} pages, ${localRefs.length} internal references, 40 complete lesson structures, metadata, sitemap, assets, and size budgets`);
+
+assert.match(routes.get('/course/setup-and-cli/'), /npm install --global @kujolang\/kujo-runtime@1\.6\.0/);
+assert.match(routes.get('/course/mechanism-and-policy/'), /experimental beta/);
+assert.match(routes.get('/course/mechanism-and-policy/'), /experimental alpha/);
+for (const html of routes.values()) assert.ok(!html.includes('Verified against 1.5.0'));
+assert.equal(JSON.parse(fs.readFileSync('output/verification.json')).version,'1.6.0');
