@@ -1,0 +1,46 @@
+{
+  "schema": "course.release-refresh/v1",
+  "version": "1.6.0",
+  "date": "2026-09-28",
+  "site": "https://kujo.robertdevore.com",
+  "contentCommit": "0bf935cdbc1f2e659d009bbd52500c187dd01444",
+  "runtimeSource": "44af277848173664f72ca85f2a1b3b98d634ecdd",
+  "runtimeSha256": "930e0da1fec2562f6990d1226a479330640c8c78eb4c36c148cee3f950b29a47",
+  "localPlatform": "macOS x64",
+  "cloudflareDeployment": "f6eb4c45-c837-4904-b719-ec56f4277194",
+  "hostedGate": {
+    "url": "https://github.com/robertdevore/kujo.robertdevore.com/actions/runs/36484690683",
+    "status": "success"
+  },
+  "checks": {
+    "lessonSuccess": 40,
+    "lessonIntentionalFailures": 40,
+    "projectChecks": 20,
+    "releaseChecks": 10,
+    "boundedNativeChecks": 30,
+    "newParityExecutions": 6,
+    "historicalDualRuntimeProbes": 7,
+    "htmlPages": 53,
+    "localReferences": 2962,
+    "publicRoutes": 52,
+    "publicContentChecks": 8
+  },
+  "scope": "Course validation; companion assurance and interoperability are source-reviewed context, not course-run integrations. Existing browser interaction receipt is historical; no new browser automation claimed.",
+  "remainingRuntimeCaveats": [
+    "struct_assignment",
+    "enum_match"
+  ],
+  "history": "evidence/history/v1.5.0",
+  "evidenceHashes": {
+    "evidence/verification.json": "e5b24f4ddfc4ead7b7ecf245cec4f8adb73c84ac46b896ca84b2d232d63eb7a2",
+    "evidence/projects.json": "0beda968cec955e2deff38c71e1a9ea87609076bbec7f5b923ba05177b22e414",
+    "evidence/release-checks.json": "b879d3cf4f29281181b25682eb31c11313b105a3b9bf921c0ba21d999328831c",
+    "evidence/v1-5-checks.json": "3ef1bf307c81401c730e7ae08b335b68cad89a9b7baf57c923e73a28f282bda9",
+    "evidence/v1-6-checks.json": "b797ff21feec1cd8b894e92f3994d6ca767bad6b233667f0bbcfdedea16363db",
+    "evidence/runtime-discrepancies.json": "06998a1461cba278968afa55900e1a381880a35cd32e4e1b8da0e952bd1b54d1",
+    "evidence/production.json": "c57757b403cbb4e62692d93c92fd17c7edf81cd8815cda46b84926627a17707c",
+    "evidence/production-v1-6.json": "e1131374c17f6296db91b1dfdefd5faeae88340342302e82a5f91c660d876038",
+    "evidence/source-ledger.json": "287db7d47775b703357e05b1befeaaae8cb9f4e536011dd42fb7a5337f93d17b",
+    "evidence/site.json": "06ff1e361f9dadf18c5b95436ecdf4f30ed6bd8d35abdd5f29e6a658461efcda"
+  }
+}

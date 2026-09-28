@@ -1,0 +1,80 @@
+{
+  "date": "2026-09-28T21:14:04.578Z",
+  "base": "https://kujo.robertdevore.com",
+  "receipts": [
+    {
+      "route": "/",
+      "status": 200,
+      "sha256": "753fa9375a18af5e229045f28eac96e0d5adc7c201e113ef6d63f7663815e8f2",
+      "checks": [
+        "Verified against 1.6.0"
+      ]
+    },
+    {
+      "route": "/course/setup-and-cli/",
+      "status": 200,
+      "sha256": "074ed3422fe20ff0f43db29199e07d3b1f5c604f4e3c15405fcddc0d4fa68f80",
+      "checks": [
+        "npm install --global @kujolang/kujo-runtime@1.6.0",
+        "Windows x64"
+      ]
+    },
+    {
+      "route": "/course/control-flow/",
+      "status": 200,
+      "sha256": "e69339432525811e90ac184b263538ad779d7d085e3deaecc58388fb02b25865",
+      "checks": [
+        "first_positive",
+        "loop return verified"
+      ]
+    },
+    {
+      "route": "/course/scope-and-capture/",
+      "status": 200,
+      "sha256": "d0a53318097301c7fe8df7afd272cea34d2b39833e4063373f773a1d821d074b",
+      "checks": [
+        "Aliases and repeated calls",
+        "snapshots"
+      ]
+    },
+    {
+      "route": "/course/async-and-await/",
+      "status": 200,
+      "sha256": "7f58f774077cd29b37ec0a2823ad6743a93de29414f023edceae26575329192e",
+      "checks": [
+        "func* sequence",
+        "Async generators and struct generator methods"
+      ]
+    },
+    {
+      "route": "/course/mechanism-and-policy/",
+      "status": 200,
+      "sha256": "a2480b9ac74275aa53225754d7295e835c821af8c8d04d2d120f80e81c229b0e",
+      "checks": [
+        "experimental beta",
+        "experimental alpha",
+        "private packages remain unpublished"
+      ]
+    },
+    {
+      "route": "/course/evidence-and-handoffs/",
+      "status": 200,
+      "sha256": "f475e51cd5809f1a4c639562ed64c0805985aa2ffe3ce275df528824f2e15956",
+      "checks": [
+        "kujo.interop-handoff/v1alpha1",
+        "Dispatch decides replay"
+      ]
+    },
+    {
+      "route": "/evidence/",
+      "status": 200,
+      "sha256": "976e757c988d1416e21de90923eb85f7a3e8bf85cbe665f6a2535847967a09c2",
+      "checks": [
+        "Observed 1.6.0 VM",
+        "Struct assignment and qualified custom-enum matching remain discrepancies"
+      ]
+    }
+  ],
+  "verificationVersion": "1.6.0",
+  "status": "passed"
+}
