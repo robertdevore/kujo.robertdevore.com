@@ -10,9 +10,11 @@ Annotations describe intended types to readers and tooling, but enforcement has 
 
 The example annotates a simple function and then asserts its actual result. These are complementary pieces of evidence: the annotation describes intent; the assertion checks behavior. The breaking example supplies incompatible runtime values so the actual operation fails.
 
-## On the horizon
+## In Kujo 1.8
 
-The current v1 scope lists optional-typing precision follow-ups, including destructuring inference, module existence checks, struct field lookup, Promise unwrap typing, and callable fallback policy. Generics, FFI, WASM targeting, and macros remain deferred candidates. They are not course prerequisites or release promises.
+The advisory analyzer now follows nested collection destructuring, known module exports, struct fields, async completion values, and callable aliases. When a value is genuinely dynamic, analysis still falls back instead of turning Kujo into a mandatory static type system. Known mistakes can produce focused warnings; dynamic runtime behavior remains available.
+
+Generics, broad FFI, a major WASM target, and macros remain deferred candidates. They are not course prerequisites or release promises.
 
 ## Professional pattern
 
@@ -28,7 +30,7 @@ Do not claim annotations make an unsafe input safe. Do not write lessons using a
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.6.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.0 runtime.
 
 {{command}}
 

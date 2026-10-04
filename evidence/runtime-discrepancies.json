@@ -1,6 +1,6 @@
 {
-  "version": "1.6.0",
-  "date": "2026-09-28",
+  "version": "1.8.0",
+  "date": "2026-10-04",
   "probes": [
     {
       "name": "builtin_name",
@@ -8,17 +8,17 @@
       "source": "mut values := [1]\nvalues = push(values, 2)\nprint(values)",
       "modes": {
         "vm": {
-          "exit": 4,
+          "exit": 0,
           "signal": null,
-          "stdout": "",
-          "stderr": "[KUJOVM001] [vm] Runtime Error: Duplicate declaration in the same scope: values\n  --> 0:0\n\n",
+          "stdout": "[1, 2]\n",
+          "stderr": "",
           "timeout": false
         },
         "interpreter": {
-          "exit": 4,
+          "exit": 0,
           "signal": null,
-          "stdout": "",
-          "stderr": "[KUJORUN001] [runtime] Runtime Error: Duplicate declaration in the same scope: values\n  --> 0:0\n\n",
+          "stdout": "[1, 2]\n",
+          "stderr": "",
           "timeout": false
         }
       }

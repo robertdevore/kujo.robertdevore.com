@@ -28,7 +28,7 @@ Printing a value does not return it. A caller receiving null may indicate a miss
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.6.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.0 runtime.
 
 {{command}}
 

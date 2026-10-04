@@ -8,6 +8,8 @@ kujo lsp starts the language server. Its protocol contracts document initializat
 
 The CLI also provides machine-readable helper commands such as lsp-diagnostics. Parser diagnostics do not execute the program. A clean editor view is therefore not proof that an effect will be permitted, a network response valid, or an assertion true.
 
+Kujo 1.8 shares one analyzed-program model between CLI checking and the LSP. Diagnostics, hover, and completion can reuse inferred variables, callable signatures, struct fields, methods, and imported namespace members. Open imported files override disk content, and editing or closing a dependency invalidates affected documents so the editor does not keep serving stale exports.
+
 ## A reproducible editor workflow
 
 Point the adapter at the same pinned binary used by your terminal. Open the course repository as the project root. Introduce a syntax error, inspect its location, repair it, and run the normal VM command. Then navigate to an exported function and compare what the editor shows with its source documentation.
@@ -28,7 +30,7 @@ An extension shipping its own outdated binary may disagree with your shell. Comp
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.6.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.0 runtime.
 
 {{command}}
 

@@ -30,7 +30,7 @@ Do not pass a repository root with unrelated private files to a documentation sc
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.6.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.0 runtime.
 
 {{command}}
 

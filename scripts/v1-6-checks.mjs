@@ -18,5 +18,5 @@ for(const name of ['control','closure','generator']) {
 const probes=JSON.parse(fs.readFileSync('evidence/runtime-discrepancies.json')).probes;
 const loop=probes.find(p=>p.name==='loop_control');
 assert.equal(loop.modes.vm.exit,0);assert.equal(loop.modes.vm.stdout,'[2, 4]\n');assert.equal(loop.modes.vm.stdout,loop.modes.interpreter.stdout);
-fs.writeFileSync('evidence/v1-6-checks.json',JSON.stringify({version:'1.6.0',date:'2026-09-28',receipts,loopControlParity:true},null,2)+'\n');
+fs.writeFileSync('evidence/v1-6-checks.json',JSON.stringify({version:'1.8.0',date:'2026-10-04',receipts,loopControlParity:true},null,2)+'\n');
 console.log('PASS: 6 loop-return/closure/generator executions with exact parity; break/continue parity');

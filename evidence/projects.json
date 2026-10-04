@@ -1,6 +1,6 @@
 {
-  "version": "1.6.0",
-  "verifiedDate": "2026-09-28",
+  "version": "1.8.0",
+  "verifiedDate": "2026-10-04",
   "receipts": [
     {
       "args": [
@@ -164,7 +164,7 @@
       "cwd": "temporary independent copy",
       "exit": 0,
       "signal": null,
-      "stdout": "\n============================================================\nTest Results\n============================================================\n  ✓ unknown goal rejected (3ms)\n  ✓ excess budget rejected (2ms)\n  ✓ correct count accepted (2ms)\n  ✓ plausible wrong count rejected (3ms)\n  ✓ extra action rejected (3ms)\n\nTests: 5 total, 5 passed, 0 failed\nTime:  16ms\n============================================================\n\nAll tests passed! ✨\n",
+      "stdout": "\n============================================================\nTest Results\n============================================================\n  ✓ unknown goal rejected (3ms)\n  ✓ excess budget rejected (2ms)\n  ✓ correct count accepted (3ms)\n  ✓ plausible wrong count rejected (2ms)\n  ✓ extra action rejected (2ms)\n\nTests: 5 total, 5 passed, 0 failed\nTime:  15ms\n============================================================\n\nAll tests passed! ✨\n",
       "stderr": ""
     },
     {
@@ -179,7 +179,7 @@
       "cwd": "temporary independent copy",
       "exit": 0,
       "signal": null,
-      "stdout": "{\"evaluated\":true,\"input\":{\"goal\":\"count_jobs\",\"jobs\":[{\"name\":\"alpha\"},{\"name\":\"beta\"}],\"max_steps\":2},\"proposal\":{\"count\":2,\"status\":\"complete\"},\"replay\":\"strict\",\"runtime\":\"1.6.0\",\"schema\":\"course.operations/v1\",\"steps\":2,\"summary\":\"Validated count matches local jobs\",\"tool\":{\"arguments\":{},\"name\":\"count_jobs\",\"result\":2},\"verdict\":\"PASS\"}\n",
+      "stdout": "{\"evaluated\":true,\"input\":{\"goal\":\"count_jobs\",\"jobs\":[{\"name\":\"alpha\"},{\"name\":\"beta\"}],\"max_steps\":2},\"proposal\":{\"count\":2,\"status\":\"complete\"},\"replay\":\"strict\",\"runtime\":\"1.8.0\",\"schema\":\"course.operations/v1\",\"steps\":2,\"summary\":\"Validated count matches local jobs\",\"tool\":{\"arguments\":{},\"name\":\"count_jobs\",\"result\":2},\"verdict\":\"PASS\"}\n",
       "stderr": ""
     },
     {
@@ -194,7 +194,7 @@
       "cwd": "temporary independent copy",
       "exit": 0,
       "signal": null,
-      "stdout": "{\"evaluated\":true,\"input\":{\"goal\":\"count_jobs\",\"jobs\":[{\"name\":\"alpha\"},{\"name\":\"beta\"}],\"max_steps\":2},\"proposal\":{\"count\":2,\"status\":\"complete\"},\"replay\":\"strict\",\"runtime\":\"1.6.0\",\"schema\":\"course.operations/v1\",\"steps\":2,\"summary\":\"Validated count matches local jobs\",\"tool\":{\"arguments\":{},\"name\":\"count_jobs\",\"result\":2},\"verdict\":\"PASS\"}\n",
+      "stdout": "{\"evaluated\":true,\"input\":{\"goal\":\"count_jobs\",\"jobs\":[{\"name\":\"alpha\"},{\"name\":\"beta\"}],\"max_steps\":2},\"proposal\":{\"count\":2,\"status\":\"complete\"},\"replay\":\"strict\",\"runtime\":\"1.8.0\",\"schema\":\"course.operations/v1\",\"steps\":2,\"summary\":\"Validated count matches local jobs\",\"tool\":{\"arguments\":{},\"name\":\"count_jobs\",\"result\":2},\"verdict\":\"PASS\"}\n",
       "stderr": ""
     },
     {

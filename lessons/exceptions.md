@@ -28,7 +28,7 @@ Do not swallow assertion failures in a broad catch meant for I/O. Do not report 
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.6.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.0 runtime.
 
 {{command}}
 
