@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 
 const base = 'https://kujo.robertdevore.com';
 const checks = {
-  '/': ['Verified against Kujo 1.8.0'],
+  '/': ['Verified against 1.8.0'],
   '/course/setup-and-cli/': ['npm install --global @kujolang/kujo-runtime@1.8.0', 'Windows x64'],
   '/course/optional-typing/': ['The advisory analyzer now follows nested collection destructuring', 'genuinely dynamic'],
   '/course/editor-and-lsp/': ['shares one analyzed-program model', 'does not keep serving stale exports'],
