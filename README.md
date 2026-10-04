@@ -4,7 +4,7 @@ A standalone course for https://kujo.robertdevore.com: 40 lessons, six stage bui
 
 ## Reproduce
 
-Install official Kujo **1.6.0**, verify the release checksum, and use Node 24+ with npm for the maintenance verification and Cloudflare deployment tools.
+Install official Kujo **1.8.0**, verify the release checksum, and use Node 24+ with npm for the maintenance verification and Cloudflare deployment tools.
 
 ```sh
 npm ci
@@ -12,7 +12,7 @@ KUJO_BIN=/absolute/path/to/kujo npm run verify
 npm run preview
 ```
 
-An explicit `KUJO_BIN` takes precedence over a locally downloaded `.tools/kujo`; both verification and building require 1.6.0. Set `KUJO_BIN_OVERRIDE` to override it for build experiments. No binary or credentials are committed. The supplied `scripts/install-runtime.sh` downloads and checksum-verifies the pinned official macOS/Linux binary into `.tools`.
+An explicit `KUJO_BIN` takes precedence over a locally downloaded `.tools/kujo`; both verification and building require 1.8.0. Set `KUJO_BIN_OVERRIDE` to override it for build experiments. No binary or credentials are committed. The supplied `scripts/install-runtime.sh` downloads and checksum-verifies the pinned official macOS/Linux binary into `.tools`.
 
 The site is built by **Kujo**: `scripts/prepare.kujo` joins authored lessons with actual verification receipts; `scripts/render.kujo` emits static HTML through the native Markdown primitive. The full Kujo SSG was evaluated and replaced with this smaller course-specific pipeline after measured latency made iterative verification impractical. All layout, search, progress, code highlighting, and the example explorer are independent of other repositories.
 
@@ -52,4 +52,4 @@ The full SEO/AI-search audit lives in `seo-audit/2026-09-07/`, including immutab
 
 ## Freshness
 
-Verification date: **2026-09-28** (America/Detroit). Recheck the latest release, stable spec/scope, native and AI contracts, roadmap/changelog, security/parity matrix, and selected ecosystem revisions before updating the course. Run the gates and explain any changed expected behavior. Never silently promote a roadmap candidate into a stable lesson.
+Verification date: **2026-10-04** (America/Detroit). Recheck the latest release, stable spec/scope, native and AI contracts, roadmap/changelog, security/parity matrix, and selected ecosystem revisions before updating the course. Run the gates and explain any changed expected behavior. Never silently promote a roadmap candidate into a stable lesson.

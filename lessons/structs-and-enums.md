@@ -4,7 +4,7 @@ Dictionaries are flexible input and serialization values. A struct gives an inte
 
 ## Runtime contract
 
-Declare a struct with fields, optional field annotations, and supported defaults. Construct it using its name and a field initializer. Access fields through dot syntax. A field update still requires a mutable binding. Methods are supported, with documented VM/interpreter coverage; do not assume every generator or metaprogramming pattern is supported inside a struct.
+Declare a struct with fields, optional field annotations, and supported defaults. Construct it using its name and a field initializer. Access fields through dot syntax. A field update still requires a mutable binding. Methods are supported, and Kujo 1.8 adds generator methods declared with `func*` in both engines. Those generator methods preserve receiver snapshots, shared alias progress, and cached terminal failures.
 
 The example's method reads a declared field. Kujo's method implementation is not JavaScript prototype inheritance or Rust ownership. Keep the domain model small and test each operation's observable result.
 
@@ -28,7 +28,7 @@ Optional type annotations do not make the VM a static type gate. A field label i
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.6.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.0 runtime.
 
 {{command}}
 
@@ -57,4 +57,3 @@ Define a Report struct with a method that computes a derived value. Create a sep
 ## Contract versus release behavior
 
 > The release VM silently left a struct field unchanged after an assignment that the interpreter applied, and the method retained the original field value. The successful example uses construction and reads only. Struct mutation and custom qualified-enum matching need a runtime fix or a deliberately labeled interpreter fallback before relying on them. See [the evidence ledger](/evidence/) for exact probes and runtime results.
-
