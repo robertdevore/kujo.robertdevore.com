@@ -13,5 +13,23 @@
   "checksumVerified": true,
   "seoScope": "Verification dates and technical content only; homepage title, routes and design preserved",
   "baseline": "work/upgrade-1.8.1-baseline/output",
-  "fixtureMigration": "scripts/migrate-1-8-1-cassettes.mjs; synthetic responses unchanged"
+  "fixtureMigration": "scripts/migrate-1-8-1-cassettes.mjs; synthetic responses unchanged",
+  "ci": {
+    "run": 38201415122,
+    "commit": "837e76d62fbd37d2a0d4946f6f05c1eddc349e46",
+    "conclusion": "success"
+  },
+  "deployment": "62a54ca4-9be0-47cb-9481-823137709aab",
+  "dependencyAudit": {
+    "before": "GHSA-wq5f-xc86-pv6w in transitive dev sharp",
+    "fix": "wrangler 4.149.0",
+    "after": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    }
+  }
 }
