@@ -1,0 +1,28 @@
+{
+  "verifiedAt": "2026-09-07T02:52:04.363Z",
+  "tablerVersion": "3.46.0",
+  "icons": [
+    "arrow-left.svg",
+    "arrow-right.svg",
+    "arrow-up-right.svg",
+    "check.svg",
+    "chevron-right.svg",
+    "circle.svg",
+    "copy.svg",
+    "hammer.svg"
+  ],
+  "palette": "grayscale outside syntax tokens",
+  "syntaxColorsPreserved": true,
+  "browser": {
+    "desktop": 1280,
+    "mobile": "390x844",
+    "noHorizontalOverflow": true,
+    "computedNonCodeColorsAllGray": true,
+    "svgMasksLoaded": true,
+    "expandedChevronRotates": true,
+    "completionIconSwitches": true,
+    "testProgressRestored": true,
+    "viewportReset": true
+  },
+  "checks": "Full runtime/project/build verification passed; CSS palette and icon asset references checked."
+}

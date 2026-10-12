@@ -1,0 +1,9 @@
+assert_equal(to_csv([{"z": 1, "a": 2}]), "a,z\n2,1\n")
+assert_equal(len(unique([[1], [2], [1]])), 2)
+assert_equal(json_schema_validate(9007199254740993, {"const": 9007199254740992.0})["valid"], false)
+assert_equal(json_schema_validate(null, {"enum": []})["valid"], false)
+let options := {"model": "mock", "endpoint": "https://example.test/v1/chat/completions"}
+let a := ai_request_hash([{"role": "tool", "content": "result", "tool_call_id": "a"}], options)
+let b := ai_request_hash([{"role": "tool", "content": "result", "tool_call_id": "b"}], options)
+assert(a != b)
+print("CSV, collections, schema and AI identity verified")

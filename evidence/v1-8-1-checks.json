@@ -1,0 +1,223 @@
+{
+  "version": "1.8.1",
+  "date": "2026-10-11",
+  "receipts": [
+    {
+      "name": "success",
+      "args": [
+        "run",
+        "--untrusted",
+        "examples/supplemental/v1-8-1-contracts.kujo"
+      ],
+      "exit": 0,
+      "stdout": "CSV, collections, schema and AI identity verified\n",
+      "stderr": ""
+    },
+    {
+      "name": "overflow",
+      "args": [
+        "run",
+        "--untrusted",
+        "work/v1-8-1/overflow.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: sum() integer overflow\n  --> 0:0\n\n"
+    },
+    {
+      "name": "csv-duplicate",
+      "args": [
+        "run",
+        "--untrusted",
+        "work/v1-8-1/csv-duplicate.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: CSV header error: duplicate column names are not representable\n  --> 0:0\n\n"
+    },
+    {
+      "name": "csv-extra",
+      "args": [
+        "run",
+        "--untrusted",
+        "work/v1-8-1/csv-extra.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: CSV row contains a column absent from the first row\n  --> 0:0\n\n"
+    },
+    {
+      "name": "schema-unvisited",
+      "args": [
+        "run",
+        "--untrusted",
+        "work/v1-8-1/schema-unvisited.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: json_schema_validate() requires 'minimum' to be a finite number\n  --> 0:0\n\n"
+    },
+    {
+      "name": "env-denied",
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-read",
+        "work/v1-8-1/env-denied.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: Capability denied: env-read required for os_environ; rerun with --allow-env-read\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n"
+    },
+    {
+      "name": "env-allowed",
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-env-read",
+        "work/v1-8-1/env-allowed.kujo"
+      ],
+      "exit": 0,
+      "stdout": "environment access allowed\n",
+      "stderr": ""
+    },
+    {
+      "name": "copy-read-denied",
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-write",
+        "work/v1-8-1/copy-read-denied.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: Capability denied: filesystem-read required for copy_file; rerun with --allow-fs-read\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n"
+    },
+    {
+      "name": "copy-allowed",
+      "args": [
+        "run",
+        "--untrusted",
+        "--allow-fs-read",
+        "--allow-fs-write",
+        "work/v1-8-1/copy-allowed.kujo"
+      ],
+      "exit": 0,
+      "stdout": "copy allowed\n",
+      "stderr": ""
+    },
+    {
+      "name": "success",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "examples/supplemental/v1-8-1-contracts.kujo"
+      ],
+      "exit": 0,
+      "stdout": "CSV, collections, schema and AI identity verified\n",
+      "stderr": ""
+    },
+    {
+      "name": "overflow",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "work/v1-8-1/overflow.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: sum() integer overflow\n  --> 0:0\n\n"
+    },
+    {
+      "name": "csv-duplicate",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "work/v1-8-1/csv-duplicate.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: CSV header error: duplicate column names are not representable\n  --> 0:0\n\n"
+    },
+    {
+      "name": "csv-extra",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "work/v1-8-1/csv-extra.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: CSV row contains a column absent from the first row\n  --> 0:0\n\n"
+    },
+    {
+      "name": "schema-unvisited",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "work/v1-8-1/schema-unvisited.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: json_schema_validate() requires 'minimum' to be a finite number\n  --> 0:0\n\n"
+    },
+    {
+      "name": "env-denied",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "--allow-fs-read",
+        "work/v1-8-1/env-denied.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: Capability denied: env-read required for os_environ; rerun with --allow-env-read\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n"
+    },
+    {
+      "name": "env-allowed",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "--allow-env-read",
+        "work/v1-8-1/env-allowed.kujo"
+      ],
+      "exit": 0,
+      "stdout": "environment access allowed\n",
+      "stderr": ""
+    },
+    {
+      "name": "copy-read-denied",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "--allow-fs-write",
+        "work/v1-8-1/copy-read-denied.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: Capability denied: filesystem-read required for copy_file; rerun with --allow-fs-read\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n"
+    },
+    {
+      "name": "copy-allowed",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "--allow-fs-read",
+        "--allow-fs-write",
+        "work/v1-8-1/copy-allowed.kujo"
+      ],
+      "exit": 0,
+      "stdout": "copy allowed\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "_cassette_version": 1,
   "request_meta": {
-    "hash": "4e613d385e18425802c58248ec3e3df042cc423e908480f5de9274f4e3daa7a6",
+    "hash": "5fc0af256d292cf50214e932062ea93bbb7feef0a5ad8221f826f89c4f9a2bd7",
     "surface": "ai_tool_loop",
     "endpoint": "http://127.0.0.1:4189/v1/chat/completions",
     "model": "course-fixture",
@@ -14,13 +14,24 @@
             "role": "user"
           },
           {
-            "content": "",
-            "role": "assistant"
+            "content": null,
+            "role": "assistant",
+            "tool_calls": [
+              {
+                "function": {
+                  "arguments": "{}",
+                  "name": "count_jobs"
+                },
+                "id": "course_call_1",
+                "type": "function"
+              }
+            ]
           },
           {
             "content": "2",
             "name": "count_jobs",
-            "role": "tool"
+            "role": "tool",
+            "tool_call_id": "course_call_1"
           }
         ],
         "model": "course-fixture",
