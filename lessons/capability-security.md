@@ -26,7 +26,7 @@ Do not grant all capabilities to resolve the first denial. Do not infer that --u
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.1 runtime.
 
 {{command}}
 
@@ -49,3 +49,9 @@ Create a three-column authority table for your reporting utility. Run with no al
 - I can explain trusted and restricted baselines.
 - I grant only necessary effect categories.
 - I do not call the language a sandbox.
+
+## Compound effects in 1.8.1
+
+Grant every effect an operation performs. os_environ now requires environment-read, not filesystem-read. copy_file, io_copy_range, zip_add_file, zip_add_dir, unzip and ssg_read_render_and_write_pages require both filesystem read and write. gif_to_webp also requires process execution. Trusted defaults are unchanged.
+
+The supplemental maintenance checks run copy_file with write authority alone, verify the real read-capability denial, then grant both effects. They also prove that filesystem-read does not authorize os_environ. No environment values are printed or stored in the receipts.

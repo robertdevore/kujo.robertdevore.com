@@ -28,7 +28,7 @@ Do not ignore validation.errors while checking only that a dictionary exists. Do
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.1 runtime.
 
 {{command}}
 
@@ -51,3 +51,9 @@ Design a schema for your report with required fields, bounds, and an explicit ex
 - I separate parsing, schema checks, and domain evaluation.
 - I know format is not enforced validation.
 - I never derive authorization from model output.
+
+## Validate the schema as well as the instance
+
+Kujo 1.8.1 checks schema structure even in absent properties, unused definitions and item schemas for empty arrays. A malformed minimum or pattern cannot hide behind an instance that never visits it. Malformed schemas raise runtime errors; a valid schema rejecting an instance returns valid: false.
+
+Empty type, allOf, anyOf and oneOf arrays are malformed. An empty enum is valid and matches nothing. Numeric const/enum comparisons are exact within validation budgets, including nested values: 1 equals 1.0, but a large integer is not rounded into equality with a nearby float. Local references can traverse schema arrays; remote references remain rejected. These changes do not turn the supported subset into a claim of full JSON Schema conformance.

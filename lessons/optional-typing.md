@@ -30,7 +30,7 @@ Do not claim annotations make an unsafe input safe. Do not write lessons using a
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.1 runtime.
 
 {{command}}
 

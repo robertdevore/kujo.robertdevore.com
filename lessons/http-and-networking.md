@@ -28,7 +28,7 @@ Do not make the default suite depend on a live public endpoint. Do not retry mal
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.1 runtime.
 
 {{command}}
 
@@ -63,3 +63,7 @@ Explicitly DNS-pinned or deny-private HTTP clients now disable ambient proxy dis
 Routed server requests now expose header_values: lowercase header names mapped to all received values in wire order. The compatibility headers dictionary cannot preserve duplicates. Authentication middleware should reject ambiguous repeated authorization headers under an explicit policy.
 
 The release also fixes VM dispatch of closures created by imported modules, supporting route registrars that capture application context. These details are reviewed against the tagged standard-library contract and release notes; the course's local HTTP build remains the executable baseline. Do not infer proxy trust from header presence.
+
+## Connected destinations and redirects
+
+The 1.8.1 private-network checks cover actual connections and redirect hops, including IPv4-mapped IPv6. Strict HTTP clients disable ambient proxies so delegated DNS cannot bypass destination validation. The explicit private-network override still opts out; do not set it in a job whose policy requires this restriction. These are host API controls, not execution isolation.

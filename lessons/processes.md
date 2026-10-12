@@ -28,7 +28,7 @@ Do not use shell quoting as your only command policy. Do not infer success from 
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.1 runtime.
 
 {{command}}
 
@@ -57,4 +57,10 @@ Replace printf with an explicitly configured equivalent on your operating system
 
 Kujo 1.4.0 adds `exec_process(argv, options)` for POSIX command launchers. Unlike `spawn_process`, successful replacement does not return a ProcessResult: the new program inherits terminal streams and working directory. Explicit argv avoids shell parsing but does not limit the executable's authority. The operation requires process-exec.
 
-Related `file_lock`, `file_unlock`, `path_owned`, and `symlink_atomic` APIs support package installation. Advisory locks coordinate cooperating processes; they cannot stop a malicious same-user writer. Atomic symlink publication requires a trusted parent and both write/delete authority. These POSIX APIs fail explicitly on unsupported platforms, including Windows; they do not emulate unsafe shell operations. Review the [native security contract](https://github.com/kujolang/kujo/blob/v1.8.0/docs/NATIVE_API_SECURITY_POSTURE.md) before using them.
+Related `file_lock`, `file_unlock`, `path_owned`, and `symlink_atomic` APIs support package installation. Advisory locks coordinate cooperating processes; they cannot stop a malicious same-user writer. Atomic symlink publication requires a trusted parent and both write/delete authority. These POSIX APIs fail explicitly on unsupported platforms, including Windows; they do not emulate unsafe shell operations. Review the [native security contract](https://github.com/kujolang/kujo/blob/v1.8.1/docs/NATIVE_API_SECURITY_POSTURE.md) before using them.
+
+## Deadlines cover output-pipe lifetime
+
+In 1.8.1, a subprocess deadline remains active while inherited stdout/stderr pipes drain after the direct child exits. Unix timeout or cancellation terminates the process group. Windows commands enter a per-command job before execution; timeout, cancellation and command return clean up descendants, and failed job admission fails closed. Background descendants must not rely on outliving the call.
+
+Processes that escape Unix groups still require external isolation. GIF conversion uses a 30-second deadline and 1 MiB capture per stream; these limits do not constrain converter memory or output-file size. The course reviews the tagged process contracts; it does not claim local macOS checks certify Windows jobs.

@@ -24,7 +24,7 @@ The example copies defaults, replaces a field, builds a new list, and applies a 
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.1 runtime.
 
 {{command}}
 
@@ -53,3 +53,7 @@ Implement a reporting function over dictionaries with required name and optional
 ## Builtin names and declaration scope
 
 The names `values`, `items`, and `input` already identify builtins in global scope. Redeclaring them at top level is rejected in both runtimes. Use a distinct name such as `course_rows`; ordinary mutable collection reassignment passes. Local parameters and intentionally nested names have different scope. The evidence ledger includes both the collision and a passing control probe.
+
+## Collection corrections in 1.8.1
+
+Integer sum overflow raises a catchable runtime error instead of wrapping. unique checks value equality when display summaries collide, preserving distinct compound, byte and secret values. Mixed integer/float sort comparisons avoid rounding a large integer before comparison. This does not change language-wide float equality. The supplemental v1-8-1-contracts.kujo example checks compound uniqueness alongside CSV, schema and request-identity contracts.

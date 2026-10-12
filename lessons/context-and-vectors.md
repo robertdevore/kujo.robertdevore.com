@@ -26,7 +26,7 @@ Do not call estimates exact token counts. Do not normalize vectors with ad hoc c
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.1 runtime.
 
 {{command}}
 
@@ -53,3 +53,7 @@ Force a context budget too small for the preserved messages and handle fits:fals
 ## Replay an embedding response
 
 The repository also includes `examples/supplemental/embedding.kujo`, using the committed embedding cassette and `--allow-ai`. It calls `ai_embedding` with the fixture input “seed text” and inspects the returned vector. This separately verifies the provider-envelope boundary; the vector-math example above remains pure. Run it from the course root with strict per-call replay and no credentials.
+
+## Extreme finite vectors
+
+Kujo 1.8.1 uses scaled norms so finite extreme and subnormal directions survive normalization when squaring their components would overflow or underflow. Context fitting also avoids repeated traversal without changing estimation, pruning order or result fields. Neither change makes token estimates provider-exact or adds retrieval policy to core.

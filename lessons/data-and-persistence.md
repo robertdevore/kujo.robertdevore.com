@@ -26,7 +26,7 @@ Do not use a timestamp as the only identity for reproducible evidence. Do not eq
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.1 runtime.
 
 {{command}}
 
@@ -56,4 +56,10 @@ Kujo 1.5.0 adds db_pool_postgres_tls for verified TLS pooling. The API requires 
 
 Release each lease exactly once to the same pool. Before reuse, the verified pool rolls back, discards session state, and restores the statement timeout; failed resets evict connections. During shutdown, stop accepting work, drain requests within an application deadline, then close the pool.
 
-This course's executable persistence build remains offline SQLite. The PostgreSQL pool discussion is source-reviewed against the [tagged contract and its dedicated local-server harness](https://github.com/kujolang/kujo/blob/v1.8.0/docs/POSTGRES_TLS_POOL.md); it is not a claim that the course ran a live PostgreSQL service. Database capability controls and verified TLS do not replace application authorization or tenant-isolation tests.
+This course's executable persistence build remains offline SQLite. The PostgreSQL pool discussion is source-reviewed against the [tagged contract and its dedicated local-server harness](https://github.com/kujolang/kujo/blob/v1.8.1/docs/POSTGRES_TLS_POOL.md); it is not a claim that the course ran a live PostgreSQL service. Database capability controls and verified TLS do not replace application authorization or tenant-isolation tests.
+
+## CSV is a table contract
+
+In 1.8.1, to_csv accepts VM dictionary literals and orders the first row's columns lexicographically. Later missing cells and nulls produce empty cells. Duplicate input headers, extra columns in later rows, and unsupported compound cells raise errors instead of silently losing data. Project heterogeneous rows onto an explicit set of columns and serialize compound values before export. Consumers should read headers rather than assume source insertion order.
+
+The release also makes database pool admission FIFO and wakes waiting callers when capacity returns. Connection setup and health checks remain outside the admission queue. This does not establish transaction ordering or replace acquisition deadlines.

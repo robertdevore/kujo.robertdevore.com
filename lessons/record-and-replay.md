@@ -26,7 +26,7 @@ Replay establishes repeatability of a particular recorded interaction. It does n
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.1 runtime.
 
 {{command}}
 
@@ -49,3 +49,9 @@ Run the example with no live credentials. Change the prompt and capture the miss
 - I can run AI tests offline.
 - I keep fallthrough out of deterministic gates.
 - I review cassettes as potentially sensitive evidence.
+
+## Migrating a fixture after a runtime correction
+
+Kujo 1.8.1 preserves assistant tool_calls, null assistant content and tool reply IDs during normalization. Our former second-turn fixture therefore produces a replay miss: it described an incomplete history. The course migrated its synthetic fixtures to the corrected request bodies, retained the same synthetic responses, and verified the new hashes through strict offline replay. No provider was contacted and no expected lesson output was changed.
+
+The migration is recorded in scripts/migrate-1-8-1-cassettes.mjs. It is specific to this course's count_jobs fixture. For real recordings, record the corrected conversation against a controlled provider or fixture server, review it, and keep the previous evidence separately. Do not rename a cassette merely to silence a replay miss.

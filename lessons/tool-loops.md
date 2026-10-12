@@ -28,7 +28,7 @@ A tools schema describes an interface, not permission. max_steps bounds this loo
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.1 runtime.
 
 {{command}}
 
@@ -51,3 +51,11 @@ Validate a count_jobs descriptor and supply a result from a pure local calculati
 - I know core tool_results are supplied strings.
 - I bound execution and validate tools separately.
 - I require evaluation before declaring success.
+
+## Tool history identity in 1.8.1
+
+Assistant turns retain their tool_calls, and each tool reply carries the matching tool_call_id. Calls need unique nonempty IDs, a function name, and arguments encoded as a string. A supplied type must be function. An assistant turn with tool calls can have null content. The runtime rejects malformed calls before continuing.
+
+The supplied tool_results still map function names to strings; Kujo does not execute model-supplied code. Call IDs preserve conversation linkage even when the same function is called twice. Application authorization, argument validation and result evaluation remain separate responsibilities.
+
+This correction changes hashes for histories containing names or tool metadata. Plain-text request hashes remain unchanged. Old tool-history cassettes must be recorded again against the corrected request body. Strict replay must never substitute a cassette for a different body.

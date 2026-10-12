@@ -28,7 +28,7 @@ The breaking example attempts parent traversal under the bounded API. This tests
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.1 runtime.
 
 {{command}}
 
@@ -103,3 +103,9 @@ print("bounded files verified")
 ```
 
 [Download this example](/examples/supplemental/v1-5-files.kujo). The repository release verifier supplies its fixtures and records success and failure diagnostics.
+
+## Publication is not a multi-file transaction
+
+In 1.8.1, ZIP extraction bounds actual decoded bytes and validates each staged entry before atomic publication. An invalid entry preserves an existing target, but earlier successfully published entries remain if a later entry fails. Roots must stay trusted against concurrent hostile mutation. Replacing a file changes inode and hard-link identity even when ordinary permissions are preserved.
+
+AI cassette writes use unique private staging and atomic last-writer-wins publication. New or replaced Unix cassettes are owner-readable/writable only. This does not promise crash durability or make a cassette directory safe to share with hostile local writers.

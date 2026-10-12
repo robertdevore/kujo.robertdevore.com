@@ -30,7 +30,7 @@ An extension shipping its own outdated binary may disagree with your shell. Comp
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.0 runtime.
+From the course repository root, use the pinned Kujo 1.8.1 runtime.
 
 {{command}}
 
