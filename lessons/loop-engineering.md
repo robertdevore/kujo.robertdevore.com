@@ -28,7 +28,7 @@ Do not let a model rewrite its own acceptance criteria to make a result pass. Do
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.1 runtime.
+From the course repository root, use the pinned Kujo 1.8.2 runtime.
 
 {{command}}
 

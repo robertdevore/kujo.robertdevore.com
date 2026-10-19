@@ -1,0 +1,8 @@
+{
+  "verifiedDate": "2026-09-06",
+  "surface": "Codex in-app browser",
+  "origins": ["http://127.0.0.1:4191", "https://kujo.robertdevore.com"],
+  "checks": {"desktopAndMobileVisualReview": true, "mobileViewport": "390x844", "desktopViewport": "1280", "noDocumentHorizontalOverflow": true, "searchTruthinessAndMutVsLet": true, "progressPersistsAfterReload": true, "testProgressRestored": true, "deepLessonLoad": true, "explorerSwitchToToolLoop": true, "actualReplayOutputAndDiagnostic": true, "oneMainAndH1": true, "labeledInputs": true, "consoleWarningsAndErrors": 0, "temporaryViewportReset": true},
+  "accessibilityScope": "Focused landmarks, labels, native controls, skip link, responsive text and navigation review; not comprehensive WCAG certification.",
+  "performanceScope": "Static delivery, self-hosted font, lazy search data, JS/CSS size budgets checked in site.json; no field Core Web Vitals claim."
+}

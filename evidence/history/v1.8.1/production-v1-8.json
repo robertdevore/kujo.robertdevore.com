@@ -1,0 +1,61 @@
+{
+  "verifiedAt": "2026-10-12T03:53:13.654Z",
+  "base": "https://kujo.robertdevore.com",
+  "receipts": [
+    {
+      "route": "/",
+      "status": 200,
+      "sha256": "18c1b1808ae84b88ff966b91feed9cb297aef5a72a3f270ab297c230aba9cc33",
+      "checks": [
+        "Verified against 1.8.1"
+      ]
+    },
+    {
+      "route": "/course/setup-and-cli/",
+      "status": 200,
+      "sha256": "ec3f0db48a00d19a7e880a894a577609f58621c896eb6b63f445694c991f3d11",
+      "checks": [
+        "npm install --global @kujolang/kujo-runtime@1.8.1",
+        "Windows x64"
+      ]
+    },
+    {
+      "route": "/course/optional-typing/",
+      "status": 200,
+      "sha256": "81e611c125e94d2e23dba7885e196c7fde390a3b50210ff1969a751f95daad29",
+      "checks": [
+        "The advisory analyzer now follows nested collection destructuring",
+        "genuinely dynamic"
+      ]
+    },
+    {
+      "route": "/course/editor-and-lsp/",
+      "status": 200,
+      "sha256": "9eca37dc35c4c514415aec9a72268abb82a7fd941a60205ddb1e2a1c0a24ad1f",
+      "checks": [
+        "shares one analyzed-program model",
+        "does not keep serving stale exports"
+      ]
+    },
+    {
+      "route": "/course/structs-and-enums/",
+      "status": 200,
+      "sha256": "dedbaf9556d0c8db46a2e6c60807227c1567c64ee3acf425efede8e7bb4cf7cf",
+      "checks": [
+        "generator methods declared with <code>func*</code>",
+        "shared alias progress"
+      ]
+    },
+    {
+      "route": "/evidence/",
+      "status": 200,
+      "sha256": "58fef1a69c0e1688caed50dc8c092244217ed92cf7037138540903ae72b0cf30",
+      "checks": [
+        "Observed 1.8.1 VM",
+        "Struct assignment and qualified custom-enum matching remain discrepancies"
+      ]
+    }
+  ],
+  "verificationVersion": "1.8.1",
+  "status": "passed"
+}

@@ -1,0 +1,19 @@
+{
+  "verifiedAt": "2026-10-12T03:53:15.107Z",
+  "version": "1.8.1",
+  "deployment": "62a54ca4-9be0-47cb-9481-823137709aab",
+  "exactMainMatches": [
+    "tool-loops",
+    "record-and-replay",
+    "data-and-persistence",
+    "structured-outputs",
+    "capability-security",
+    "http-and-networking",
+    "processes",
+    "collections-and-pipelines",
+    "context-and-vectors",
+    "filesystem"
+  ],
+  "searchTermsVerified": true,
+  "status": "passed"
+}

@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-23T20:31:31.090Z",
+  "deployment": "e60adc4d-ce8f-4a6a-8860-f11400c074d7",
+  "version": "1.5.0",
+  "exactMainMatches": [
+    "/course/filesystem/",
+    "/course/machine-contracts/",
+    "/course/scope-and-capture/",
+    "/course/secret-boundaries/",
+    "/course/standard-library/",
+    "/course/data-and-persistence/",
+    "/course/http-and-networking/",
+    "/course/setup-and-cli/",
+    "/evidence/"
+  ],
+  "homepageTitlesPreserved": true,
+  "searchIncludesNewAPIs": true,
+  "status": "passed",
+  "ci": {
+    "id": 35916269244,
+    "commit": "960a37d69bca43548798b2324db8f46ad89cbf2f",
+    "conclusion": "success"
+  },
+  "browser": {
+    "search": "read_stdin returned machine-contracts lesson",
+    "navigation": true,
+    "newSectionVisible": true,
+    "consoleErrors": [],
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "horizontalOverflow": false,
+      "reset": true
+    }
+  }
+}

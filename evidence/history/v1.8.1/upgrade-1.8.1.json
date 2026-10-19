@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-11",
+  "release": {
+    "html_url": "https://github.com/kujolang/kujo/releases/tag/v1.8.1",
+    "published_at": "2026-10-10T17:24:02Z",
+    "tag_name": "v1.8.1",
+    "target_commitish": "main"
+  },
+  "releaseNotes": "# Kujo 1.8.1 maintenance release\n\nStatus: released on 2026-10-10. Native/source and npm published-install checks\npassed across all five supported platforms. See the\n[publication receipt](https://github.com/kujolang/kujo/blob/main/release/kujo-1.8.1-publication.json).\n\nThis release contains the accumulated post-1.8.0 correctness, security,\nreliability and efficiency fixes. It introduces no new language syntax.\n\n## Correctness and compatibility\n\n- CSV export accepts VM fixed dictionaries and orders first-row columns\n  lexicographically. Duplicate input headers, later extra columns and unsupported\n  compound cells fail explicitly instead of losing data. Missing/null cells,\n  CSV escaping and secret redaction remain supported. Consumers must use column\n  headers and explicitly project or serialize heterogeneous/compound rows.\n- Collection fixes preserve distinct compound values in `unique`, invert supported\n  integer dictionaries correctly, compare large mixed numeric sort keys exactly,\n  and report integer `sum` overflow as a catchable runtime error.\n- Scaled vector calculations preserve finite extreme/subnormal directions.\n  JSON Schema numeric equality is exact, local references traverse arrays, and\n  malformed schemas are checked independently of instance shape. Empty `enum`\n  remains valid and matches nothing. Structural checks are resource-bounded.\n- AI messages preserve names, assistant tool calls and tool-call IDs, including\n  VM dictionary literals. Tool-loop replies retain their call linkage. Corrected\n  named/tool histories require cassettes matching the corrected request bodies;\n  plain-text history hash behavior is unchanged.\n- Database pool admission is FIFO, with notification rather than polling.\n  HTTP worker reservations account for queued connections.\n\n## Security and process reliability\n\n- Private-network restrictions apply to connected destinations and redirects,\n  including IPv4-mapped IPv6. Strict HTTP clients disable ambient proxies.\n- Compound operations enforce their required capabilities, including environment\n  reads, source-file reads and GIF converter process execution. Restricted scripts\n  must grant required effects explicitly; trusted defaults are unchanged.\n- ZIP decoding is bounded and validated entries publish atomically. AI cassettes\n  use private unique staging; shared-integer overflow leaves state unchanged.\n- Subprocess deadlines include descendant-held output pipes. Windows commands own\n  descendants through per-command jobs admitted before execution; failed job\n  admission fails closed. GIF conversion has a 30-second deadline and 1 MiB per\n  captured output stream, with explicit failure/truncation diagnostics.\n- Hickory DNS dependencies advance to 0.26.3 for upstream corrections.\n\n## Efficiency and diagnostics\n\n- Context fitting avoids repeated traversal and avoids normalizing discarded or\n  count-only messages; estimation, pruning and result contracts are preserved.\n- Schema validation reuses at most 32 compiled patterns per call and uses direct\n  property membership lookup. The cache never survives the call.\n- Long invalid numeric strings use bounded Unicode-safe previews. TOML inputs\n  above 512 bytes produce structured parser locations and bounded error messages\n  without echoing the source document. Short diagnostics remain unchanged.\n\nThe three repository hardening audits contain reproduction tests and bounded\nmeasurement claims. Debug timing probes are not production throughput promises.\nThe release preserves public builtin signatures, CLI options and exit classes,\nJSON result shapes, configuration keys and environment variable names. Kujo\nremains a local-code runtime, not a security sandbox.\n\n## Distribution and next work\n\nThe published distribution covers five native platforms (Linux x64/arm64, macOS\nx64/arm64, Windows x64), deterministic source/checksums and six npm packages.\nCrates.io is optional and is not part of this publication.\n\nFollow [roadmap items 2–6](https://github.com/kujolang/kujo/blob/main/ROADMAP.md#2-native-api-representation-and-runtime-parity)\nfor 1.9. Wave C/D contracts and participant SDKs remain experimental; their\npromotion is not implied by this maintenance release.\n",
+  "sourceCommit": "357796a1a868f2c80bc8f7b8edcc7d6aff384f04",
+  "binarySha256": "cc811ce04910d68f6703f8717eb6dc4fcd05666a29f738dee88bf57d52f852c2",
+  "archiveSha256": "0700693b27b37c71d6e839e902b11da5eccaa8d5a0a6b4d6432f08bf752399b9",
+  "checksumVerified": true,
+  "seoScope": "Verification dates and technical content only; homepage title, routes and design preserved",
+  "baseline": "work/upgrade-1.8.1-baseline/output",
+  "fixtureMigration": "scripts/migrate-1-8-1-cassettes.mjs; synthetic responses unchanged",
+  "ci": {
+    "run": 38201415122,
+    "commit": "837e76d62fbd37d2a0d4946f6f05c1eddc349e46",
+    "conclusion": "success"
+  },
+  "deployment": "62a54ca4-9be0-47cb-9481-823137709aab",
+  "dependencyAudit": {
+    "before": "GHSA-wq5f-xc86-pv6w in transitive dev sharp",
+    "fix": "wrangler 4.149.0",
+    "after": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    }
+  }
+}

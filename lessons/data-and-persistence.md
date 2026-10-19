@@ -26,7 +26,7 @@ Do not use a timestamp as the only identity for reproducible evidence. Do not eq
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.1 runtime.
+From the course repository root, use the pinned Kujo 1.8.2 runtime.
 
 {{command}}
 
