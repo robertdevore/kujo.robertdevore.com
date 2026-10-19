@@ -1,6 +1,6 @@
 {
-  "version": "1.8.1",
-  "verifiedDate": "2026-10-11",
+  "version": "1.8.2",
+  "verifiedDate": "2026-10-19",
   "receipts": [
     {
       "args": [
@@ -117,7 +117,7 @@
       "cwd": "temporary independent copy",
       "exit": 0,
       "signal": null,
-      "stdout": "setup\nteardown\nsetup\nteardown\n\n============================================================\nTest Results\n============================================================\n  ✓ empty input (3ms)\n  ✓ positive values (2ms)\n\nTests: 2 total, 2 passed, 0 failed\nTime:  6ms\n============================================================\n\nAll tests passed! ✨\n",
+      "stdout": "setup\nteardown\nsetup\nteardown\n\n============================================================\nTest Results\n============================================================\n  ✓ empty input (5ms)\n  ✓ positive values (2ms)\n\nTests: 2 total, 2 passed, 0 failed\nTime:  8ms\n============================================================\n\nAll tests passed! ✨\n",
       "stderr": ""
     },
     {
@@ -164,7 +164,7 @@
       "cwd": "temporary independent copy",
       "exit": 0,
       "signal": null,
-      "stdout": "\n============================================================\nTest Results\n============================================================\n  ✓ unknown goal rejected (3ms)\n  ✓ excess budget rejected (2ms)\n  ✓ correct count accepted (3ms)\n  ✓ plausible wrong count rejected (3ms)\n  ✓ extra action rejected (2ms)\n\nTests: 5 total, 5 passed, 0 failed\nTime:  16ms\n============================================================\n\nAll tests passed! ✨\n",
+      "stdout": "\n============================================================\nTest Results\n============================================================\n  ✓ unknown goal rejected (5ms)\n  ✓ excess budget rejected (5ms)\n  ✓ correct count accepted (3ms)\n  ✓ plausible wrong count rejected (3ms)\n  ✓ extra action rejected (7ms)\n\nTests: 5 total, 5 passed, 0 failed\nTime:  27ms\n============================================================\n\nAll tests passed! ✨\n",
       "stderr": ""
     },
     {
