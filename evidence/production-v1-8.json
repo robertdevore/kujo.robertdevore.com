@@ -1,28 +1,28 @@
 {
-  "verifiedAt": "2026-10-19T19:40:00.988Z",
+  "verifiedAt": "2026-10-22T19:54:34.683Z",
   "base": "https://kujo.robertdevore.com",
   "receipts": [
     {
       "route": "/",
       "status": 200,
-      "sha256": "4a96ac4e40d71d344575093383cbd066079921bc048f413407ae9e42f2d97826",
+      "sha256": "0123846b1e067560f69a00cdc25c0163e1759bc940c53cec8241695e0a5eab91",
       "checks": [
-        "Verified against 1.8.2"
+        "Verified against 1.9.0"
       ]
     },
     {
       "route": "/course/setup-and-cli/",
       "status": 200,
-      "sha256": "ba22e7599ab5437b890d98de48e69d519626ffd8de5fb99a4ab912323daa06e3",
+      "sha256": "0298c4a570ba6cc9043313fda4a4738be3bdb1366008bd63923ab030626309f6",
       "checks": [
-        "npm install --global @kujolang/kujo-runtime@1.8.2",
+        "npm install --global @kujolang/kujo-runtime@1.9.0",
         "Windows x64"
       ]
     },
     {
       "route": "/course/optional-typing/",
       "status": 200,
-      "sha256": "c86060e58200d12a9c58359bab1b08cdc1ae0e65e16d1a5a1a68e22544c80bd4",
+      "sha256": "bc29af39a364c6cfab4e2ee723617595a1b642c409e905cd8e1ad4379db8040f",
       "checks": [
         "The advisory analyzer now follows nested collection destructuring",
         "genuinely dynamic"
@@ -31,7 +31,7 @@
     {
       "route": "/course/editor-and-lsp/",
       "status": 200,
-      "sha256": "c0286a97b7f2b86545cff52b91161306a3efaf30c4aee354ac315374e01deae1",
+      "sha256": "14c62d7777fb269a12d3090b4f8453fe8197752b6cc2f792d3ab769fbbae417f",
       "checks": [
         "shares one analyzed-program model",
         "does not keep serving stale exports"
@@ -40,7 +40,7 @@
     {
       "route": "/course/structs-and-enums/",
       "status": 200,
-      "sha256": "ecf76a09bfe66a91fea3aa2e24e53d3a03738d2243e1be9b4c13b06b57e1f9f3",
+      "sha256": "6730f37a03d1e3cd4da87ddd9e94d9db1523d1627f00a444fcba2fac60d7d1b8",
       "checks": [
         "generator methods declared with <code>func*</code>",
         "shared alias progress"
@@ -49,13 +49,13 @@
     {
       "route": "/evidence/",
       "status": 200,
-      "sha256": "6e70b1a3cab1f1dc488273c5984574f3b391c48e51d18f249fb46d277fc8c7a6",
+      "sha256": "2b5f45cc64d30a3c419a62ed56e457b29e1e7198fe32b985ac10968ce72f3dfd",
       "checks": [
-        "Observed 1.8.2 VM",
-        "Struct assignment and qualified custom-enum matching remain discrepancies"
+        "Observed 1.9.0 VM",
+        "Qualified custom-enum matching remains a discrepancy"
       ]
     }
   ],
-  "verificationVersion": "1.8.2",
+  "verificationVersion": "1.9.0",
   "status": "passed"
 }
