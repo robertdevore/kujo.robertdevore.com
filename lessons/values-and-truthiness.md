@@ -28,7 +28,7 @@ Before running the example, write down the number of truthy inputs. Then predict
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.2 runtime.
+From the course repository root, use the pinned Kujo 1.9.0 runtime.
 
 {{command}}
 

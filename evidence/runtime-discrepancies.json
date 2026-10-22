@@ -1,6 +1,6 @@
 {
-  "version": "1.8.2",
-  "date": "2026-10-19",
+  "version": "1.9.0",
+  "date": "2026-10-22",
   "probes": [
     {
       "name": "builtin_name",
@@ -94,7 +94,7 @@
         "vm": {
           "exit": 0,
           "signal": null,
-          "stdout": "3\n",
+          "stdout": "4\n",
           "stderr": "",
           "timeout": false
         },

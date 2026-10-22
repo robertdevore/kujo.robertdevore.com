@@ -28,7 +28,7 @@ The breaking example attempts parent traversal under the bounded API. This tests
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.2 runtime.
+From the course repository root, use the pinned Kujo 1.9.0 runtime.
 
 {{command}}
 

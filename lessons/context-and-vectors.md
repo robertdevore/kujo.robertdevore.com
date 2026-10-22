@@ -26,7 +26,7 @@ Do not call estimates exact token counts. Do not normalize vectors with ad hoc c
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.2 runtime.
+From the course repository root, use the pinned Kujo 1.9.0 runtime.
 
 {{command}}
 

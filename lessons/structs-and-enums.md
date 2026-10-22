@@ -28,7 +28,7 @@ Optional type annotations do not make the VM a static type gate. A field label i
 
 ## Run it
 
-From the course repository root, use the pinned Kujo 1.8.2 runtime.
+From the course repository root, use the pinned Kujo 1.9.0 runtime.
 
 {{command}}
 
@@ -56,4 +56,4 @@ Define a Report struct with a method that computes a derived value. Create a sep
 
 ## Contract versus release behavior
 
-> The release VM silently left a struct field unchanged after an assignment that the interpreter applied, and the method retained the original field value. The successful example uses construction and reads only. Struct mutation and custom qualified-enum matching need a runtime fix or a deliberately labeled interpreter fallback before relying on them. See [the evidence ledger](/evidence/) for exact probes and runtime results.
+> Kujo 1.9.0 fixes the tested struct-field assignment: both runtimes update the field from 3 to 4. The course example still uses construction and reads. Qualified custom-enum matching remains a VM/interpreter discrepancy; use the verified Result/Option patterns or an explicitly labeled interpreter fallback. See [the evidence ledger](/evidence/) for exact probes and runtime results.
