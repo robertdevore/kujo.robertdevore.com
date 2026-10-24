@@ -12,3 +12,4 @@ templates/page-home.html
 templates/page-course.html
 assets/course-search.json
 assets/course-examples.json
+.security-checkpoint/
