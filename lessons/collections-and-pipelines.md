@@ -57,3 +57,21 @@ The names `values`, `items`, and `input` already identify builtins in global sco
 ## Collection corrections in 1.8.1
 
 Integer sum overflow raises a catchable runtime error instead of wrapping. unique checks value equality when display summaries collide, preserving distinct compound, byte and secret values. Mixed integer/float sort comparisons avoid rounding a large integer before comparison. This does not change language-wide float equality. The supplemental v1-8-1-contracts.kujo example checks compound uniqueness alongside CSV, schema and request-identity contracts.
+
+## Nested writes and comparator sorting in 1.9
+
+A nested assignment writes back to its mutable root. Retained copies keep their old values:
+
+```kujo
+mut rows := [[1, 2]]
+let before := rows
+rows[0][1] = 7
+assert_equal(before, [[1, 2]])
+assert_equal(rows, [[1, 7]])
+```
+
+Missing intermediate containers and invalid indices fail without publishing a partly updated root. Expression side effects are not rolled back. Simple assignment evaluates its right-hand side first, then target indices once from root to leaf. Compound assignment also evaluates indices during its initial read: keep effectful calls out of those indices.
+
+`sort_by(items, comparator)` returns a new array. The comparator returns an integer: negative for before, zero for tied, positive for after. Ties preserve input order. Callback errors propagate; the input remains unchanged, but callback side effects remain. Define a consistent ordering and retain ordinary capability restrictions.
+
+Run the [1.9 contract example](/examples/supplemental/v1-9-contracts.kujo) with `kujo run --untrusted examples/supplemental/v1-9-contracts.kujo`. It checks nested-write recovery, snapshot isolation and stable sorting in both runtime verification paths. Exercise: sort equal-priority jobs by priority alone and prove that their original relative order survives.

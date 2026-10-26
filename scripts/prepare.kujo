@@ -1,7 +1,7 @@
 func escape(value) { return escape_xml(to_string(value)) }
 func fence(language, text) { return "\n```" + language + "\n" + text + "\n```\n" }
 func front(title, slug, description, order) {
-    return "---\ntitle: " + to_json(title) + "\nslug: " + slug + "\ndescription: " + to_json(description) + "\norder: " + to_string(order) + "\ndate: 2026-10-22\nauthor: Robert DeVore\n---\n\n"
+    return "---\ntitle: " + to_json(title) + "\nslug: " + slug + "\ndescription: " + to_json(description) + "\norder: " + to_string(order) + "\ndate: 2026-10-25\nauthor: Robert DeVore\n---\n\n"
 }
 func main() {
     course := parse_json(read_file("course.json"))
@@ -49,7 +49,7 @@ func main() {
         body = replace(body, "{{diagnostic}}", fence("shell", "kujo run --untrusted " + join(item["flags"], " ") + " examples/" + id + "-break.kujo") + "\nExit status: **" + to_string(result["failure"]["exit"]) + "**. Captured diagnostic:\n" + fence("diagnostic", result["failure"]["stderr"]))
         stage := stages[item["stage"] - 1]
         body = "<p class=\"eyebrow\">STAGE " + to_string(item["stage"]) + " / " + escape(stage) + " · LESSON " + id + "</p>\n\n" + body
-        body += "\n\n<p class=\"provenance\">Verified 2026-10-22 · Official Kujo 1.9.0 release · <a href=\"https://github.com/kujolang/kujo/blob/v1.9.0/" + item["source"] + "\">Source contract</a> · <a href=\"/examples/" + id + ".kujo\" download>Download example</a></p>"
+        body += "\n\n<p class=\"provenance\">Verified 2026-10-25 · Official Kujo 1.9.0 release · <a href=\"https://github.com/kujolang/kujo/blob/v1.9.0/" + item["source"] + "\">Source contract</a> · <a href=\"/examples/" + id + ".kujo\" download>Download example</a></p>"
         body += "<div class=\"lesson-actions\"><button class=\"complete\" data-complete=\"" + item["slug"] + "\" type=\"button\">Mark lesson complete</button><span data-complete-status></span></div><nav class=\"lesson-pager\" aria-label=\"Lesson navigation\">"
         if position > 0 { body += "<a href=\"/course/" + lessons[position - 1]["slug"] + "/\"><span class=\"icon icon-arrow-left\" aria-hidden=\"true\"></span> " + escape(lessons[position - 1]["title"]) + "</a>" }
         if position < len(lessons) - 1 { body += "<a href=\"/course/" + lessons[position + 1]["slug"] + "/\">" + escape(lessons[position + 1]["title"]) + " <span class=\"icon icon-arrow-right\" aria-hidden=\"true\"></span></a>" }

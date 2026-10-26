@@ -1,0 +1,213 @@
+{
+  "version": "1.9.0",
+  "date": "2026-10-25",
+  "receipts": [
+    {
+      "name": "success",
+      "args": [
+        "run",
+        "--untrusted",
+        "examples/supplemental/v1-9-contracts.kujo"
+      ],
+      "exit": 0,
+      "stdout": "Nested writes, bytes, callbacks, CSV and numeric contracts verified\n",
+      "stderr": ""
+    },
+    {
+      "name": "utf8",
+      "args": [
+        "run",
+        "--untrusted",
+        "work/v1-9/utf8.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: utf8_decode() invalid UTF-8 at byte 0\n  --> 0:0\n\n"
+    },
+    {
+      "name": "byte",
+      "args": [
+        "run",
+        "--untrusted",
+        "work/v1-9/byte.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: Byte index assignment requires an integer in range 0-255\n  --> 0:0\n\n"
+    },
+    {
+      "name": "comparator",
+      "args": [
+        "run",
+        "--untrusted",
+        "work/v1-9/comparator.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: sort_by comparator must return an integer\n  --> 0:0\n\n"
+    },
+    {
+      "name": "callback",
+      "args": [
+        "run",
+        "--untrusted",
+        "work/v1-9/callback.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: Capability denied: env-read required for os_environ; rerun with --allow-env-read\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\n"
+    },
+    {
+      "name": "csv",
+      "args": [
+        "run",
+        "--untrusted",
+        "work/v1-9/csv.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: CSV record error: CSV error: record 1 (line: 2, byte: 4): found record with 1 fields, but the previous record has 2 fields\n  --> 0:0\n\n"
+    },
+    {
+      "name": "precision",
+      "args": [
+        "run",
+        "--untrusted",
+        "work/v1-9/precision.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: format_fixed expects a number and integer precision in 0..=100\n  --> 0:0\n\n"
+    },
+    {
+      "name": "index",
+      "args": [
+        "run",
+        "--untrusted",
+        "work/v1-9/index.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: Invalid index assignment\n  --> 0:0\n\n"
+    },
+    {
+      "name": "overflow",
+      "args": [
+        "run",
+        "--untrusted",
+        "work/v1-9/overflow.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJOVM001] [vm] Runtime Error: Integer overflow: 9223372036854775807 + 1\n  --> 0:0\n\n"
+    },
+    {
+      "name": "success",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "examples/supplemental/v1-9-contracts.kujo"
+      ],
+      "exit": 0,
+      "stdout": "Nested writes, bytes, callbacks, CSV and numeric contracts verified\n",
+      "stderr": ""
+    },
+    {
+      "name": "utf8",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "work/v1-9/utf8.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: utf8_decode() invalid UTF-8 at byte 0\n  --> 0:0\n\n"
+    },
+    {
+      "name": "byte",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "work/v1-9/byte.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: Byte index assignment requires an integer in range 0-255\n  --> 0:0\n\n"
+    },
+    {
+      "name": "comparator",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "work/v1-9/comparator.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: sort_by comparator must return an integer\n  --> 0:0\n\n"
+    },
+    {
+      "name": "callback",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "work/v1-9/callback.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: Capability denied: env-read required for os_environ; rerun with --allow-env-read\n  --> 0:0\n   = help: Rerun with the required --allow-* flag, or remove the host-effect operation.\n\nCall stack:\n  0 at <function with 1 params>\n\n"
+    },
+    {
+      "name": "csv",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "work/v1-9/csv.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: CSV record error: CSV error: record 1 (line: 2, byte: 4): found record with 1 fields, but the previous record has 2 fields\n  --> 0:0\n\n"
+    },
+    {
+      "name": "precision",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "work/v1-9/precision.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: format_fixed expects a number and integer precision in 0..=100\n  --> 0:0\n\n"
+    },
+    {
+      "name": "index",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "work/v1-9/index.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: Invalid index assignment: unsupported array index type\n  --> 0:0\n\n"
+    },
+    {
+      "name": "overflow",
+      "args": [
+        "run",
+        "--untrusted",
+        "--interpreter",
+        "work/v1-9/overflow.kujo"
+      ],
+      "exit": 4,
+      "stdout": "",
+      "stderr": "[KUJORUN001] [runtime] Runtime Error: Integer overflow: 9223372036854775807 + 1\n  --> 0:0\n\n"
+    }
+  ]
+}

@@ -57,3 +57,13 @@ Build a truthiness table for ten values. Add separate tests for null and empty i
 Use `byte_length` when a protocol or resource limit counts bytes. It accepts strings and bytes without allocating a converted representation. `len("é")` is 1 Unicode scalar; `byte_length("é")` is 2 UTF-8 bytes. String `contains` returns integer 0/1; array and dictionary membership return booleans. The 1.4.0 typing fix reflects these existing runtime results, without changing user-defined function signatures.
 
 Run `kujo run --untrusted examples/supplemental/v1-4-values.kujo` from the course repository. The verifier also runs it in interpreter mode.
+
+## Bytes, indices and explicit arithmetic in 1.9
+
+`utf8_encode(text)` produces bytes; `utf8_decode(data)` rejects invalid UTF-8 instead of inserting replacement characters. Mutable bytes accept integer indices and values from 0 through 255. Copies and byte iteration retain snapshots when another binding changes. String indexing still counts Unicode scalars, not UTF-8 bytes.
+
+Array, string and byte reads accept finite floating-point indices, truncated toward zero before resolving negative indices. Writes require integer indices. Prefer explicit conversion when an index comes from numeric computation.
+
+`format_fixed(1.25, 3)` returns `"1.250"`. Precision must be an integer from 0 through 100. Float formatting rounds the binary value to nearest, ties to even; it does not make binary floats exact decimal quantities. `wrapping_add`, `wrapping_sub` and `wrapping_mul` explicitly use signed arithmetic modulo 2^64. Ordinary arithmetic still checks overflow.
+
+The [1.9 contract example](/examples/supplemental/v1-9-contracts.kujo) verifies these boundaries. Exercise: preserve a byte snapshot, mutate the working buffer, and prove the snapshot still decodes to the original text.

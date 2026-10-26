@@ -81,3 +81,9 @@ print("PDF digest repeatable")
 ```
 
 [Download this example](/examples/supplemental/v1-5-pdf.kujo). The repository release verifier supplies its fixtures and records success and failure diagnostics.
+
+## Regex callbacks in 1.9
+
+`regex_count(text, pattern)` counts non-overlapping matches without building a result array. `regex_replace_with(text, pattern, callback)` calls a synchronous function in match order. Its argument is an array containing the complete match at index 0, then numbered captures; unmatched optional groups are null. The callback must return a string, inserted literally without dollar-sign expansion.
+
+Callback errors stop replacement; earlier side effects remain. Callbacks retain the caller's capabilities and call-depth limits. The [1.9 contract example](/examples/supplemental/v1-9-contracts.kujo) verifies counting and replacement; the maintenance tests separately prove that an environment-reading callback is denied under untrusted execution.

@@ -17,3 +17,13 @@ for (const html of routes.values()) assert.ok(!html.includes('Verified against 1
 assert.equal(JSON.parse(fs.readFileSync('output/verification.json')).version,'1.9.0');
 assert.ok(!fs.readFileSync('output/assets/js/course.js','utf8').includes('1.5.0'));
 assert.ok(!fs.readFileSync('output/projects/capstone/src/main.kujo','utf8').includes('1.5.0'));
+
+// All learner-facing version surfaces must agree with executed verification.
+const verified=JSON.parse(fs.readFileSync('output/verification.json'));
+assert.equal(course.version,verified.version);
+assert.equal(course.verifiedDate,verified.verifiedDate);
+assert.equal(JSON.parse(fs.readFileSync('evidence/release.json')).tag_name,'v'+verified.version);
+assert.ok(fs.readFileSync('output/assets/js/course.js','utf8').includes(`Captured from Kujo ${verified.version}.`));
+assert.ok(fs.readFileSync('output/projects/capstone/src/main.kujo','utf8').includes(`"runtime": "${verified.version}"`));
+assert.match(routes.get('/'),/<title>Clarity\. Context\. Control\.<\/title>/);
+assert.match(routes.get('/'),/<meta property="og:title" content="Clarity\. Context\. Control\."/);

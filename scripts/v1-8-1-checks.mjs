@@ -18,4 +18,4 @@ for(const mode of [[],['--interpreter']])for(const [name,source,flags,exit,reaso
  const file=source===null?'examples/supplemental/v1-8-1-contracts.kujo':`work/v1-8-1/${name}.kujo`;if(source!==null)fs.writeFileSync(file,source+'\n');
  const args=['run','--untrusted',...mode,...flags,file];const r=spawnSync(binary,args,{env,encoding:'utf8',timeout:10000});assert.ifError(r.error);assert.equal(r.status,exit,`${name}: ${r.stderr}`);assert.ok((r.stdout+r.stderr).toLowerCase().includes(reason.toLowerCase()),`${name}: ${r.stderr}`);receipts.push({name,args,exit:r.status,stdout:r.stdout,stderr:r.stderr});
 }
-fs.writeFileSync('evidence/v1-8-1-checks.json',JSON.stringify({version:'1.9.0',date:'2026-10-22',receipts},null,2)+'\n');console.log(`PASS: ${receipts.length} maintenance-contract checks in VM and interpreter`);
+fs.writeFileSync('evidence/v1-8-1-checks.json',JSON.stringify({version:'1.9.0',date:'2026-10-25',receipts},null,2)+'\n');console.log(`PASS: ${receipts.length} maintenance-contract checks in VM and interpreter`);

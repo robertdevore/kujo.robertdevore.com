@@ -51,3 +51,7 @@ Write a summarize(values, predicate) function. Pass two predicates that accept d
 - I use explicit return when a result is required.
 - I can pass a function as a value.
 - I can explain a callback’s inputs and captured context.
+
+## Call-depth boundaries
+
+Kujo 1.9 bounds ordinary VM and interpreter calls, including imported interpreter functions, to 256 nested calls. Exhaustion is a catchable runtime error. The synchronous VM/interpreter callback bridge retains a separate 32-entry limit; generator delegation has its own 32-resume bound. These are separate limits, not a shared recursion budget. Imports still execute through the documented interpreter path.

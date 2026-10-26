@@ -63,3 +63,9 @@ This course's executable persistence build remains offline SQLite. The PostgreSQ
 In 1.8.1, to_csv accepts VM dictionary literals and orders the first row's columns lexicographically. Later missing cells and nulls produce empty cells. Duplicate input headers, extra columns in later rows, and unsupported compound cells raise errors instead of silently losing data. Project heterogeneous rows onto an explicit set of columns and serialize compound values before export. Consumers should read headers rather than assume source insertion order.
 
 The release also makes database pool admission FIFO and wakes waiting callers when capacity returns. Connection setup and health checks remain outside the admission queue. This does not establish transaction ordering or replace acquisition deadlines.
+
+## Headerless CSV in 1.9
+
+Use `parse_csv_rows(text)` when every record is data. It returns arrays of strings and preserves leading zeros, decimal spelling and empty fields. All rows must have the same width; malformed quotes and inconsistent widths raise errors. Input is bounded to 8 MiB and 1,000,000 total fields. The existing `parse_csv` still treats the first record as headers and performs numeric conversion.
+
+The [1.9 contract example](/examples/supplemental/v1-9-contracts.kujo) checks that `001` and `2.00` survive parsing as strings. Exercise: parse an identifier column without losing its leading zeros, then explicitly convert only the quantity column.

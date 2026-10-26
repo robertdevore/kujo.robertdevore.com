@@ -1,6 +1,6 @@
 ## Verification boundary
 
-The lesson verifier uses the official Kujo **1.9.0 macOS x64** binary, SHA-256 `657879720c5f51e9598715ec4b5455f51d18774cc89b919b8863b41db4cfc007`, from the published release at source `2cfaf185ad03059c89ef4f72fb061074255d00fc`. This course was reverified on 2026-10-22. The upstream release also publishes Linux x64/arm64, macOS arm64 and Windows x64, plus all six runtime npm packages and a deterministic source archive. Local course verification does not claim a separate full course run on each platform.
+The lesson verifier uses the official Kujo **1.9.0 macOS x64** binary, SHA-256 `657879720c5f51e9598715ec4b5455f51d18774cc89b919b8863b41db4cfc007`, from the published release at source `2cfaf185ad03059c89ef4f72fb061074255d00fc`. This course was reverified on 2026-10-25. The upstream release also publishes Linux x64/arm64, macOS arm64 and Windows x64, plus all six runtime npm packages and a deterministic source archive. Local course verification does not claim a separate full course run on each platform.
 
 Each of 40 lesson examples is checked and executed on the default VM, with exact expected stdout. Each intentional failure checks its exit category and diagnostic reason. [Download the current verification receipts](/verification.json). The repository also records package, stage-project, AI replay, browser, and production checks.
 
@@ -50,7 +50,7 @@ The historical 1.6 evidence remains useful for the features introduced in that r
 
 ## 1.8 analysis and runtime evidence
 
-The complete course gate passes on the official 1.8.2 binary: 40 VM examples, 40 expected failures, 20 project and integration checks, release checks, the retained 1.5 and 1.6 regression suites, and the 53-route static build. The dual-runtime probes continue to expose the two known struct-assignment and qualified-enum differences instead of hiding them.
+The historical 1.8.2 course gate passed on its official binary: 40 VM examples, 40 expected failures, 20 project and integration checks, release checks, the retained 1.5 and 1.6 regression suites, and the 53-route static build. At that release, the dual-runtime probes exposed struct-assignment and qualified-enum differences. The 1.9.0 results below supersede that observation.
 
 Kujo 1.8 adds shared CLI/LSP program analysis, content-hashed imported-module analysis, richer optional inference, struct generator methods, and a measured generator-resume allocation improvement without changing v1 syntax. See the upstream [release notes](https://github.com/kujolang/kujo/blob/v1.8.2/docs/RELEASE_NOTES_1_8.md) and [release-readiness evidence](https://github.com/kujolang/kujo/blob/v1.8.2/docs/KUJO_1_8_RELEASE_READINESS.md).
 
@@ -63,7 +63,7 @@ The tagged release notes retain candidate wording and some tagged documents name
 
 ## 1.8.2 dependency maintenance verification
 
-The complete course gate and the retained 1.8.1 maintenance checks pass on the checksum-verified official 1.8.2 binary. Historical 1.8.1 receipts remain in evidence/history/v1.8.1. The two documented runtime discrepancies remain unchanged.
+The complete course gate and the retained 1.8.1 maintenance checks pass on the checksum-verified official 1.8.2 binary. Historical 1.8.1 receipts remain in evidence/history/v1.8.1. Both runtime discrepancies remained in 1.8.2; struct assignment was fixed in 1.9.0.
 
 This release removes the remaining ZIP advisories and dependency maintenance warnings while preserving Kujo-language behavior. Rust embedders must review the [ZIP 9 API migration](https://github.com/kujolang/kujo/blob/v1.8.2/docs/ZIP_9_RUST_MIGRATION.md); the course does not expose that Rust writer type. See the [1.8.2 release notes](https://github.com/kujolang/kujo/blob/main/docs/RELEASE_NOTES_1_8_2.md) for upstream verification and scope.
 
@@ -73,3 +73,7 @@ This release removes the remaining ZIP advisories and dependency maintenance war
 The 1.9.0 runtime passes the course examples, intentional failures, project checks and retained regression suites. Struct assignment now produces 4 in both runtimes; qualified custom-enum matching still selects the VM default branch while the interpreter matches. Previous 1.8.2 receipts are preserved in evidence/history/v1.8.2.
 
 The tagged source retains candidate-era stable-release labels in some documentation. The published release, exact archive checksum and installed-platform checks establish the 1.9.0 distribution boundary. See the [1.9.0 release notes](https://github.com/kujolang/kujo/blob/main/docs/RELEASE_NOTES_1_9_0.md).
+
+### October 25 reconciliation
+
+The weekly check found that the October 22 upgrade left older labels in course.json, the example explorer, the capstone result and the release receipt. Those now agree on 1.9.0. Eighteen additional VM/interpreter checks cover nested-write atomicity, retained byte snapshots, strict UTF-8, stable comparator sorting, callback capability denial, headerless CSV, formatting and explicit wrapping arithmetic. The receipt is evidence/v1-9-checks.json. Expected lesson outputs and AI cassettes were not regenerated.

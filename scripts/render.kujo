@@ -67,7 +67,7 @@ func render_page(title, description, route, inner, layout) {
         inner = replace(inner, "<h1>", crumb_html + "<h1>")
     }
     if page_type == "LearningResource" {
-        inner = replace(inner, "</h1>", "</h1><p class=\"byline\">By <a href=\"https://robertdevore.com\">Robert DeVore</a> · Kujo examples verified <time datetime=\"2026-10-22\">October 22, 2026</time></p>")
+        inner = replace(inner, "</h1>", "</h1><p class=\"byline\">By <a href=\"https://robertdevore.com\">Robert DeVore</a> · Kujo examples verified <time datetime=\"2026-10-25\">October 22, 2026</time></p>")
     }
     if route == "/404/" { json_ld = "<meta name=\"robots\" content=\"noindex,follow\">" }
     html = replace(html, "{{json_ld}}", json_ld)

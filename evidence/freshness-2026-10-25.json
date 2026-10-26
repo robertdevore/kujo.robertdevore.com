@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-25",
+  "scope": "Reconcile October 22 upgrade and add missing 1.9 contract teaching; not a full SEO audit",
+  "baselineCommit": "3b1e35bc49d6c5d660bd84d84d573e85dfca12d7",
+  "baselineHomepageSha256": "d9630681375b3d9644a597b5bb4f64f4d2ff6b0ef6b4882f7ab1e134d7a5362e",
+  "before": {
+    "runtime": "1.9.0",
+    "courseManifest": "1.8.2",
+    "explorer": "1.8.1",
+    "capstone": "1.8.1",
+    "releaseReceipt": "1.8.1"
+  },
+  "after": {
+    "runtime": "1.9.0",
+    "courseManifest": "1.9.0",
+    "explorer": "1.9.0",
+    "capstone": "1.9.0",
+    "releaseReceipt": "1.9.0"
+  },
+  "metadata": {
+    "title": "Clarity. Context. Control.",
+    "guidance": "https://developers.google.com/search/docs/appearance/publication-dates",
+    "interpretation": "Visible verification and structured update dates align with the completed check; no ranking or citation improvement claimed."
+  },
+  "verification": "npm run verify passed; 18 additional dual-runtime 1.9 checks; original lesson goldens and AI cassettes unchanged",
+  "unresolved": "Known qualified custom-enum VM/interpreter divergence remains documented; no new upstream finding."
+}
