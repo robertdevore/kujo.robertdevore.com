@@ -1,11 +1,11 @@
 {
-  "verifiedAt": "2026-10-22T19:54:34.683Z",
+  "verifiedAt": "2026-10-26T03:48:24.636Z",
   "base": "https://kujo.robertdevore.com",
   "receipts": [
     {
       "route": "/",
       "status": 200,
-      "sha256": "0123846b1e067560f69a00cdc25c0163e1759bc940c53cec8241695e0a5eab91",
+      "sha256": "9d96f22781ce648c98ed8f3d43733d58786683c01b7b8f945655b2f0ac555f9b",
       "checks": [
         "Verified against 1.9.0"
       ]
@@ -13,7 +13,7 @@
     {
       "route": "/course/setup-and-cli/",
       "status": 200,
-      "sha256": "0298c4a570ba6cc9043313fda4a4738be3bdb1366008bd63923ab030626309f6",
+      "sha256": "45fef937287c1e546639930d4d4a3e4debbabbf4b499c4bdcf6bcb645510b7d5",
       "checks": [
         "npm install --global @kujolang/kujo-runtime@1.9.0",
         "Windows x64"
@@ -22,7 +22,7 @@
     {
       "route": "/course/optional-typing/",
       "status": 200,
-      "sha256": "bc29af39a364c6cfab4e2ee723617595a1b642c409e905cd8e1ad4379db8040f",
+      "sha256": "1d99a3b7888a1d7cd5a2f1703eec0c3a040f702b97fdd936b2074577cfa327c8",
       "checks": [
         "The advisory analyzer now follows nested collection destructuring",
         "genuinely dynamic"
@@ -31,7 +31,7 @@
     {
       "route": "/course/editor-and-lsp/",
       "status": 200,
-      "sha256": "14c62d7777fb269a12d3090b4f8453fe8197752b6cc2f792d3ab769fbbae417f",
+      "sha256": "125487505c7bb3e2ed0d3b6886ac11a4f096c251d24ff41cc8738abf0e87f2f4",
       "checks": [
         "shares one analyzed-program model",
         "does not keep serving stale exports"
@@ -40,7 +40,7 @@
     {
       "route": "/course/structs-and-enums/",
       "status": 200,
-      "sha256": "6730f37a03d1e3cd4da87ddd9e94d9db1523d1627f00a444fcba2fac60d7d1b8",
+      "sha256": "728715da970bfad01c290b8af69aaa20bc22c3a7a7f2c4d89f5099326385c86e",
       "checks": [
         "generator methods declared with <code>func*</code>",
         "shared alias progress"
@@ -49,7 +49,7 @@
     {
       "route": "/evidence/",
       "status": 200,
-      "sha256": "2b5f45cc64d30a3c419a62ed56e457b29e1e7198fe32b985ac10968ce72f3dfd",
+      "sha256": "64c608d0bc14f686f4e8ffbc558c78204d2581a5fa437fd1d1676e8dcb811a48",
       "checks": [
         "Observed 1.9.0 VM",
         "Qualified custom-enum matching remains a discrepancy"

@@ -23,5 +23,30 @@
     "interpretation": "Visible verification and structured update dates align with the completed check; no ranking or citation improvement claimed."
   },
   "verification": "npm run verify passed; 18 additional dual-runtime 1.9 checks; original lesson goldens and AI cassettes unchanged",
-  "unresolved": "Known qualified custom-enum VM/interpreter divergence remains documented; no new upstream finding."
+  "unresolved": "Known qualified custom-enum VM/interpreter divergence remains documented; no new upstream finding.",
+  "deployment": "67f2cc74-24f4-4bdf-a895-30f80f4af0c0",
+  "courseCI": "https://github.com/robertdevore/kujo.robertdevore.com/actions/runs/40265848191",
+  "dependencies": {
+    "wrangler": "4.149.0",
+    "undiciOverride": "7.30.1",
+    "before": {
+      "info": 0,
+      "low": 0,
+      "moderate": 2,
+      "high": 1,
+      "critical": 0,
+      "total": 3
+    },
+    "after": {
+      "info": 0,
+      "low": 0,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 0
+    },
+    "advisory": "https://github.com/advisories/GHSA-xjj6-f33q-929c",
+    "productionDependencies": 0,
+    "validation": "npm audit zero vulnerabilities; Wrangler deploy dry-run and local Miniflare homepage, lesson and search requests passed"
+  }
 }

@@ -1,0 +1,23 @@
+{
+  "verifiedAt": "2026-10-26T03:48:35.108Z",
+  "version": "1.9.0",
+  "date": "2026-10-25",
+  "matchedPages": [
+    "/",
+    "/course/collections-and-pipelines/",
+    "/course/values-and-truthiness/",
+    "/course/data-and-persistence/",
+    "/course/functions/",
+    "/course/standard-library/",
+    "/evidence/"
+  ],
+  "manifest": true,
+  "explorer": true,
+  "capstone": true,
+  "searchTerms": [
+    "sort_by",
+    "utf8_encode",
+    "parse_csv_rows",
+    "regex_count"
+  ]
+}

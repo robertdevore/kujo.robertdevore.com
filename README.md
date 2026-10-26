@@ -53,3 +53,5 @@ The full SEO/AI-search audit lives in `seo-audit/2026-09-07/`, including immutab
 ## Freshness
 
 Verification date: **2026-10-22** (America/Detroit). Recheck the latest release, stable spec/scope, native and AI contracts, roadmap/changelog, security/parity matrix, and selected ecosystem revisions before updating the course. Run the gates and explain any changed expected behavior. Never silently promote a roadmap candidate into a stable lesson.
+
+The development dependency override pins Undici 7.30.1 because Miniflare's exact older pin is affected by GHSA-4qv8-2p9j-2685, GHSA-f72v-6w45-q472 and GHSA-xjj6-f33q-929c. Review the override when upgrading Wrangler; remove it only after its resolved dependency is patched. This dependency belongs to local deployment/preview tooling, not the static production runtime.
