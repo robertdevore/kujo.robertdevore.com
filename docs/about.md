@@ -20,3 +20,7 @@ Examples target the official Kujo 1.9.0 release, verified on 2026-10-25. Known d
 
 Course source and examples are available in the [standalone repository](https://github.com/robertdevore/kujo.robertdevore.com). Third-party source and fixture provenance are recorded in THIRD_PARTY.md. The verification results cover the recorded examples and runtime version; they do not certify production deployments.
 
+
+## Apply the workflow in Hermes
+
+[Use Kujo tools inside Hermes](/hermes/) to check requirements, evaluate changes and inspect execution receipts. The optional plugin works beyond Kujo-language repositories and requires its own Hermes and runtime setup.

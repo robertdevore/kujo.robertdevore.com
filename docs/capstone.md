@@ -82,3 +82,7 @@ Extend one capability at a time. Maintain the same loop: bounded goal, explicit 
 
 <div class="lesson-actions"><button class="complete" data-complete="capstone" type="button">Mark capstone complete</button><span data-complete-status></span></div>
 
+
+## Continue with an agent
+
+[Kujo Hermes](/hermes/) applies explicit checks and inspectable receipts to Hermes development workflows. It is a separate integration; the capstone remains a standalone learning project.

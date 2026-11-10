@@ -58,5 +58,11 @@
     "title": "Evidence and freshness ledger",
     "description": "Inspect the runtime version, verified examples, and known contract discrepancies.",
     "file": "docs/evidence.md"
+  },
+  {
+    "slug": "hermes",
+    "title": "Use Kujo tools inside Hermes",
+    "description": "Apply engineering checks, human approvals and inspectable evidence to Hermes development workflows.",
+    "file": "docs/hermes.md"
   }
 ]
