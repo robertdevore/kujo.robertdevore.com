@@ -86,3 +86,5 @@ Extend one capability at a time. Maintain the same loop: bounded goal, explicit 
 ## Continue with an agent
 
 [Kujo Hermes](/hermes/) applies explicit checks and inspectable receipts to Hermes development workflows. It is a separate integration; the capstone remains a standalone learning project.
+
+[Kujo for Paperclip 0.3.0](/paperclip/) applies approved verification, delegated evidence and human acceptance to native agent assignments. Use it as an optional extension after completing the standalone capstone.
