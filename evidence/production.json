@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-11-13T04:02:17.676Z",
+  "verifiedAt": "2026-11-13T05:28:42.913Z",
   "base": "https://kujo.robertdevore.com",
   "addresses": [
     {
@@ -26,22 +26,22 @@
       "CN": "robertdevore.com"
     }
   },
-  "checkedRoutes": 53,
+  "checkedRoutes": 54,
   "assets": true,
   "unknownRoute404": true,
   "headers": {
     "alt-svc": "h3=\":443\"; ma=86400",
     "cache-control": "public, max-age=0, must-revalidate",
     "cf-cache-status": "HIT",
-    "cf-ray": "a59ae14cdbec0ccc-ORD",
+    "cf-ray": "a59b5fe4f93e8ce1-ORD",
     "content-encoding": "zstd",
     "content-security-policy": "default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'none'; form-action 'none'",
     "content-type": "text/html",
-    "date": "Fri, 13 Nov 2026 04:02:17 GMT",
+    "date": "Fri, 13 Nov 2026 05:28:43 GMT",
     "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
     "permissions-policy": "camera=(), microphone=(), geolocation=()",
     "referrer-policy": "strict-origin-when-cross-origin",
-    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=QHJHw3FjRF9R5DMlEHSWu6nKD2G7V6ner%2Fx0SANgwFwGiWmd0rHRw2uRRMU%2BymFl6GYOlANurcEn4%2BLeuIFnzx1eusqWQVR4Fh1hWZDHhjmWNFlJ4tvB5GFKIanj3XQL7vfEHRnSyPEBqA2ouNf0IJ1wuNE%3D\"}]}",
+    "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=JZTnogA5V131luB4Ptoh%2FqGUvNGq4iufZc443nF%2BQTORcw82k6twp1cxesKi7XeTdKNa7fjyd6mbRm2THXcwxjlxbC57OPoxkYHcBPpJN5OjCh6Kfa4yM%2BK0NxUVWf5NeZ75YI9MyWSMQHqyZ0dWlpq3czI%3D\"}]}",
     "server": "cloudflare",
     "x-content-type-options": "nosniff",
     "x-frame-options": "DENY"
