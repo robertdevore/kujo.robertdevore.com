@@ -156,9 +156,12 @@
     },
     {
       "repo": "site-kit",
-      "revision": "e4d1d37032d84a77e84d55533b2f5523535f3bb3",
+      "revision": "74cff7b73f2f21d658fc0219ac7f4d44f7f93efd",
       "source": "https://github.com/kujolang/site-kit",
-      "status": "inspected local ecosystem source; not a course runtime dependency"
+      "status": "SiteKit v1.2.0 release reviewed; course uses custom CSS and has no SiteKit runtime dependency",
+      "version": "1.2.0",
+      "release": "https://github.com/kujolang/site-kit/releases/tag/v1.2.0",
+      "reviewedDate": "2026-11-12"
     },
     {
       "repo": "kennel",
