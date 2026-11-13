@@ -64,5 +64,11 @@
     "title": "Use Kujo tools inside Hermes",
     "description": "Apply engineering checks, human approvals and inspectable evidence to Hermes development workflows.",
     "file": "docs/hermes.md"
+  },
+  {
+    "slug": "paperclip",
+    "title": "Verify agent work in Paperclip",
+    "description": "Apply approved checks, retained evidence and human acceptance to delegated agent tasks with Kujo for Paperclip 0.3.0.",
+    "file": "docs/paperclip.md"
   }
 ]
