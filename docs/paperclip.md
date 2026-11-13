@@ -18,7 +18,7 @@ Use Paperclip 2026.1012.0 or later, with 0.3.0 qualified against official 2026.1
 npx paperclipai plugin install @kujolang/paperclip
 ```
 
-The runtime is included. New assurance features are disabled by default. Workcell requires configured local Docker and an immutable image; Lens requires optional browser dependencies. Follow the [installation guide](https://github.com/kujolang/paperclip/blob/v0.3.0/docs/INSTALLATION.md) and [assurance configuration](https://github.com/kujolang/paperclip/blob/v0.3.0/docs/ACCOUNTABILITY.md).
+The runtime is included. New assurance features are disabled by default and execution requires macOS or Linux. Workcell requires configured local Docker and an immutable image; Lens requires optional browser dependencies. Follow the [installation guide](https://github.com/kujolang/paperclip/blob/v0.3.0/docs/INSTALLATION.md) and [assurance configuration](https://github.com/kujolang/paperclip/blob/v0.3.0/docs/ACCOUNTABILITY.md).
 
 ## Know what the evidence establishes
 
