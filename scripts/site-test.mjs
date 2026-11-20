@@ -20,6 +20,8 @@ assert.ok(!fs.readFileSync('output/projects/capstone/src/main.kujo','utf8').incl
 
 // All learner-facing version surfaces must agree with executed verification.
 const verified=JSON.parse(fs.readFileSync('output/verification.json'));
+assert.match(verified.commands.doctor.stdout, /cwd: <course-root>/);
+assert.equal(JSON.parse(verified.commands.docgen.stdout).output_dir, '<course-root>/work/docgen');
 assert.equal(course.version,verified.version);
 assert.equal(course.verifiedDate,verified.verifiedDate);
 assert.equal(JSON.parse(fs.readFileSync('evidence/release.json')).tag_name,'v'+verified.version);

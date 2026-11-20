@@ -32,5 +32,10 @@ for(const [name,args,extraEnv,expectedExit,expectedText] of [
  ['spawn',['run','--untrusted','examples/supplemental/spawn.kujo'],{},0,'spawn accepted']
 ]){const result=run(args,{extraEnv});assert.equal(result.exit,expectedExit);assert.ok((result.stdout+result.stderr).includes(expectedText),name+': '+result.stderr);evidence.commands[name]={args,...result};}
 
-fs.mkdirSync('evidence',{recursive:true});fs.writeFileSync('evidence/verification.json',JSON.stringify(evidence,null,2)+'\n');
+const portableEvidence = JSON.stringify(evidence, (_key, value) =>
+  typeof value === 'string' ? value.replaceAll(root + path.sep, '<course-root>/').replaceAll(root, '<course-root>') : value,
+  2,
+);
+fs.mkdirSync('evidence',{recursive:true});
+fs.writeFileSync('evidence/verification.json', portableEvidence + '\n');
 console.log('PASS: 40 checked VM examples, 40 verified intentional failures, and CLI/DocGen/LSP receipts');
