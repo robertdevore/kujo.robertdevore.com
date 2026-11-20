@@ -70,5 +70,11 @@
     "title": "Verify agent work in Paperclip",
     "description": "Apply approved checks, retained evidence and human acceptance to delegated agent tasks with Kujo for Paperclip 0.3.0.",
     "file": "docs/paperclip.md"
+  },
+  {
+    "slug": "software-factory",
+    "title": "Build and verify software with Kujo Software Factory",
+    "description": "Apply the capstone workflow to a local software project with independent tests and portable evidence.",
+    "file": "docs/software-factory.md"
   }
 ]
