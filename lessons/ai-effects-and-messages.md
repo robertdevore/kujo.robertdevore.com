@@ -18,6 +18,11 @@ The example verifies message structure without network access. This first AI tes
 
 Assemble explicit context, check its size and sensitivity, select an approved endpoint, and handle the response as untrusted input. Keep provider routing and retries in application/ecosystem policy. The next lessons give requests a stable identity and make tests reproducible through replay.
 
+When you move to live inference, use the common setup guide to choose a local
+or hosted provider, configure its model and credentials, and pick the
+appropriate SDK or native operation. The lesson examples run offline.
+[Kujo provider setup](https://docs.kujolang.ai/ecosystem/providers/#configure-a-provider)
+
 ## Common mistakes
 
 Do not call all text a trusted system instruction. Do not assume an AI helper's success envelope validates your domain object. Do not claim AI-native means only that a language has an ai_chat function; inspectability and controlled effects are equally central.

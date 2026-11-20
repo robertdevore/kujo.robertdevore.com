@@ -68,6 +68,8 @@ Use temporary copies for destructive fixture drills. Keep the original compariso
 
 ## Live-provider extension
 
+Choose an integration from the [Kujo provider directory](https://kujolang.ai/providers/) and follow the [common provider setup guide](https://docs.kujolang.ai/ecosystem/providers/#configure-a-provider) in a separate AI SDK checkout. The capstone itself uses Kujo runtime primitives and strict replay.
+
 Live use is an explicit opt-in that requires a new endpoint, operator-approved credentials, AI-specific egress policy, bounded requests, and new reviewed cassettes. Set KUJO_AI_ALLOWED_ENDPOINTS to the permitted endpoint prefix and apply private-destination denial as appropriate. Verify denied endpoints separately: successful replay bypasses live destination checks and does not prove the live policy.
 
 Keep provider smoke checks outside the offline gate. A live provider can return new malformed or misleading content, so preserve all input and evaluator defenses. External execution isolation remains necessary for third-party code.
